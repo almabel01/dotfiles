@@ -1,0 +1,84 @@
+{
+    "editor.fontSize": 18,
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "editor.matchBrackets": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "workbench.editor.centeredLayoutAutoResize": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "window.restoreFullscreen": true,
+    "terminal.integrated.fontFamily": "Fire Coda Retina, monospace",
+    "editor.fontFamily": "Fira Code Retina, monospace",
+    "workbench.preferredLightColorTheme": "Github Light Theme",
+    "better-comments.highlightPlainText": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "workbench.settings.openDefaultKeybindings": true,
+    "keyboard.touchbar.enabled": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "**",
+            "color": "#98C379",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.debug.silent": true,
+    "vim.easymotion": true,
+    "editor.renderWhitespace": "all",
+    "workbench.colorTheme": "Github Light Theme",
+    "cSpell.userWords": [
+        "szervezet"
+    ],
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "cSpell.enableFiletypes": [
+        "ahk",
+        "lua"
+    ],
+    "terminal.external.osxExec": "iTerm.app",
+    "java.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
+    "java.help.firstView": "gettingStarted",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 18,
+    "window.autoDetectColorScheme": true,
+    "window.autoDetectHighContrast": false,
+    "workbench.tips.enabled": false,
+    "git.enableSmartCommit": true
+}

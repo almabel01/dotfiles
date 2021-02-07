@@ -1,0 +1,56 @@
+{
+	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	"Boolean has next int": {
+		"prefix": "bhni",
+		"body": [
+			"boolean hasNextInt = scanner.hasNextInt();",
+		],
+		"description": ""
+	},
+	"int scanner": {
+		"prefix": "scnint",
+		"body": [
+			"int  = scanner.nextInt();",
+			"scanner.nextLine();",
+		],
+		"description": ""
+	},
+	"new scan": {
+		"prefix": "nwsc",
+		"body": [
+			"java.util.Scanner scanner = new java.util.Scanner(java.lang.System.in);",
+			"",
+			"scanner.close();"
+		],
+		"description": ""
+	},
+	"while true int scan": {
+		"prefix": "wtintscan",
+		"body": [
+			"int i = 0;",
+			"while (true) {",
+			"java.lang.System.out.println("Enter a number: ");",
+			"boolean hasNextInt = scanner.hasNextInt();",
+			" if (hasNextInt) {",
+			" int n = scanner.nextInt();",
+			"i++;",
+			"sum += n;",
+			"} else {",
+			" break;",
+			"}",
+			"scanner.nextLine();",
+			"}",
+		],
+		"description": ""
+	},
+	"output border from asterixes": {
+		"prefix": "jvbrd",
+		"body": [
+			"System.out.println("**********"); //this is a border",
+		],
+		"description": ""
+	}
+}
