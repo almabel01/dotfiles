@@ -80,5 +80,6 @@
     "window.autoDetectColorScheme": true,
     "window.autoDetectHighContrast": false,
     "workbench.tips.enabled": false,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "git.autofetch": true
 }
