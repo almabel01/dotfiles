@@ -67,7 +67,7 @@
                 ; :safari ["^com\\.apple\\.Safari$"]
                 ; :browser ["^com\\.apple\\.Safari$"]
                 :java ["^com.jetbrains.intellij.ce$"]
-                }
+                } ; application specific layers and commands are not working now :( ;!TODO 
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           ;:tab-key {:key :tab}
           }
@@ -345,9 +345,9 @@
         ;  :rules [:code
         ;          [:t :!CTOSt] ; focus on terminal
         ;          ]}
-        ; {:des "java (IntelliJ)"
-        ;  :rules [:java
-        ;          [:c :!CShyphen] ; comment with line comment
-        ;          [:b :!Chyphen] ; comment with comment block
-        ;          ]}
+         {:des "java (IntelliJ)"
+          :rules [:java
+                  [:c :!CShyphen] ; comment with line comment
+                  [:b :!Chyphen] ; comment with comment block
+                  ]}
         ]}
