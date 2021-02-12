@@ -160,8 +160,8 @@
                  ]}
         {:des "numpad like numbers"
          :rules [:numpad
-                 [:0 :!S7] ;duplicate
-                ;;  [:hypen :!S6] ;duplicate
+                 [:0 :!S7]
+                ;;  [:hypen :!S6]
                  [:equal_sign :!SOcomma]
                 ;;  ;;
                  [:o :7]
