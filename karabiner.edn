@@ -161,7 +161,7 @@
         {:des "numpad like numbers"
          :rules [:numpad
                  [:0 :!S7]
-                ;;  [:hypen :!S6]
+                 [:hyphen :!S6]
                  [:equal_sign :!SOcomma]
                 ;;  ;;
                  [:o :7]
