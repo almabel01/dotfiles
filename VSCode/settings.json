@@ -63,7 +63,6 @@
     "vim.debug.silent": true,
     "vim.easymotion": true,
     "editor.renderWhitespace": "all",
-    "workbench.colorTheme": "Github Light Theme",
     "cSpell.userWords": [
         "szervezet"
     ],
@@ -77,9 +76,10 @@
     "java.help.firstView": "gettingStarted",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontSize": 18,
-    "window.autoDetectColorScheme": true,
     "window.autoDetectHighContrast": false,
     "workbench.tips.enabled": false,
     "git.enableSmartCommit": true,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.colorTheme": "Github Light Theme",
+    "window.autoDetectColorScheme": true
 }

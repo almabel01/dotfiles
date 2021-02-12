@@ -69,7 +69,7 @@
                 :java ["^com.jetbrains.intellij.ce$"]
                 } ; application specific layers and commands are not working now :( ;!TODO 
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
-          ;:tab-key {:key :tab}
+          :numpad {:key :tab}
           }
  :simlayers {;    
 ; *launchers 
@@ -158,6 +158,29 @@
                  [:8 [:!SOright_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
                  [:9 [:!SOright_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
                  ]}
+        {:des "numpad like numbers"
+         :rules [:numpad
+                 [:0 :!S7] ;duplicate
+                ;;  [:hypen :!S6] ;duplicate
+                 [:equal_sign :!SOcomma]
+                ;;  ;;
+                 [:o :7]
+                 [:p :8]
+                 [:open_bracket :9]
+                 [:close_bracket :slash]
+                ;;  ;;
+                 [:l :4]
+                 [:semicolon :5]
+                 [:quote :6]
+                 [:backslash :!S3]
+                ;;  ;;
+                 [:comma :1]
+                 [:period :2]
+                 [:slash :3]
+                ;;  ;;;;;;;;;;;
+                 [:w :non_us_backslash]
+                 [:e :comma]
+         ]}
 ;; *launchers
         {:des "l-key (launch mode)"
          :rules [:launch-mode
