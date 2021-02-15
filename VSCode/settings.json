@@ -13,7 +13,7 @@
     "window.restoreFullscreen": true,
     "terminal.integrated.fontFamily": "Fire Coda Retina, monospace",
     "editor.fontFamily": "Fira Code Retina, monospace",
-    "workbench.preferredLightColorTheme": "Github Light Theme",
+    "workbench.preferredLightColorTheme": "GitHub Light",
     "better-comments.highlightPlainText": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -80,6 +80,6 @@
     "workbench.tips.enabled": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "workbench.colorTheme": "Github Light Theme",
+    "workbench.colorTheme": "GitHub Light",
     "window.autoDetectColorScheme": true
 }
