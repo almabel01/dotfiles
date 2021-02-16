@@ -93,4 +93,4 @@ alias karc="vim ~/dotfiles/karabiner.edn"
 alias zshconfig="vim ~/dotfiles/.zshrc"
 alias vimconfig="vim ~/dotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
-
+alias icloud="/Users/abel/Library/Mobile Documents/com~apple~CloudDocs"
