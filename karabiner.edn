@@ -126,6 +126,7 @@
                  [:##q :left_command]
                  [:##z :left_option]
                  [:##w :left_control]
+                 [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:##spacebar :left_shift]
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
                  [:quote :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)

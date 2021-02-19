@@ -4,6 +4,7 @@ require "apps"
 require "windows"
 require "altTab"
 require "Spotify"
+
 -- require "moveWindows"
 
 local VimMode = hs.loadSpoon('VimMode')
@@ -14,7 +15,9 @@ vim
   :disableForApp('MacVim')
   :disableForApp('zoom.us')
   :disableForApp('iTerm2')
-  :enterWithSequence('jk')
+  :disableForApp('Terminal')
+  :bindHotKeys({ enter = {{'ctrl'}, ';'} })
+  -- :enterWithSequence('jk')
 
 hs.application.enableSpotlightForNameSearches(true)
 -- hs.ipc.cliInstall()
