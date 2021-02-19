@@ -80,6 +80,6 @@
     "workbench.tips.enabled": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "GitHub Light",
     "window.autoDetectColorScheme": true
 }

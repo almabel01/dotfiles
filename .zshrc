@@ -90,8 +90,7 @@ source $ZPLUG_HOME/init.zsh
 # For a full list of active aliases, run `alias`.
 # aliases:
 alias karc="vim ~/dotfiles/karabiner.edn"
+alias hammerspoon="cd ~/.hammerspoon/"
 alias zshconfig="vim ~/dotfiles/.zshrc"
 alias vimconfig="vim ~/dotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
-alias icloud="/Users/abel/Library/Mobile%Documents/com~apple~CloudDocs"
-alias wiki="~/Library/Mobile Documents/com~apple~CloudDocs/wiki/"

@@ -6,6 +6,16 @@ require "altTab"
 require "Spotify"
 -- require "moveWindows"
 
+local VimMode = hs.loadSpoon('VimMode')
+local vim = VimMode:new()
+
+vim
+  :disableForApp('Code')
+  :disableForApp('MacVim')
+  :disableForApp('zoom.us')
+  :disableForApp('iTerm2')
+  :enterWithSequence('jk')
+
 hs.application.enableSpotlightForNameSearches(true)
 -- hs.ipc.cliInstall()
 
