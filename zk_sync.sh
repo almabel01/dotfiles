@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh 
 
 ZK_PATH="/Users/abel/wiki"
 
