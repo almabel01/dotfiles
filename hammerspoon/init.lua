@@ -12,6 +12,7 @@ local vim = VimMode:new()
 
 vim
   :disableForApp('Code')
+  :disableForApp('IntelliJ IDEA')
   :disableForApp('MacVim')
   :disableForApp('zoom.us')
   :disableForApp('iTerm2')

@@ -68,7 +68,12 @@ ZSH_DISABLE_COMPFIX=true
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode z)
+plugins=(
+	vscode
+	z
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 export ZPLUG_HOME=/usr/local/opt/zplug
@@ -90,9 +95,12 @@ source $ZPLUG_HOME/init.zsh
 # For a full list of active aliases, run `alias`.
 # aliases:
 alias karc="vim ~/dotfiles/karabiner.edn"
-alias hammerspoon="cd ~/.hammerspoon/"
+alias hmsp="cd ~/.hammerspoon/"
 alias zshconfig="vim ~/dotfiles/.zshrc"
+alias sozsh="source ~/dotfiles/.zshrc"
 alias vimconfig="vim ~/dotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias wiki="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs/wiki"
+alias obsi="~/Library/Mobile\ Documents/com~apple~CloudDocs/wiki/.obsidian/"
+alias bin="/usr/local/bin/"
