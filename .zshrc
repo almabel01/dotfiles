@@ -95,12 +95,12 @@ source $ZPLUG_HOME/init.zsh
 # For a full list of active aliases, run `alias`.
 # aliases:
 alias karc="vim ~/dotfiles/karabiner.edn"
-alias hmsp="cd ~/.hammerspoon/"
+alias hmsp="~/.hammerspoon/"
 alias zshconfig="vim ~/dotfiles/.zshrc"
 alias sozsh="source ~/dotfiles/.zshrc"
 alias vimconfig="vim ~/dotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
-alias wiki="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs/wiki"
-alias obsi="~/Library/Mobile\ Documents/com~apple~CloudDocs/wiki/.obsidian/"
+alias wiki="~/wiki/"
+alias obsi="~/wiki/.obsidian/"
 alias bin="/usr/local/bin/"
