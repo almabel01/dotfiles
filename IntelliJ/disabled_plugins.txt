@@ -1,0 +1,11 @@
+
+AntSupport
+InternalWiki
+Subversion
+com.android.tools.idea.smali
+com.intellij.gradle
+com.jetbrains.changeReminder
+hg4idea
+org.jetbrains.android
+org.jetbrains.idea.maven
+org.jetbrains.kotlin

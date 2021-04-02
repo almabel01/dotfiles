@@ -1,0 +1,32 @@
+<templateSet group="user">
+  <template name="jvbrd-1" value="java.lang.System.out.println(&quot;**********&quot;); //this is a border" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="nwsc" value="java.util.Scanner scanner = new java.util.Scanner(java.lang.System.in);&#10;&#10;scanner.close();&#10;" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="scnint" value="int  = scanner.nextInt();&#10;scanner.nextLine();&#10;" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="bhni" value="boolean hasNextInt = scanner.hasNextInt();" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jvbrd" value="java.lang.System.out.println(&quot; &quot;); //this is a border" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="&lt;abbreviation&gt;" value="public static void" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

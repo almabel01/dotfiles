@@ -1,0 +1,208 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">ZmxvYXQ=</entry>
+        <entry encoding="base64">bXlNYXhGbG9hdFZhbHVl</entry>
+        <entry encoding="base64">RmxvYXQ=</entry>
+        <entry encoding="base64">JWxlZnRvdmVyS0I=</entry>
+        <entry encoding="base64">bGVmdG92ZXJLQg==</entry>
+        <entry encoding="base64">c2FtZQ==</entry>
+        <entry encoding="base64">bnVtYmVyQXNTdHJpbmc=</entry>
+        <entry encoding="base64">bnVtYmVyVG9Xb3JsZA==</entry>
+        <entry encoding="base64">TWF0aC5yb3VuZA==</entry>
+        <entry encoding="base64">KioqKioqKioqKg==</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">cy9mbG9hdC9kb3VibGU=</entry>
+        <entry encoding="base64">cy9GbG9hdC9Eb3VibGU=</entry>
+        <entry encoding="base64">cy9teU1heEZsb2F0VmFsdWUvbXlNYXhEb3VibGVWYWx1ZS9n</entry>
+        <entry encoding="base64">cy9GbG9hdC9Eb3VibGUvZw==</entry>
+        <entry encoding="base64">PyVsZWZ0b3ZlcktC</entry>
+        <entry encoding="base64">JXMvbGVmdG92ZXJLQi9yZW1haW5kZXIvZw==</entry>
+        <entry encoding="base64">JXMvc2FtZS9hbnN3ZXIvZw==</entry>
+        <entry encoding="base64">JXMvbnVtYmVyQXNTdHJpbmcvZGlnaXRBc1N0cmluZy9n</entry>
+        <entry encoding="base64">JXMvbnVtYmVyVG9Xb3JsZC9udW1iZXJUb1dvcmRzL2c=</entry>
+        <entry encoding="base64">dw==</entry>
+        <entry encoding="base64">JXMvTWF0aC5yb3VuZC9NYXRoLmNlaWwvZw==</entry>
+        <entry encoding="base64">JXMvKioqKioqKioqKi8gL2c=</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/JAVAMasterclass/202103221131_FlourPackProblem/src/com/abel/Main.java" timestamp="1616411085984">
+        <mark key="[" line="5" column="44" />
+        <mark key="]" line="14" column="8" />
+        <mark key="." line="14" column="8" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103270746_InputCalculator/src/com/abel/Main.java" timestamp="1616838512971">
+        <mark key="[" line="26" column="0" />
+        <mark key="]" line="26" column="0" />
+        <mark key="." line="26" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103241632_DiagonalStar/src/com/abel/Main.java" timestamp="1616669542876">
+        <mark key="[" line="43" column="0" />
+        <mark key="]" line="43" column="0" />
+        <mark key="." line="43" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103291645_SimpleCalculator/src/com/abel/SimpleCalculator.java" timestamp="1617030041175">
+        <mark key="[" line="39" column="8" />
+        <mark key="]" line="23" column="21" />
+        <mark key="^" line="23" column="21" />
+        <mark key="." line="23" column="20" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/javaVimTest/Main.java" timestamp="1616441948866">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103251223_ReadingUserInputChallenge/src/com/abel/Main.java" timestamp="1616672706249">
+        <mark key="[" line="22" column="9" />
+        <mark key="]" line="31" column="1" />
+        <mark key="." line="31" column="1" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202104011718_WallArea/src/com/abel/Wall.java" timestamp="1617290589009">
+        <mark key="[" line="8" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103291645_SimpleCalculator/src/com/abel/Main.java" timestamp="1617029849511">
+        <mark key="[" line="12" column="80" />
+        <mark key="]" line="12" column="78" />
+        <mark key="^" line="12" column="78" />
+        <mark key="." line="12" column="77" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/Constructors/src/com/abel/Main.java" timestamp="1617355056892">
+        <mark key="[" line="47" column="0" />
+        <mark key="]" line="16" column="28" />
+        <mark key="." line="16" column="28" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/Constructors/src/com/abel/VipCustomer.java" timestamp="1617354573113">
+        <mark key="'" line="0" column="0" />
+        <mark key="[" line="55" column="0" />
+      </file>
+      <file name="/" timestamp="1616838693911">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103211317_NumberToWords/src/com/abel/Main.java" timestamp="1616409060536">
+        <mark key="'" line="24" column="35" />
+        <mark key="[" line="63" column="17" />
+        <mark key="]" line="63" column="17" />
+        <mark key="." line="63" column="17" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103291703_Person/src/com/abel/Main.java" timestamp="1617353187432">
+        <mark key="[" line="17" column="26" />
+        <mark key="]" line="17" column="24" />
+        <mark key="." line="17" column="23" />
+        <mark key="^" line="17" column="24" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103221205_LargestPrime/src/com/abel/Main.java" timestamp="1616413051640">
+        <mark key="[" line="30" column="3" />
+        <mark key="]" line="30" column="0" />
+        <mark key="." line="30" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103291703_Person/src/com/abel/Person.java" timestamp="1617353218834">
+        <mark key="[" line="36" column="32" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103251251_MinMaxChallenge/src/com/abel/Main.java" timestamp="1616827796392">
+        <mark key="[" line="42" column="30" />
+        <mark key="]" line="10" column="33" />
+        <mark key="." line="10" column="34" />
+        <mark key="^" line="38" column="47" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/202103271045_PaintJob/src/com/abel/Main.java" timestamp="1616841362432">
+        <mark key="[" line="44" column="5" />
+        <mark key="]" line="25" column="8" />
+        <mark key="." line="25" column="4" />
+        <mark key="^" line="25" column="8" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/Classes/src/com/company/Main.java" timestamp="1617028649610">
+        <mark key="[" line="11" column="0" />
+        <mark key="]" line="11" column="0" />
+        <mark key="." line="11" column="0" />
+      </file>
+      <file name="$USER_HOME$/JAVAMasterclass/Classes/src/com/company/Car.java" timestamp="1617028979309">
+        <mark key="[" line="24" column="29" />
+        <mark key="]" line="26" column="12" />
+        <mark key="." line="26" column="13" />
+      </file>
+      <file name="/fragment.java" timestamp="1617354669007">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="12" column="8" filename="$USER_HOME$/JAVAMasterclass/202102081503_FloatAndDouble/src/com/abel/Main.java" />
+      <jump line="11" column="8" filename="$USER_HOME$/JAVAMasterclass/202102081503_FloatAndDouble/src/com/abel/Main.java" />
+      <jump line="14" column="8" filename="$USER_HOME$/JAVAMasterclass/202102081503_FloatAndDouble/src/com/abel/Main.java" />
+      <jump line="13" column="8" filename="$USER_HOME$/JAVAMasterclass/202102081503_FloatAndDouble/src/com/abel/Main.java" />
+      <jump line="14" column="47" filename="$USER_HOME$/JAVAMasterclass/202103071625_MegabytesConverter/src/com/abel/Main.java" />
+      <jump line="19" column="20" filename="$USER_HOME$/JAVAMasterclass/202103071625_MegabytesConverter/src/com/abel/Main.java" />
+      <jump line="18" column="8" filename="$USER_HOME$/JAVAMasterclass/202103071735_DecimalComparator/src/com/abel/Main.java" />
+      <jump line="22" column="40" filename="$USER_HOME$/JAVAMasterclass/202103211317_NumberToWords/src/com/abel/Main.java" />
+      <jump line="24" column="35" filename="$USER_HOME$/JAVAMasterclass/202103211317_NumberToWords/src/com/abel/Main.java" />
+      <jump line="365" column="0" filename="$USER_HOME$/JAVAMasterclass/javaVimTest/Main.java" />
+      <jump line="69" column="50" filename="$USER_HOME$/JAVAMasterclass/202103271045_PaintJob/src/com/abel/Main.java" />
+      <jump line="35" column="4" filename="$USER_HOME$/JAVAMasterclass/Constructors/src/com/abel/VipCustomer.java" />
+      <jump line="0" column="0" filename="$USER_HOME$/JAVAMasterclass/Constructors/src/com/abel/VipCustomer.java" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="4">
+        <text encoding="base64">Kg==</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">Kg==</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">KioqKioqKioqKg==</text>
+      </register>
+      <register name="0" type="4">
+        <text encoding="base64">aWYgKCh3aWR0aCA8PSAwKSB8fCAoaGVpZ2h0IDw9IDApIHx8IChhcmVhUGVyQnVja2V0IDw9IDApKSB7CgkJCXJldHVybiAtMTsKCQl9</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">CS8vIHdyaXRlIHlvdXIgY29kZSBoZXJlCg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICBTeXN0ZW0ub3V0LnByaW50bG4oIk1vZGVsIGlzICIgKyBwb3JzY2hlLmdldE1vZGVsKCkpOwo=</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">CQlpbnQgYnVja2V0cyA9IDA7Cg==</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">CQlpbnQgYnVja2V0cyA9IDA7Cg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">CQlwcmludFRleHQoIkhlbGxvIFdvcmxkISIpOwo=</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">CXB1YmxpYyBzdGF0aWMgdm9pZCBwcmludFRleHQgKFN0cmluZyB0ZXh0KSB7CgkJU3lzdGVtLm91dC5wcmludGxuKHRleHQpOwoJfQoK</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">CS8qCgkzLiBJbiBzb21lIGNhc2VzLCBCb2IgZG9lcyBub3Qga25vdyB0aGUgd2lkdGggYW5kIGhlaWdodCBvZiB0aGUgd2FsbCBidXQgaGUga25vd3MKCXRoZSBhcmVhIG9mIGEgd2FsbC4gSGUgbmVlZHMgeW91IHRvIHdyaXRlIGFub3RoZXIgbWV0aG9kLiBXcml0ZSBhbm90aGVyIG92ZXJsb2FkZWQgbWV0aG9kCgluYW1lZCBnZXRCdWNrZXRDb3VudCB3aXRoIDIgcGFyYW1ldGVycyBuYW1lbHksIGFyZWEgYW5kIGFyZWFQZXJCdWNrZXQgKGJvdGggb2YgdHlwZSBkb3VibGUpLgoJVGhlIG1ldGhvZCBuZWVkcyB0byByZXR1cm4gYSB2YWx1ZSBvZiB0eXBlIGludCB0aGF0IHJlcHJlc2VudHMgdGhlIG51bWJlciBvZiBidWNrZXRzIHRoYXQgQm9iCgluZWVkcyB0byBidXkgYmVmb3JlIGdvaW5nIHRvIHdvcmsuIFRvIGNhbGN1bGF0ZSB0aGUgYnVja2V0IGNvdW50LCByZWZlciB0byB0aGUgbm90ZXMgYmVsb3cuCglJZiBvbmUgb2YgdGhlIHBhcmFtZXRlcnMgYXJlYSBvciBhcmVhUGVyQnVja2V0IGlzIGxlc3Mgb3IgZXF1YWwgdG8gMCwgdGhlIG1ldGhvZCBuZWVkcyB0bwoJcmV0dXJuIC0xdG8gaW5kaWNhdGUgYW4gaW52YWxpZCB2YWx1ZS4gSWYgYWxsIHBhcmFtZXRlcnMgYXJlIHZhbGlkLCB0aGUgbWV0aG9kIG5lZWRzIHRvCgljYWxjdWxhdGUgdGhlIG51bWJlciBvZiBidWNrZXRzIGFuZCByZXR1cm4gaXQuCgkgKi8K</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">JXMvTWF0aC5yb3VuZC9NYXRoLmNlaWwvZw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">KioqKioqKioqKg==</last-search>
+      <last-offset encoding="base64" />
+      <last-pattern encoding="base64">KioqKioqKioqKg==</last-pattern>
+      <last-replace encoding="base64">TWF0aC5jZWls</last-replace>
+      <last-substitute encoding="base64">KioqKioqKioqKg==</last-substitute>
+      <last-dir>-1</last-dir>
+      <show-last>false</show-last>
+    </search>
+  </component>
+</application>

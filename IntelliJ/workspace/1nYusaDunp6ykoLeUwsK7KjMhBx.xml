@@ -1,0 +1,115 @@
+<project version="4">
+  <component name="FavoritesManager">
+    <favorites_list name="202101251358_ByteShortIntLong" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/abel/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Short</find>
+      <find>short</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Long</replace>
+      <replace>long</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/com/abel/Main.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes />
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-" />
+    </option>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993565" weight="0.18957011" />
+      <window_info id="Structure" order="1" sideWeight="0.5006435" side_tool="true" weight="0.18957011" />
+      <window_info id="Favorites" order="2" sideWeight="0.5006435" side_tool="true" weight="0.18957011" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32947233" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32891566" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32947233" />
+      <window_info anchor="bottom" id="Problems View" order="5" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32947233" />
+      <window_info anchor="bottom" id="Services" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="10" />
+    </layout>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="74" width="1440" height="752" key="#Live_Templates" timestamp="1611584222800">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="0" y="74" width="1440" height="752" key="#Live_Templates/0.0.1440.900@0.0.1440.900" timestamp="1611584222800" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1612775548481">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1612775548481" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1612775548474">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1612775548474" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1612775548473">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1612775548473" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1612775548475">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1612775548475" />
+    <state x="229" y="86" width="982" height="728" key="SettingsEditor" timestamp="1612773234076">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="86" width="982" height="728" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1612773234076" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/abel/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

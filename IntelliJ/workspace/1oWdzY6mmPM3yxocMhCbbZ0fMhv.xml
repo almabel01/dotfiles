@@ -1,0 +1,63 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21428572" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="5" weight="0.32998997" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Services" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="InternalWiki" order="0" />
+    </layout>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="124" y="-626" width="1636" height="1006" key="dock-window-1" timestamp="1613406739568">
+      <screen x="0" y="-1025" width="1680" height="1025" />
+    </state>
+    <state x="124" y="-626" width="1636" height="1006" key="dock-window-1/0.-1025.1680.1025/0.25.1440.875@0.-1025.1680.1025" timestamp="1613406739568" />
+    <state x="200" y="-825" width="1480" height="825" key="dock-window-2" timestamp="1613406708088">
+      <screen x="0" y="-1025" width="1680" height="1025" />
+    </state>
+    <state x="200" y="-825" width="1480" height="825" key="dock-window-2/0.-1025.1680.1025/0.25.1440.875@0.-1025.1680.1025" timestamp="1613406708088" />
+    <state x="476" y="-893" width="727" height="761" key="new project wizard" timestamp="1613406647556">
+      <screen x="0" y="-1025" width="1680" height="1025" />
+    </state>
+    <state x="476" y="-893" width="727" height="761" key="new project wizard/0.-1025.1680.1025/0.25.1440.875@0.-1025.1680.1025" timestamp="1613406647556" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/wiki/Strings.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="420">
+            <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

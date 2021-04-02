@@ -1,0 +1,5 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="Markdown/Hide errors in code fences" />
+  </component>
+</application>

@@ -1,0 +1,609 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/JAVAMasterclass/HelloWorld">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202101221053_HelloWorld – Hello.java" projectWorkspaceId="1nQ5Fb7ygBMTKJ75v76g1EddJTw">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240683561" />
+              <frame x="0" y="25" width="1440" height="875" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1611324140311" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202101251105_HelloWorldChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202101251105_HelloWorldChallenge – Main.java" projectWorkspaceId="1nYaL1Gfxd8gztImgIR4uEHw7VO">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240726486" />
+              <frame x="0" y="25" width="1440" height="875" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1611569421192" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202101251358_ByteShortIntLong">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202101251358_ByteShortIntLong – Main.java" projectWorkspaceId="1nYusaDunp6ykoLeUwsK7KjMhBx">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240728267" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1612773070375" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202102081022_PrimitiveTypeChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202102081022_PrimitiveTypeChallenge – Main.java" projectWorkspaceId="1oC2EY8uVitDse44kYR2FTu9jez">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240734687" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1612776140976" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202101251105_HelloWorldChallenge/src/com/abel">
+          <value>
+            <RecentProjectMetaInfo frameTitle="abel" projectWorkspaceId="1oCcrWcIGwa7Jk44CSzCOQQeYpz">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240697546" />
+              <frame x="0" y="25" width="1440" height="875" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1612794211265" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202102081503_FloatAndDouble">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202102081503_FloatAndDouble – Main.java" projectWorkspaceId="1oCaVPigggg3S0GYqC4JbAkZI8s">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240704497" />
+              <frame x="0" y="25" width="1440" height="875" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1613133622823" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202102151657_CharAndBoolean">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202102151657_CharAndBoolean" projectWorkspaceId="1oWaAmAO5iI9xsgJisNr3rMukSD">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240711196" />
+              <frame x="0" y="-1050" width="1680" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1613404661751" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/private/var/folders/8m/rzr8lp_17sv8g9zmr76tnxg00000gn/T/Strings.md">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Strings.md" projectWorkspaceId="1oWdzY6mmPM3yxocMhCbbZ0fMhv">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240711196" />
+              <frame x="0" y="-1025" width="1680" height="1025" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1613406723758" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202102151730_Strings">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202102151730_Strings – Main.java" projectWorkspaceId="1oWeCctEtU9BGxN7mGaE10hyuj7">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240711196" />
+              <frame x="0" y="-1050" width="1680" height="1050" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1613406739739" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103051814_operatorChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103051814_operatorChallenge – Main.java" projectWorkspaceId="1pLZkAVqFF2AtpxxyePtIPod3pe">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727350" />
+              <frame x="0" y="0" width="1440" height="900" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1614964475703" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103060923_methodsChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103060923_methodsChallenge" projectWorkspaceId="1pNMJ0JFh6bTyoMH5rogsUOECt5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240692090" />
+              <frame x="0" y="25" width="1440" height="875" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615019021382" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103071624_MegabyteConverter">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103071624_MegabyteConverter" projectWorkspaceId="1pR0f4IlKOejHKPYEyQtnVi7peG">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727197" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615130695107" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103071625_MegabytesConverter">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103071625_MegabytesConverter – Main.java" projectWorkspaceId="1pR0l3l7KyelXZR3t4ALVLYOl2F">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727197" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615130742370" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103071710_LeapYear">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103071710_LeapYear – Main.java" projectWorkspaceId="1pR6AjGHDhTI9K7Ovq0AAboK3Jy">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727197" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615133413265" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103071735_DecimalComparator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103071735_DecimalComparator – Main.java" projectWorkspaceId="1pR9Ge0J0iO9BuUy5F1hNEXBHw8">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727197" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615134940901" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103081224_EqualSumChecker">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103081224_EqualSumChecker – Main.java" projectWorkspaceId="1pTMXChmAcfIxQuaFKGhYalZ1uf">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240684391" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615202666395" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103081232_TeenNumberChecker">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103081232_TeenNumberChecker – Main.java" projectWorkspaceId="1pTNZJSfEJCiAzrvJ0ovFGjmE4R">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240684391" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615203173285" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103061029_SpeedConverter">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103061029_SpeedConverter – ~/JAVAMasterclass/202103061029_SpeedConverter/out/production/202103061029_SpeedConverter/com/abel/Main.class" projectWorkspaceId="1pNULciK58CHn2cNCX7akvvBTv3">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240721079" />
+              <frame x="0" y="25" width="1440" height="875" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615566594503" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103071651_BarkingDog">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103071651_BarkingDog – Main.java" projectWorkspaceId="1pR3vsTH8a38a70tSEToAZztKQh">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240705813" />
+              <frame x="0" y="25" width="1440" height="875" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615578032310" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103130744_javaMethodOverloading">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103130744_javaMethodOverloading – Main.java" projectWorkspaceId="1pgwC2rN07x2DgsvyYuxNMdkMBP">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240738990" />
+              <frame x="0" y="-1050" width="894" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615617913114" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103130914_SecondAndMinutes">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103130914_SecondAndMinutes – Main.java" projectWorkspaceId="1ph76zF7wyPmiuo3EbkzahOcz2n">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240738990" />
+              <frame x="0" y="-1050" width="882" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615628362068" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103131046_MinutesToYearsDaysCalculator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103131046_MinutesToYearsDaysCalculator – Main.java" projectWorkspaceId="1phIIEoxcQT05DjklEJsj9arDjl">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240738990" />
+              <frame x="0" y="0" width="762" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615628815714" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103131112_EqualityPrinter">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103131112_EqualityPrinter – Main.java" projectWorkspaceId="1phLR5HeBaqwIK016fUIM144ku5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240738990" />
+              <frame x="0" y="0" width="747" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615630366050" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103131128_PlayingCat">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103131128_PlayingCat – Main.java" projectWorkspaceId="1phNqceWbyJLuWgMalSbW3odpKE">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240738990" />
+              <frame x="-252" y="-1080" width="1005" height="1080" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615631556650" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103171731_SwitchStatement">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103171731_SwitchStatement – Main.java" projectWorkspaceId="1ptNy0q7EoSeO2Pve2A5DAoymy3">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240707416" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1615998680092" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103131038_AreaCalculator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103131038_AreaCalculator" projectWorkspaceId="1phHLbMRuoixi5Ch6QaaprEGx4u">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240705698" />
+              <frame x="0" y="-1050" width="1680" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616089166348" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103181848_ForLoop">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103181848_ForLoop – Main.java" projectWorkspaceId="1pwMSUJ7RTsHw3N3WKINxfKGisI">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240729989" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616089701609" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103181915_Sum3And5Challenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103181915_Sum3And5Challenge – Main.java" projectWorkspaceId="1pwPk5hT9tZgMAYI3YoBkDVtNZl">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240729989" />
+              <frame x="0" y="-1050" width="340" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616091321388" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103191713_DigitSumChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103191713_DigitSumChallenge – Main.java" projectWorkspaceId="1pz06MWa40SLYlznnLsDTDQ2cUr">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240681649" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616170437175" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103200817_NumberPalindrome">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103200817_NumberPalindrome – Main.java" projectWorkspaceId="1q0mLtU4e3IdHaF5pUnXHW0Gai0">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689559" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616224859474" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103200842_FirstLastDigitSum">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103200842_FirstLastDigitSum – Main.java" projectWorkspaceId="1q0p9cnzj9eCzHvJsWAKh2YBSbq">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689559" />
+              <frame x="0" y="0" width="714" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616226213587" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103201002_EvenDigitSum">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103201002_EvenDigitSum – Main.java" projectWorkspaceId="1q0z8I5LFHGnULHHXYzY1nVMsfn">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689559" />
+              <frame x="0" y="0" width="714" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616231136975" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103201021_SharedDigit">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103201021_SharedDigit – Main.java" projectWorkspaceId="1q11Z2i2bMlD5aFELKXSpVpRA9H">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689559" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616232334828" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103211044_LastDigitChecker">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103211044_LastDigitChecker – Main.java" projectWorkspaceId="1q3tNSjG6bTPE9IhC9HFwfiRgj9">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727049" />
+              <frame x="0" y="0" width="714" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616320063426" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103211107_GreatestCommonDivisor">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103211107_GreatestCommonDivisor – Main.java" projectWorkspaceId="1q3vpcjPS6i8hUDez7z0p4z4xQH">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240727049" />
+              <frame x="0" y="25" width="720" height="875" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616321288911" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103211153_PerfectNumber">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103211153_PerfectNumber – Main.java" projectWorkspaceId="1q41TtxTM1ZiR2AfKAbODBXeKf5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240718171" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616399903769" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103211317_NumberToWords">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103211317_NumberToWords – Main.java" projectWorkspaceId="1q6etb9xh1ePWRt7siA4VmkbxXG">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240732270" />
+              <frame x="0" y="-1050" width="833" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616404686275" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103221131_FlourPackProblem">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103221131_FlourPackProblem – Main.java" projectWorkspaceId="1q6o73gXlbWH19O5HxtgTvA2ULe">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240732270" />
+              <frame x="0" y="-1050" width="924" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616409232137" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103221205_LargestPrime">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103221205_LargestPrime – Main.java" projectWorkspaceId="1q6s6FIB2tp0bUvg5aQ1eXd68TY">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240732270" />
+              <frame x="0" y="-1050" width="896" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616411198616" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103211136_AllFactors">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103211136_AllFactors – Main.java" projectWorkspaceId="1q3zwVv2pvxVToYmWXuSqvUWw4q">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240732270" />
+              <frame x="0" y="25" width="720" height="875" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616413095085" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/private/var/folders/8m/rzr8lp_17sv8g9zmr76tnxg00000gn/T/Main.java">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Main.java – Main.java" projectWorkspaceId="1q7sHg7xZDQuY0m8pfcsBjagSFq">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240729709" />
+              <frame x="0" y="25" width="720" height="875" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616441880657" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103241632_DiagonalStar">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103241632_DiagonalStar – Main.java" projectWorkspaceId="1qD3115087nXDDYWBBFxFiL2vT5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240739026" />
+              <frame x="0" y="-1050" width="1680" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616600117321" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103251223_ReadingUserInputChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103251223_ReadingUserInputChallenge – Main.java" projectWorkspaceId="1qFNWrD8NEayMXvqgaSJHyLOQIU">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689480" />
+              <frame x="0" y="-1050" width="1680" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616671414496" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103251251_MinMaxChallenge">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103251251_MinMaxChallenge – Main.java" projectWorkspaceId="1qFR7Oxg84g9tf3KIm56dKSswEd">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240689480" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616673185729" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103270746_InputCalculator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103270746_InputCalculator – Main.java" projectWorkspaceId="1qKUV2WC6FfwzSAlIFQL3ToFjw8">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240728979" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616827796807" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103271045_PaintJob">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103271045_PaintJob – Main.java" projectWorkspaceId="1qKqDnPJx7FhOxa8f2p5CRpu3Xd">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240728979" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616838513320" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/Classes">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Classes – Car.java" projectWorkspaceId="1dV5KK4MlgjZ5qrlmmrEXhTx1Dk">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240728979" />
+              <frame x="0" y="-1050" width="834" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1616842300141" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103291645_SimpleCalculator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103291645_SimpleCalculator – SimpleCalculator.java" projectWorkspaceId="1qR4p8PIo90K0w4hrjnYhQxrcYv">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240697534" />
+              <frame x="0" y="-1050" width="834" height="1050" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1617029250287" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202104011718_WallArea">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202104011718_WallArea – Wall.java" projectWorkspaceId="1qZcR1vNpFOtfUW2MwTWlcRJ5AM">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240734299" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1617290543181" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/JAVAMasterclass/202103291703_Person">
+          <value>
+            <RecentProjectMetaInfo frameTitle="202103291703_Person – Person.java" opened="true" projectWorkspaceId="1qR6nQEFgHyMUXmcGpLcxqMNRro">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-203.6682.168" />
+              <option name="buildTimestamp" value="1609240695586" />
+              <frame x="0" y="0" width="1440" height="900" fullScreen="true" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1617353087141" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/JAVAMasterclass" />
+  </component>
+</application>

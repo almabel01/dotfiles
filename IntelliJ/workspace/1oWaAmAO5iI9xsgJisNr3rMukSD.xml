@@ -1,0 +1,146 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$USER_HOME$/wiki/CharAndBoolean.md" />
+      <option value="$PROJECT_DIR$/src/com/abel/Main.java" />
+      <option value="$USER_HOME$/wiki/202102151712_CharAndBoolean.md" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="202102151657_CharAndBoolean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="202102151657_CharAndBoolean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="202102151657_CharAndBoolean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="202102151657_CharAndBoolean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="202102151657_CharAndBoolean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="202102151657_CharAndBoolean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="abel" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17481662" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25714287" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Services" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="6" />
+      <window_info anchor="right" id="InternalWiki" order="0" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17481662" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25714287" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Services" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="6" />
+      <window_info anchor="right" id="InternalWiki" order="0" />
+    </layout-to-restore>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1680" height="242" key="GridCell.Tab.0.bottom" timestamp="1613406454889">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="242" key="GridCell.Tab.0.bottom/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613406454889" />
+    <state width="1680" height="242" key="GridCell.Tab.0.center" timestamp="1613406454878">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="242" key="GridCell.Tab.0.center/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613406454878" />
+    <state width="1680" height="242" key="GridCell.Tab.0.left" timestamp="1613406454863">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="242" key="GridCell.Tab.0.left/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613406454863" />
+    <state width="1680" height="242" key="GridCell.Tab.0.right" timestamp="1613406454888">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="242" key="GridCell.Tab.0.right/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613406454888" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1613406371300">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613406371300" />
+    <state x="505" y="-817" key="search.everywhere.popup" timestamp="1613405570151">
+      <screen x="0" y="-1050" width="1680" height="1050" />
+    </state>
+    <state x="505" y="-798" key="search.everywhere.popup/0.-1025.1680.1025/0.25.1440.875@0.-1025.1680.1025" timestamp="1613404731273" />
+    <state x="505" y="-817" key="search.everywhere.popup/0.-1050.1680.1050/0.0.1440.900@0.-1050.1680.1050" timestamp="1613405570151" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/wiki/CharAndBoolean.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="338">
+            <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/wiki/202102151712_CharAndBoolean.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="856">
+            <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/abel/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

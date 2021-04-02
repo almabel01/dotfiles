@@ -1,0 +1,23 @@
+<keymap version="1" name="macOS copy" parent="Mac OS X 10.5+">
+  <action id="ChangesView.ToggleCommitUi" />
+  <action id="CheckinProject" />
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta c" />
+  </action>
+  <action id="NewClass">
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta n" />
+  </action>
+  <action id="NewProject">
+    <keyboard-shortcut first-keystroke="ctrl meta n" />
+  </action>
+  <action id="OpenFile">
+    <keyboard-shortcut first-keystroke="ctrl meta o" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="ctrl alt 1" />
+  </action>
+  <action id="Terminal.ClearBuffer">
+    <keyboard-shortcut first-keystroke="meta l" />
+  </action>
+  <action id="context.clear" />
+</keymap>

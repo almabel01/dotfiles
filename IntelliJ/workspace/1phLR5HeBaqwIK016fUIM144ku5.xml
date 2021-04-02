@@ -1,0 +1,93 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/abel/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/com/abel/Main.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24934383" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Services" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="6" />
+      <window_info anchor="right" id="InternalWiki" order="1" />
+    </layout>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="599" height="269" key="GridCell.Tab.0.bottom" timestamp="1615631556237">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="599" height="269" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1615631556237" />
+    <state width="599" height="269" key="GridCell.Tab.0.center" timestamp="1615631556235">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="599" height="269" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1615631556235" />
+    <state width="599" height="269" key="GridCell.Tab.0.left" timestamp="1615631556233">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="599" height="269" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1615631556233" />
+    <state width="599" height="269" key="GridCell.Tab.0.right" timestamp="1615631556236">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="599" height="269" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1615631556236" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1615630463422">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1615630463422" />
+    <state x="9" y="51" width="729" height="797" key="new project wizard" timestamp="1615631553669">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="9" y="51" width="729" height="797" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1615631553669" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/abel/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
