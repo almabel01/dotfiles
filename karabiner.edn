@@ -63,13 +63,16 @@
              :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
         ;      :btt "osascript -e 'tell application \"BetterTouchTool\" to  trigger_named \"%s\"'"
              }
- :applications {:code ["^com.microsoft.VSCode$"]
-                ; :safari ["^com\\.apple\\.Safari$"]
-                ; :browser ["^com\\.apple\\.Safari$"]
-                :java ["^com.jetbrains.intellij.ce$"]
+ :applications {
+                ;; :code ["^com.microsoft.VSCode$"]
+                ;; :safari ["^com\\.apple\\.Safari$"]
+                ;; :browser ["^com\\.apple\\.Safari$"]
+                ;; :java ["^com.jetbrains.intellij.ce$"]
+                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 } ; application specific layers and commands are not working now :( ;!TODO 
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           :numpad {:key :tab}
+        ;;   :alt {:key :left_option}
           }
  :simlayers {;    
 ; *launchers 
@@ -90,7 +93,7 @@
              :focus-mode {:key :f}
         ;      :browsers {:key :b} ;;TODO
              ;:code {:key :i :condi [:code]} ; VS Code
-             :java {:key :i :condi [:java]} ; IntelliJ IDEA
+        ;;      :java {:key :i :condi [:java]} ; IntelliJ IDEA
              }
 ;;;;;;;;;;;;;;;;
  :main [;;;
@@ -99,18 +102,23 @@
         {:des "left cmd → cmd+tab if alone" :rules [[:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
-        {:des "right_shift to () if alone, unless VSCode is in front" :rules [:!code [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode vim extension, turned off for if it's in front
+        {:des "right_shift to () if alone, unless VSCode is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension ;! TODO: make it only ( if in front
+        ;; {:des "left_shift to ( in VSCode and IntelliJ" :rules [:vimModeOn [:##left_shift :left_shift nil {:alone :!S8}]]}
         {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
         ; {:des "spacebar for left shift" :rules [[:spacebar :left_shift nil {:alone :spacebar}]]}
         ; {:des "VS Code character swaps" ; ! used to work, not working now
         ;  :rules [[:period :!Operiod :code]
         ;          [:!Operiod :period :code]
         ;          [:hyphen :!S6 :code]]}
-        {:des "IntelliJ IDEA character swaps"
-         :rules [[:hyphen [:!S6 :!S6] :java] ; java comments
-                 [:period :!Operiod :java]
-                 [:!Operiod :period :java]
-                 [:equal_sign :!Operiod :java]]}
+        ;; {:des "IntelliJ IDEA character swaps" ; not working
+        ;;  :rules [[:hyphen [:!S6 :!S6] :java] ; java comments
+        ;;          [:period :!Operiod :java]
+        ;;          [:!Operiod :period :java]
+        ;;          [:equal_sign :!Operiod :java]]}
+        ;; {:des "testing with left option"
+        ;;  :rules [:alt
+        ;;         [:n [:!On :n]] ;;writes ñ on Spanish layout
+        ;; ]}
         {:des "hyper (caps_lock)"
          :rules [:hyper
                  ; *hyper navigation  
@@ -358,6 +366,7 @@
                  [:q :!Speriod] ;:
                  [:w :!Operiod] ;;
                  [:e :!Obackslash] ;`
+
                  ]}
         {:des "moving focus"
          :rules [:focus-mode
@@ -375,3 +384,15 @@
                   [:b :!Chyphen] ; comment with comment block
                   ]}
         ]}
+
+;;writing ñ by pressing left option
+{:profiles
+ {:goku {:default true
+         :sim 50
+         :delay 80
+         :alone 120
+         :held 70}}
+ :main [
+     {:des "left option to ñ" :rules [[:##left_option :left_option nil {:alone [:!On :n]}]]}
+ ]
+}
