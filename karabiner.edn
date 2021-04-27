@@ -68,7 +68,7 @@
                 ;; :safari ["^com\\.apple\\.Safari$"]
                 ;; :browser ["^com\\.apple\\.Safari$"]
                 ;; :java ["^com.jetbrains.intellij.ce$"]
-                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                ;; :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 } ; application specific layers and commands are not working now :( ;!TODO 
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           :numpad {:key :tab}
@@ -103,6 +103,7 @@
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         {:des "right_shift to () if alone, unless VSCode is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension ;! TODO: make it only ( if in front
+        {:des "left_shift to <> if alone" :rules [[:##left_shift :left_shift nil {:alone [:!SOz :!SOx :left_arrow]}]]}
         ;; {:des "left_shift to ( in VSCode and IntelliJ" :rules [:vimModeOn [:##left_shift :left_shift nil {:alone :!S8}]]}
         {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
         ; {:des "spacebar for left shift" :rules [[:spacebar :left_shift nil {:alone :spacebar}]]}
