@@ -84,5 +84,6 @@
     "editor.accessibilitySupport": "off",
     "workbench.tree.renderIndentGuides": "always",
     "html.format.indentInnerHtml": true,
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "tabnine.experimentalAutoImports": true
 }

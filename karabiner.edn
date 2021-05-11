@@ -64,11 +64,11 @@
         ;      :btt "osascript -e 'tell application \"BetterTouchTool\" to  trigger_named \"%s\"'"
              }
  :applications {
-                ;; :code ["^com.microsoft.VSCode$"]
+                :code ["^com.microsoft.VSCode$"]
                 ;; :safari ["^com\\.apple\\.Safari$"]
                 ;; :browser ["^com\\.apple\\.Safari$"]
-                ;; :java ["^com.jetbrains.intellij.ce$"]
-                ;; :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                :java ["^com.jetbrains.intellij.ce$"]
+                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 } ; application specific layers and commands are not working now :( ;!TODO 
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           :numpad {:key :tab}
@@ -379,21 +379,9 @@
         ;  :rules [:code
         ;          [:t :!CTOSt] ; focus on terminal
         ;          ]}
-         {:des "java (IntelliJ)"
-          :rules [:java
-                  [:c :!CShyphen] ; comment with line comment
-                  [:b :!Chyphen] ; comment with comment block
-                  ]}
+        ;;  {:des "java (IntelliJ)"
+        ;;   :rules [:java
+        ;;           [:c :!CShyphen] ; comment with line comment
+        ;;           [:b :!Chyphen] ; comment with comment block
+        ;;           ]}
         ]}
-
-;;writing ñ by pressing left option
-{:profiles
- {:goku {:default true
-         :sim 50
-         :delay 80
-         :alone 120
-         :held 70}}
- :main [
-     {:des "left option to ñ" :rules [[:##left_option :left_option nil {:alone [:!On :n]}]]}
- ]
-}
