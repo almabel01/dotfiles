@@ -116,9 +116,6 @@
         ;;          [:period :!Operiod :java]
         ;;          [:!Operiod :period :java]
         ;;          [:equal_sign :!Operiod :java]]}
-        ;; {:des "testing with left option"
-        ;;  :rules [:alt
-        ;;         [:n [:!On :n]] ;;writes ñ on Spanish layout
         ;; ]}
         {:des "hyper (caps_lock)"
          :rules [:hyper
