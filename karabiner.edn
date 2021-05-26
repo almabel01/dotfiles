@@ -215,7 +215,8 @@
                  ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1sl__D0qI6W37-UH3q5kO7LCg-dQF2rz5vKGZUJM6z0c/edit?usp=sharing
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
-                 [:u [:open "https://www.udemy.com"]]]}
+                ;;  [:u [:open "https://www.udemy.com"]]
+                 ]}
 ;; *numbers, F-keys & symbols
         {:des "left_hand_1 (p-key)"
          :rules [:left_hand_1
