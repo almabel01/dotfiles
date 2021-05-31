@@ -12,6 +12,10 @@ Plug 'lambdalisue/lista.nvim'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
+set number
+set showmatch
+set autoindent
+
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
