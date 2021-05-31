@@ -370,13 +370,4 @@
                  [:n :!FTf4] ; move focus to active or next window
                  [:w :!FTf9] ; move focus to next window
                  ]}
-        ; {:des "code (VS Code)"
-        ;  :rules [:code
-        ;          [:t :!CTOSt] ; focus on terminal
-        ;          ]}
-        ;;  {:des "java (IntelliJ)"
-        ;;   :rules [:java
-        ;;           [:c :!CShyphen] ; comment with line comment
-        ;;           [:b :!Chyphen] ; comment with comment block
-        ;;           ]}
         ]}
