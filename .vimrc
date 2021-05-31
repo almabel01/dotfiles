@@ -14,7 +14,22 @@ call plug#end()
 
 set number
 set showmatch
+set hls
+set backspace=indent,eol,start
+set ve+=onemore
 set autoindent
+set noexpandtab
+set smartindent
+exec 'set tabstop=3'
+exec 'set textwidth=0'
+exec 'set shiftwidth=3'
+exec 'set softtabstop=3'
+
+if has('unnamedplus')
+	set clipboard+=unnamedplus
+else
+	set clipboard=unnamed
+endif
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
