@@ -12,6 +12,9 @@ Plug 'lambdalisue/lista.nvim'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
+nmap H ^
+namp L $
+
 set number
 set showmatch
 set hls
