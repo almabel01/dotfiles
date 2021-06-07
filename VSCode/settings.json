@@ -85,5 +85,11 @@
     "workbench.tree.renderIndentGuides": "always",
     "html.format.indentInnerHtml": true,
     "liveServer.settings.CustomBrowser": "chrome",
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "cSpell.ignoreWords": [
+        "a",
+        "border",
+        "is",
+        "this"
+    ]
 }

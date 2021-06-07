@@ -46,10 +46,10 @@
 		],
 		"description": ""
 	},
-	"output border from asterixes": {
+	"output border": {
 		"prefix": "jvbrd",
 		"body": [
-			"System.out.println("**********"); //this is a border",
+			"System.out.println(" "); //this is a border",
 		],
 		"description": ""
 	}
