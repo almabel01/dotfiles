@@ -12,8 +12,8 @@ Plug 'lambdalisue/lista.nvim'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
-nmap H ^
-namp L $
+"nmap H ^
+"nmap L $
 
 set number
 set showmatch
@@ -28,10 +28,19 @@ exec 'set textwidth=0'
 exec 'set shiftwidth=3'
 exec 'set softtabstop=3'
 
-if has('unnamedplus')
-	set clipboard+=unnamedplus
+set clipboard=unnamed
+set clipboardrjunnamedplus
+
+"if has('unnamedplus')
+"	set clipboard+=unnamedplus
+"else
+"	set clipboard=unnamed
+"endif
+
+if system('unname -s') == "Darwin\\n"
+	set clipboard=unnamed "OSX
 else
-	set clipboard=unnamed
+	set clipboard=unnamedplus "Linux
 endif
 
 let g:NERDTreeDirArrowExpandable = '▸'
