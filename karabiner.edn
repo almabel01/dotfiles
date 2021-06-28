@@ -103,8 +103,6 @@
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension ;! TODO: make it only ( if in front
-        ;; {:des "left_shift to < if alone" :rules [[:##left_shift :left_shift nil {:alone :!SOz}]]}
-        ;; {:des "left_shift to ( in VSCode and IntelliJ" :rules [:vimModeOn [:##left_shift :left_shift nil {:alone :!S8}]]}
         {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
 
         ;;turning off arrow keys
@@ -125,11 +123,11 @@
                  [:##o :end]
                  [:##u :page_down]
                  [:##a :return_or_enter]
-                 [:##q :left_command]
+                 [:##w :left_command]
                  [:##z :left_option]
-                 [:##w :left_control]
-                 [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
-                 [:##spacebar :left_shift]
+                ;;  [:##w :left_control]
+                 [:##x :left_shift]
+                ;;  [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
                  [:quote :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)
                  [:hyphen :!SOleft_arrow] ; highlight/select previous word (ü on HUN keyboard)
@@ -148,18 +146,18 @@
                  [:comma :delete_forward] ; delete forward
                  [:period :!Odelete_forward] ; delete next word
                  [:!Ccomma :!Cdelete_forward] ; delete to the end of the line
-                 [:d [:!Cright_arrow :!CSleft_arrow :delete_or_backspace]] ; delete whole line
+                ;;  [:d [:!Cright_arrow :!CSleft_arrow :delete_or_backspace]] ; delete whole line
                  ; *hyper shortcuts  
                  [:c :!QWERc] ; Alfred clipboard history
                  [:e :!QWERe] ; Alfred emoji search
                  [:s :!QWERs] ; Alfred search snippets
                  ; *hyper text modification ;!! duplicate
-                 [:1 [:!SOleft_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
-                 [:2 [:!SOleft_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
-                 [:3 [:!SOleft_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
-                 [:7 [:!SOright_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
-                 [:8 [:!SOright_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
-                 [:9 [:!SOright_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
+                ;;  [:1 [:!SOleft_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
+                ;;  [:2 [:!SOleft_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
+                ;;  [:3 [:!SOleft_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
+                ;;  [:7 [:!SOright_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
+                ;;  [:8 [:!SOright_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
+                ;;  [:9 [:!SOright_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
                  ]}
         {:des "numpad like numbers"
          :rules [:numpad
@@ -200,7 +198,9 @@
                  [:p [:launch "Photos"]]
                  [:i [:launch "iTerm"]]
                  [:j [:launch "IntelliJ IDEA CE"]]
-                 [:v [:launch "Visual Studio Code"]]]}
+                 [:v [:launch "Visual Studio Code"]]
+                 [:u [[:launch "Google Chrome"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Chrome
+                 ]}
         {:des "s-key (social)"
          :rules [:s-key
                  [:f [:launch "Messenger"]]

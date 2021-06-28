@@ -91,5 +91,6 @@
         "border",
         "is",
         "this"
-    ]
+    ],
+    "editor.minimap.enabled": false
 }
