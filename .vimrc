@@ -29,7 +29,7 @@ exec 'set shiftwidth=3'
 exec 'set softtabstop=3'
 
 set clipboard=unnamed
-set clipboardrjunnamedplus
+set clipboard=unnamedplus
 
 "if has('unnamedplus')
 "	set clipboard+=unnamedplus
