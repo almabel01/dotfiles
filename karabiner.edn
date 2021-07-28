@@ -123,9 +123,10 @@
                  [:##o :end]
                  [:##u :page_down]
                  [:##a :return_or_enter]
+                 ;;modifiers
                  [:##w :left_command]
                  [:##z :left_option]
-                ;;  [:##w :left_control]
+                 [:##grave_accent_and_tilde :left_control]
                  [:##x :left_shift]
                 ;;  [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
@@ -151,6 +152,7 @@
                  [:c :!QWERc] ; Alfred clipboard history
                  [:e :!QWERe] ; Alfred emoji search
                  [:s :!QWERs] ; Alfred search snippets
+                 [:f :!QWERf] ;Fastdiff Alfred shortcut
                  ; *hyper text modification ;!! duplicate
                 ;;  [:1 [:!SOleft_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
                 ;;  [:2 [:!SOleft_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
@@ -194,7 +196,7 @@
                  [:n [:launch "Notes"]]
                  [:w [:launch "Obsidian"]]
                  [:e [:launch "Mail"]]
-                 [:t [:launch "Reminders"]]
+                 [:t [:launch "Reminders"]] ;;t for Todoist
                  [:p [:launch "Photos"]]
                  [:i [:launch "iTerm"]]
                  [:j [:launch "IntelliJ IDEA CE"]]
@@ -350,7 +352,7 @@
                  [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
                  [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
                  ]}
-        {:des "comma-mode"
+        {:des "comma-mode" ;;accessing chars used in programming and hard to reach on HUN keyboard
          :rules [:comma-mode
                  [:a :!S8] ;( ;!duplicate
                  [:s :!S9] ;) ;!duplicate
@@ -366,7 +368,7 @@
                  ]}
         {:des "moving focus"
          :rules [:focus-mode
-                 [:d :!FTf3] ;;TODO: create dock mode -> moving & switching apps with hjkl + f
+                 [:d :!FTf3]
                  [:n :!FTf4] ; move focus to active or next window
                  [:w :!FTf9] ; move focus to next window
                  ]}
