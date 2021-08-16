@@ -193,6 +193,7 @@
                  [:f [:launch "Finder"]]
                  [:c [:launch "Calendar"]]
                  [:g [:launch "Google Chrome"]]
+                 [:b [:launch "Firefox"]] ;b for browser i guess
                  [:n [:launch "Notes"]]
                  [:w [:launch "Obsidian"]]
                  [:e [:launch "Mail"]]
@@ -201,7 +202,8 @@
                  [:i [:launch "iTerm"]]
                  [:j [:launch "IntelliJ IDEA CE"]]
                  [:v [:launch "Visual Studio Code"]]
-                 [:u [[:launch "Google Chrome"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Chrome
+                ;;  [:u [[:launch "Google Chrome"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Chrome
+                 [:u [[:launch "Firefox"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Firefox
                  ]}
         {:des "s-key (social)"
          :rules [:s-key

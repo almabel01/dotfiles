@@ -22,12 +22,12 @@ prompt pure
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 ZSH_DISABLE_COMPFIX=true
 
 # Uncomment the following line to automatically update without prompting.
- DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -103,5 +103,4 @@ alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 # alias wiki="~/wiki/"
 alias wiki="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/wiki/wiki"
-alias obsi="~/wiki/.obsidian/"
 alias bin="/usr/local/bin/"
