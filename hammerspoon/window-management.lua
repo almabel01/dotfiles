@@ -11,12 +11,12 @@ grid.setMargins('0, 0')
 module = {}
 
 -- Set screen watcher, in case you connect a new monitor, or unplug a monitor
-screens = {}
-screenArr = {}
-local screenwatcher = hs.screen.watcher.new(function()
-  screens = hs.screen.allScreens()
-end)
-screenwatcher:start()
+-- screens = {}
+-- screenArr = {}
+-- local screenwatcher = hs.screen.watcher.new(function()
+--   screens = hs.screen.allScreens()
+-- end)
+-- screenwatcher:start()
 
 -- Construct list of screens
 indexDiff = 0
