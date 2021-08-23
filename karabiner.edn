@@ -192,7 +192,7 @@
                  [:m [:launch "Spotify"]]
                  [:f [:launch "Finder"]]
                  [:c [:launch "Calendar"]]
-                 [:g [:launch "Google Chrome"]]
+                ;;  [:g [:launch "Google Chrome"]]
                  [:b [:launch "Firefox"]] ;b for browser i guess
                  [:n [:launch "Notes"]]
                  [:w [:launch "Obsidian"]]
@@ -203,7 +203,8 @@
                  [:j [:launch "IntelliJ IDEA CE"]]
                  [:v [:launch "Visual Studio Code"]]
                 ;;  [:u [[:launch "Google Chrome"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Chrome
-                 [:u [[:launch "Firefox"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Firefox
+                ;;  [:u [[:launch "Firefox"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Firefox
+                 [:u [[:open "https://www.udemy.com"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] 
                  ]}
         {:des "s-key (social)"
          :rules [:s-key
@@ -219,7 +220,7 @@
                  ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1sl__D0qI6W37-UH3q5kO7LCg-dQF2rz5vKGZUJM6z0c/edit?usp=sharing
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
-                ;;  [:u [:open "https://www.udemy.com"]]
+                 [:u [:open "https://www.udemy.com"]]
                  ]}
 ;; *numbers, F-keys & symbols
         {:des "left_hand_1 (p-key)"
