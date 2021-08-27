@@ -107,6 +107,8 @@
  :main [;;; 
         ;;4Tech keyboard settings
         ;; {:des "changing control to command" :rules [:!vimModeOn :internal [:left_control :left_command nil {:alone :!Ctab}]]} ;;to be solved
+        {:des "í to 0" :rules [[:##non_us_backslash :grave_accent_and_tilde]]}
+        {:des "0 to í" :rules [[:##grave_accent_and_tilde :non_us_backslash]]}
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
 
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}

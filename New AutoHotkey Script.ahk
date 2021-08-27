@@ -283,8 +283,3 @@ Return
 ; r & l::
 ; Send +9
 ; Return
-
-;;;;;;text replacement
-:*:lnin::
-Send LinkedIn
-Return
