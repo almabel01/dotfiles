@@ -68,6 +68,7 @@
     "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
     "cSpell.enableFiletypes": [
         "ahk",
+        "clojure",
         "lua"
     ],
     "terminal.external.osxExec": "iTerm.app",
@@ -79,7 +80,7 @@
     "workbench.tips.enabled": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "GitHub Light",
     "window.autoDetectColorScheme": true,
     "editor.accessibilitySupport": "off",
     "workbench.tree.renderIndentGuides": "always",

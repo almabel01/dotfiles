@@ -30,12 +30,18 @@
     ;;
     ;; code for all this:
     ;; https://github.com/yqrashawn/GokuRakuJoudo/blob/b9b334a187379f9bc8182ad59e2cca2a1789e9c0/src/karabiner_configurator/keys.clj#L68
-{:profiles
+{
+:profiles
  {:goku {:default true
          :sim 50
          :delay 80
          :alone 120
          :held 70}}
+
+:devices{
+        :internal [{:vendor_id 1452 :product_id 657}]
+        :fortech [{:vendor_id 7247 :product_id 38}]
+         }
  :tos {;  :same_wind_app   {:key :grave_accent_and_tilde :modi [:left_command] :lazy true}
        :prev_app        {:key :tab :modi [:left_command] :lazy true}
        :left_paren      {:key :8 :modi [:left_shift] :lazy true}
@@ -51,7 +57,8 @@
 ;        :select_abc      {:select_input_source
 ;                          {:input_source_id "^com\\.apple\\.keylayout\\.ABC$"}
        }
- :templates {:alf "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+ :templates {;:alf "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
         ;      :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :open "open \"%s\""
         ;      :applescript "osascript '~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/%s'"
@@ -97,6 +104,8 @@
              }
 ;;;;;;;;;;;;;;;;
  :main [;;; 
+        {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
+
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [[:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
@@ -195,6 +204,7 @@
                 ;;  [:g [:launch "Google Chrome"]]
                  [:b [:launch "Firefox"]] ;b for browser i guess
                  [:n [:launch "Notes"]]
+                 [:d [:launch "Drafts"]]
                  [:w [:launch "Obsidian"]]
                  [:e [:launch "Mail"]]
                  [:t [:launch "Reminders"]] ;;t for Todoist
@@ -213,7 +223,8 @@
                  [:d [:launch "Discord"]]]}
         {:des "u-key (utilities)"
          :rules [:u-key
-                 [:p [:launch "System Preferences"]]]}
+                 [:p [:launch "System Preferences"]]
+         ]}
         {:des "o-key (open websites)"
          :rules [:o-key
                  [:k [:open "https://docs.google.com/spreadsheets/d/1-quGQWvYoeEuMf1jDeKJUIY-DZytnpBJcL-JrFs6Tvw/edit#gid=656760228"]] ; open my finances spreadsheet 
@@ -322,10 +333,13 @@
                  [:a :!Ff15] ; start new amphetamie session
                  [:t :!Ff16] ; add new reminder via Alfred 
                  [:s :!Ff17] ; search menubar with Alfred
-                ;  [:n [:alf "darkmode" "com.sirshanksalot.dark-mode-toggle"]]
+                ;  [:n [:alfred "darkmode" "com.sirshanksalot.dark-mode-toggle"]]
                  [:n :!Ff18] ; toogle darkmode via Alfred shortcut
-                ;  [:k [:alf "keprofile" "com.alfred.karabinerelements.profileswitcher"]]
+                ;  [:k [:alfred "keprofile" "com.alfred.karabinerelements.profileswitcher"]]
                  [:k :!Ff19] ; change karabiner profile with Alfred
+                ;;  [:j [[:launch "Drafts"] :!Ej]] ;;jotting with Drafts
+                 [:j :!QWERj] ;;jotting with Drafts
+                [:j :!QRj]
          ; *text modification ;!TODO
                  ;;;;;;;;;;;;;;;;;;;
         ; *Spotify
