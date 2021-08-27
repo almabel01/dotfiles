@@ -80,6 +80,7 @@
  :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           :numpad {:key :tab}
         ;;   :alt {:key :left_option}
+        ;; :numlockMode {:key :num_lock} ;;TODO
           }
  :simlayers {;    
 ; *launchers 
@@ -104,6 +105,8 @@
              }
 ;;;;;;;;;;;;;;;;
  :main [;;; 
+        ;;4Tech keyboard settings
+        ;; {:des "changing control to command" :rules [:!vimModeOn :internal [:left_control :left_command nil {:alone :!Ctab}]]} ;;to be solved
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
 
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
@@ -115,10 +118,10 @@
         {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
 
         ;;turning off arrow keys
-        {:des "left arrow" :rules [[:##left_arrow :vk_none]]}
-        {:des "up arrow" :rules [[:##up_arrow :vk_none]]}
-        {:des "down arrow" :rules [[:##down_arrow :vk_none]]}
-        {:des "right arrow" :rules [[:##right_arrow :vk_none]]}
+        {:des "left arrow" :rules [[:##left_arrow :vk_none :internal]]}
+        {:des "up arrow" :rules [[:##up_arrow :vk_none :internal]]}
+        {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
+        {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
 
         {:des "hyper (caps_lock)"
          :rules [:hyper
