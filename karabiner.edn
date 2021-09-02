@@ -336,7 +336,7 @@
                  [:c :!Ff14] ; show control center
                 ;  [:c :applescript "controlCenter.scpt"]
                  [:a :!Ff15] ; start new amphetamie session
-                 [:t :!Ff16] ; add new reminder via Alfred 
+                 [:r :!Ff16] ; add new reminder via Alfred 
                  [:s :!Ff17] ; search menubar with Alfred
                 ;  [:n [:alfred "darkmode" "com.sirshanksalot.dark-mode-toggle"]]
                  [:n :!Ff18] ; toogle darkmode via Alfred shortcut
@@ -344,7 +344,8 @@
                  [:k :!Ff19] ; change karabiner profile with Alfred
                 ;;  [:j [[:launch "Drafts"] :!Ej]] ;;jotting with Drafts
                  [:j :!QWERj] ;;jotting with Drafts
-                [:j :!QRj]
+                 [:j :!QRj]
+                ;;  [:d :!QWERt] ;Alfred text actions
          ; *text modification ;!TODO
                  ;;;;;;;;;;;;;;;;;;;
         ; *Spotify
