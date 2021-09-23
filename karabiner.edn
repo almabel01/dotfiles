@@ -148,7 +148,8 @@
                  ;;modifiers
                  [:##w :left_command]
                  [:##z :left_option]
-                 [:##grave_accent_and_tilde :left_control]
+                ;;  [:##grave_accent_and_tilde :left_control]
+                 [:##q :left_control]
                  [:##x :left_shift]
                 ;;  [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
@@ -156,12 +157,12 @@
                  [:hyphen :!SOleft_arrow] ; highlight/select previous word (ü on HUN keyboard)
                  [:equal_sign :!SOright_arrow] ; hihglight/select next word (ó on HUN keyboard)
                  ; *hyper mouse
-                ;  [:down_arrow {:mkey {:y 1536}}]
-                ;  [:up_arrow {:mkey {:y -1536}}]
-                ;  [:left_arrow {:mkey {:x -1536}}]
-                ;  [:right_arrow {:mkey {:x 1536}}]
-                ;  [:return_or_enter {:pkey :button1}]
-                ;  [:!Creturn_or_enter {:pkey :button2}]
+                ;;  [:down_arrow {:mkey {:y 1536}}]
+                ;;  [:up_arrow {:mkey {:y -1536}}]
+                ;;  [:left_arrow {:mkey {:x -1536}}]
+                ;;  [:right_arrow {:mkey {:x 1536}}]
+                ;;  [:return_or_enter {:pkey :button1}]
+                ;;  [:!Creturn_or_enter {:pkey :button2}]
                  ; *hyper delete  
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
@@ -399,6 +400,7 @@
                  ]}
         {:des "workmandead" ;for testing purposes rn
          :rules [:workmandead
+                [:tab :!Obackslash] ;`
                 [:q :!S5] ;%
                 [:w :!O1] ;&
                 [:e :!Scomma] ;?
