@@ -242,71 +242,71 @@
         {:des "o-key (open websites)"
          :rules [:o-key
                  [:k [:open "https://docs.google.com/spreadsheets/d/1-quGQWvYoeEuMf1jDeKJUIY-DZytnpBJcL-JrFs6Tvw/edit#gid=656760228"]] ; open my finances spreadsheet 
-                 ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1sl__D0qI6W37-UH3q5kO7LCg-dQF2rz5vKGZUJM6z0c/edit?usp=sharing
+                 ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1EoYVZFFO_S77Lp0awYrRCq44Zz5X2VRgcQG_rdnVlZk/edit?usp=sharing
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
                  [:u [:open "https://www.udemy.com"]]
                  ]}
 ;; *numbers, F-keys & symbols
-        {:des "left_hand_1 (p-key)"
-         :rules [:left_hand_1
-         ; numbers 
-                 [:q :1]
-                 [:w :2]
-                 [:e :3]
-                 [:r :4]
-                 [:t :5]
-         ; F-keys
-                 [:a :##Ff1]
-                 [:s :##Ff2]
-                 [:d :##Ff3]
-                 [:f :##Ff4]
-                 [:g :##Ff5]]}
-        {:des "right_hand_1 (e-key)"
-         :rules [:right_hand_1
-         ; numbers
-                 [:y :6];z on HUN keyboard
-                 [:u :7]
-                 [:i :8]
-                 [:o :9]
-                 [:p :non_us_backslash] ; 0
-         ; F-keys
-                 [:h :##Ff6]
-                 [:j :##Ff7]
-                 [:k :##Ff8]
-                 [:l :##Ff9]
-                 [:semicolon :##Ff10]
-                 [:quote :##Ff11]
-                 [:backslash :##Ff12]]}
-        {:des "left_hand_2 (k-key)"
-         :rules [:left_hand_2
-         ; 1st row
-                 [:q :!O1] ; &
-                 [:w :!Oclose_bracket] ; ~
-                 [:e :!O3] ; £
-                 [:r :!O4] ; $
-                 [:t :!O5] ; ‹
-         ; 2nd row
-                 [:a :!S1] ; '
-                 [:s :!S2] ; "
-                 [:d :!S3] ; +
-                 [:f :!S4] ; !
-                 [:g :!S5] ; %
-                 ]}
-        {:des "right_hand_2 (r-key)"
-         :rules [:right_hand_2
-         ; 1st row 
-                 [:y :!O6] ; ›
-                 [:u :!SOz] ; <
-                 [:i :!SOx] ; >
-                 [:o :!Ohyphen] ; \
-                 [:p :!Oquote] ; ^
-         ; 2nd row
-                 [:h :!S6] ; /
-                 [:j :!S7] ; =
-                 [:k :!S8] ; ( ;! duplicate
-                 [:l :!S9] ; ) ;! duplicate
-                 ]}
+        ;; {:des "left_hand_1 (p-key)"
+        ;;  :rules [:left_hand_1
+        ;;  ; numbers 
+        ;;          [:q :1]
+        ;;          [:w :2]
+        ;;          [:e :3]
+        ;;          [:r :4]
+        ;;          [:t :5]
+        ;;  ; F-keys
+        ;;          [:a :##Ff1]
+        ;;          [:s :##Ff2]
+        ;;          [:d :##Ff3]
+        ;;          [:f :##Ff4]
+        ;;          [:g :##Ff5]]}
+        ;; {:des "right_hand_1 (e-key)"
+        ;;  :rules [:right_hand_1
+        ;;  ; numbers
+        ;;          [:y :6];z on HUN keyboard
+        ;;          [:u :7]
+        ;;          [:i :8]
+        ;;          [:o :9]
+        ;;          [:p :non_us_backslash] ; 0
+        ;;  ; F-keys
+        ;;          [:h :##Ff6]
+        ;;          [:j :##Ff7]
+        ;;          [:k :##Ff8]
+        ;;          [:l :##Ff9]
+        ;;          [:semicolon :##Ff10]
+        ;;          [:quote :##Ff11]
+        ;;          [:backslash :##Ff12]]}
+        ;; {:des "left_hand_2 (k-key)"
+        ;;  :rules [:left_hand_2
+        ;;  ; 1st row
+        ;;          [:q :!O1] ; &
+        ;;          [:w :!Oclose_bracket] ; ~
+        ;;          [:e :!O3] ; £
+        ;;          [:r :!O4] ; $
+        ;;          [:t :!O5] ; ‹
+        ;;  ; 2nd row
+        ;;          [:a :!S1] ; '
+        ;;          [:s :!S2] ; "
+        ;;          [:d :!S3] ; +
+        ;;          [:f :!S4] ; !
+        ;;          [:g :!S5] ; %
+        ;;          ]}
+        ;; {:des "right_hand_2 (r-key)"
+        ;;  :rules [:right_hand_2
+        ;;  ; 1st row 
+        ;;          [:y :!O6] ; ›
+        ;;          [:u :!SOz] ; <
+        ;;          [:i :!SOx] ; >
+        ;;          [:o :!Ohyphen] ; \
+        ;;          [:p :!Oquote] ; ^
+        ;;  ; 2nd row
+        ;;          [:h :!S6] ; /
+        ;;          [:j :!S7] ; =
+        ;;          [:k :!S8] ; ( ;! duplicate
+        ;;          [:l :!S9] ; ) ;! duplicate
+        ;;          ]}
 ;; *shortcuts
 
         {:des "window management (w-key)"
@@ -386,15 +386,15 @@
                  ]}
         {:des "comma-mode" ;;accessing chars used in programming and hard to reach on HUN keyboard
          :rules [:comma-mode
-                 [:a :!S8] ;( ;!duplicate
-                 [:s :!S9] ;) ;!duplicate
-                 [:d :!O8] ;[ ;!duplicate
-                 [:f :!O9] ;] ;!duplicate
-                 [:g :!O7] ;{ ;!duplicate
-                 [:h :!O0] ;} ;!duplicate
+                ;;  [:a :!S8] ;( ;!duplicate
+                ;;  [:s :!S9] ;) ;!duplicate
+                ;;  [:d :!O8] ;[ ;!duplicate
+                ;;  [:f :!O9] ;] ;!duplicate
+                ;;  [:g :!O7] ;{ ;!duplicate
+                ;;  [:h :!O0] ;} ;!duplicate
                  [:q :!Speriod] ;:
                  [:w :!Operiod] ;;
-                 [:e :!Obackslash] ;`
+                ;;  [:e :!Obackslash] ;`
                  [:z :!SOz] ;<
                  [:x :!SOx] ;>
                  ]}

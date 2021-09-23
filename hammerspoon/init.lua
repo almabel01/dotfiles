@@ -1,23 +1,23 @@
 require "winmov"
 require "utilities"
-require "apps"
+-- require "apps"
 require "windows"
 require "altTab"
 require "Spotify"
 
 -- require "moveWindows"
 
-local VimMode = hs.loadSpoon('VimMode')
-local vim = VimMode:new()
+-- local VimMode = hs.loadSpoon('VimMode')
+-- local vim = VimMode:new()
 
-vim
-  :disableForApp('Code')
-  :disableForApp('IntelliJ IDEA')
-  :disableForApp('MacVim')
-  :disableForApp('zoom.us')
-  :disableForApp('iTerm2')
-  :disableForApp('Terminal')
-  :bindHotKeys({ enter = {{'ctrl'}, ';'} })
+-- vim
+--   :disableForApp('Code')
+--   :disableForApp('IntelliJ IDEA')
+--   :disableForApp('MacVim')
+--   :disableForApp('zoom.us')
+--   :disableForApp('iTerm2')
+--   :disableForApp('Terminal')
+  -- :bindHotKeys({ enter = {{'ctrl'}, ';'} })
   -- :enterWithSequence('jk')
 
 hs.application.enableSpotlightForNameSearches(true)
