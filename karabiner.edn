@@ -39,11 +39,6 @@
          :held 70
  }
 }
-;;  {:workman {:default false
-;;          :sim 50
-;;          :delay 80
-;;          :alone 120
-;;          :held 70}}
 
 :devices{
         :internal [{:vendor_id 1452 :product_id 657}]
@@ -66,16 +61,13 @@
        } ;;tos
  :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
-        ;      :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :open "open \"%s\""
-        ;      :applescript "osascript '~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/%s'"
              :applescript "osascript '~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/%s'"
              :hs "open -g hammerspoon://%s"
              :launch "osascript -e 'tell application \"%s\" to activate'"
              :show "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'\n"
              :toggle "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
              :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
-        ;      :btt "osascript -e 'tell application \"BetterTouchTool\" to  trigger_named \"%s\"'"
              } ;;templates
  :applications {
                 :code ["^com.microsoft.VSCode$"]
@@ -88,8 +80,6 @@
           :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
           :mouse {:key :tab}
           :workmandead {:key :spacebar}
-        ;;   :alt {:key :left_option}
-        ;; :numlockMode {:key :num_lock} ;TODO
          } ;;layers
  :simlayers {;    
 ; *launchers 
@@ -97,11 +87,6 @@
              :s-key {:key :s} ; social media apps
              :u-key {:key :u} ; launch utilities
              :o-key {:key :o} ; open websites
-; *numbers, F-keys & symbols  
-        ;;      :left_hand_1 {:key :p} ; numbers 1-5 & f1-f5
-        ;;      :right_hand_1 {:key :e} ; numbers 6-0 & f6-f12
-        ;;      :left_hand_2 {:key :k} ; symbols
-        ;;      :right_hand_2 {:key :r} ; symbols
 ; *shortcuts  
              :accent {:key :p} ; accent keys
              :accent2 {:key :open_bracket}
@@ -112,10 +97,6 @@
              :q-key {:key :q} ; control mode
              :comma-mode {:key :comma}
              :focus-mode {:key :f}
-        ;;      :workmandead {:key :spacebar}
-        ;      :browsers {:key :b} ;;TODO
-             ;:code {:key :i :condi [:code]} ; VS Code
-        ;;      :java {:key :i :condi [:java]} ; IntelliJ IDEA
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
  :main [;;; 
@@ -171,16 +152,12 @@
                  ;;modifiers
                  [:##w :left_command]
                  [:##z :left_option]
-                ;;  [:##grave_accent_and_tilde :left_control]
                  [:##q :left_control]
                  [:##x :left_shift]
-                ;;  [:##d ["mouse " 1] nil {:afterup ["mouse" 0]}]
-                ;;  [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
                  [:quote :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)
                  [:hyphen :!SOleft_arrow] ; highlight/select previous word (ü on HUN keyboard)
                  [:equal_sign :!SOright_arrow] ; highlight/select next word (ó on HUN keyboard)
-                 ; *hyper mouse
                  ; *hyper delete  
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
@@ -188,43 +165,12 @@
                  [:comma :delete_forward] ; delete forward
                  [:period :!Odelete_forward] ; delete next word
                  [:!Ccomma :!Cdelete_forward] ; delete to the end of the line
-                ;;  [:d [:!Cright_arrow :!CSleft_arrow :delete_or_backspace]] ; delete whole line
                  ; *hyper shortcuts  
                  [:c :!QWERc] ; Alfred clipboard history
                  [:e :!QWERe] ; Alfred emoji search
                  [:s :!QWERs] ; Alfred search snippets
                  [:f :!QWERf] ;Fastdiff Alfred shortcut
-                 ; *hyper text modification ;!! duplicate
-                ;;  [:1 [:!SOleft_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
-                ;;  [:2 [:!SOleft_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
-                ;;  [:3 [:!SOleft_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
-                ;;  [:7 [:!SOright_arrow :!Cc :x :c :w]] ; - capitalize word before cursor
-                ;;  [:8 [:!SOright_arrow :!Cc :x :u :w]] ; - uppercase whole word before cursor
-                ;;  [:9 [:!SOright_arrow :!Cc :x :l :w]]; - lowercase whole word before cursor
                  ]}
-        ;; {:des "numpad like numbers"
-        ;;  :rules [:numpad
-        ;;          [:0 :!S7]
-        ;;          [:hyphen :!S6]
-        ;;          [:equal_sign :!SOcomma]
-        ;;         ;;  ;;
-        ;;          [:o :7]
-        ;;          [:p :8]
-        ;;          [:open_bracket :9]
-        ;;          [:close_bracket :slash]
-        ;;         ;;  ;;
-        ;;          [:l :4]
-        ;;          [:semicolon :5]
-        ;;          [:quote :6]
-        ;;          [:backslash :!S3]
-        ;;         ;;  ;;
-        ;;          [:comma :1]
-        ;;          [:period :2]
-        ;;          [:slash :3]
-        ;;         ;;  ;;;;;;;;;;;
-        ;;          [:w :non_us_backslash]
-        ;;          [:e :comma]
-        ;;  ]}
 ;; *launchers
         {:des "l-key (launch mode)"
          :rules [:launch-mode
@@ -266,66 +212,6 @@
                  [:g [:open "https://github.com"]]
                  [:u [:open "https://www.udemy.com"]]
                  ]}
-;; *numbers, F-keys & symbols
-        ;; {:des "left_hand_1 (p-key)"
-        ;;  :rules [:left_hand_1
-        ;;  ; numbers 
-        ;;          [:q :1]
-        ;;          [:w :2]
-        ;;          [:e :3]
-        ;;          [:r :4]
-        ;;          [:t :5]
-        ;;  ; F-keys
-        ;;          [:a :##Ff1]
-        ;;          [:s :##Ff2]
-        ;;          [:d :##Ff3]
-        ;;          [:f :##Ff4]
-        ;;          [:g :##Ff5]]}
-        ;; {:des "right_hand_1 (e-key)"
-        ;;  :rules [:right_hand_1
-        ;;  ; numbers
-        ;;          [:y :6];z on HUN keyboard
-        ;;          [:u :7]
-        ;;          [:i :8]
-        ;;          [:o :9]
-        ;;          [:p :non_us_backslash] ; 0
-        ;;  ; F-keys
-        ;;          [:h :##Ff6]
-        ;;          [:j :##Ff7]
-        ;;          [:k :##Ff8]
-        ;;          [:l :##Ff9]
-        ;;          [:semicolon :##Ff10]
-        ;;          [:quote :##Ff11]
-        ;;          [:backslash :##Ff12]]}
-        ;; {:des "left_hand_2 (k-key)"
-        ;;  :rules [:left_hand_2
-        ;;  ; 1st row
-        ;;          [:q :!O1] ; &
-        ;;          [:w :!Oclose_bracket] ; ~
-        ;;          [:e :!O3] ; £
-        ;;          [:r :!O4] ; $
-        ;;          [:t :!O5] ; ‹
-        ;;  ; 2nd row
-        ;;          [:a :!S1] ; '
-        ;;          [:s :!S2] ; "
-        ;;          [:d :!S3] ; +
-        ;;          [:f :!S4] ; !
-        ;;          [:g :!S5] ; %
-        ;;          ]}
-        ;; {:des "right_hand_2 (r-key)"
-        ;;  :rules [:right_hand_2
-        ;;  ; 1st row 
-        ;;          [:y :!O6] ; ›
-        ;;          [:u :!SOz] ; <
-        ;;          [:i :!SOx] ; >
-        ;;          [:o :!Ohyphen] ; \
-        ;;          [:p :!Oquote] ; ^
-        ;;  ; 2nd row
-        ;;          [:h :!S6] ; /
-        ;;          [:j :!S7] ; =
-        ;;          [:k :!S8] ; ( ;! duplicate
-        ;;          [:l :!S9] ; ) ;! duplicate
-        ;;          ]}
 ;; *shortcuts
 
         {:des "accent keys"
