@@ -80,7 +80,7 @@
     "workbench.tips.enabled": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "GitHub Light",
     "window.autoDetectColorScheme": true,
     "editor.accessibilitySupport": "off",
     "workbench.tree.renderIndentGuides": "always",
@@ -93,5 +93,16 @@
         "is",
         "this"
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "vim.camelCaseMotion.enable": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        }
+    ]
 }

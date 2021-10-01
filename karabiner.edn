@@ -36,12 +36,19 @@
          :sim 50
          :delay 80
          :alone 120
-         :held 70}}
+         :held 70
+ }
+}
+;;  {:workman {:default false
+;;          :sim 50
+;;          :delay 80
+;;          :alone 120
+;;          :held 70}}
 
 :devices{
         :internal [{:vendor_id 1452 :product_id 657}]
         :fortech [{:vendor_id 7247 :product_id 38}]
-         }
+         } ;;devices
  :tos {;  :same_wind_app   {:key :grave_accent_and_tilde :modi [:left_command] :lazy true}
        :prev_app        {:key :tab :modi [:left_command] :lazy true}
        :left_paren      {:key :8 :modi [:left_shift] :lazy true}
@@ -56,8 +63,8 @@
 ;                           :language        "en"}}
 ;        :select_abc      {:select_input_source
 ;                          {:input_source_id "^com\\.apple\\.keylayout\\.ABC$"}
-       }
- :templates {;:alf "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+       } ;;tos
+ :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
         ;      :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :open "open \"%s\""
@@ -69,20 +76,21 @@
              :toggle "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
              :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
         ;      :btt "osascript -e 'tell application \"BetterTouchTool\" to  trigger_named \"%s\"'"
-             }
+             } ;;templates
  :applications {
                 :code ["^com.microsoft.VSCode$"]
                 ;; :safari ["^com\\.apple\\.Safari$"]
                 ;; :browser ["^com\\.apple\\.Safari$"]
                 :java ["^com.jetbrains.intellij.ce$"]
                 :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
-                }
- :layers {:hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
-        ;;   :numpad {:key :tab}
+                } ;;applications
+ :layers {
+          :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
+          :mouse {:key :tab}
           :workmandead {:key :spacebar}
         ;;   :alt {:key :left_option}
-        ;; :numlockMode {:key :num_lock} ;;TODO
-          }
+        ;; :numlockMode {:key :num_lock} ;TODO
+         } ;;layers
  :simlayers {;    
 ; *launchers 
              :launch-mode {:key :l} ; launch frequnetly used apps
@@ -90,11 +98,14 @@
              :u-key {:key :u} ; launch utilities
              :o-key {:key :o} ; open websites
 ; *numbers, F-keys & symbols  
-             :left_hand_1 {:key :p} ; numbers 1-5 & f1-f5
-             :right_hand_1 {:key :e} ; numbers 6-0 & f6-f12
-             :left_hand_2 {:key :k} ; symbols
-             :right_hand_2 {:key :r} ; symbols
+        ;;      :left_hand_1 {:key :p} ; numbers 1-5 & f1-f5
+        ;;      :right_hand_1 {:key :e} ; numbers 6-0 & f6-f12
+        ;;      :left_hand_2 {:key :k} ; symbols
+        ;;      :right_hand_2 {:key :r} ; symbols
 ; *shortcuts  
+             :accent {:key :p} ; accent keys
+             :accent2 {:key :open_bracket}
+             :accent3 {:key :close_bracket}
              :w-key {:key :w} ; window management
              :d-key {:key :d} ; essentials
              :m-key {:key :m} ; markdown mode
@@ -105,7 +116,7 @@
         ;      :browsers {:key :b} ;;TODO
              ;:code {:key :i :condi [:code]} ; VS Code
         ;;      :java {:key :i :condi [:java]} ; IntelliJ IDEA
-             }
+             } ;;simlayers
 ;;;;;;;;;;;;;;;;
  :main [;;; 
         ;;4Tech keyboard settings
@@ -133,6 +144,18 @@
         ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
         {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
 
+        {:des "mouse"
+         :rules [:mouse
+                 [:j {:mkey {:y 1036}} [:mouse]]
+                 [:k {:mkey {:y -1036}} [:mouse]]
+                 [:h {:mkey {:x -1036}} [:mouse]]
+                 [:l {:mkey {:x 1036}} [:mouse]]
+                 [:n {:pkey :button1} [:mouse]]
+                 [:m {:pkey :button2} [:mouse]]
+                 ;TODO: button3
+         ]
+        }
+
         {:des "hyper (caps_lock)"
          :rules [:hyper
                  ; *hyper navigation  
@@ -151,18 +174,13 @@
                 ;;  [:##grave_accent_and_tilde :left_control]
                  [:##q :left_control]
                  [:##x :left_shift]
+                ;;  [:##d ["mouse " 1] nil {:afterup ["mouse" 0]}]
                 ;;  [:d :!Tsemicolon] ;start normal mode with Hammerspoon Vim Mode
                  [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
                  [:quote :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)
                  [:hyphen :!SOleft_arrow] ; highlight/select previous word (ü on HUN keyboard)
-                 [:equal_sign :!SOright_arrow] ; hihglight/select next word (ó on HUN keyboard)
+                 [:equal_sign :!SOright_arrow] ; highlight/select next word (ó on HUN keyboard)
                  ; *hyper mouse
-                ;;  [:down_arrow {:mkey {:y 1536}}]
-                ;;  [:up_arrow {:mkey {:y -1536}}]
-                ;;  [:left_arrow {:mkey {:x -1536}}]
-                ;;  [:right_arrow {:mkey {:x 1536}}]
-                ;;  [:return_or_enter {:pkey :button1}]
-                ;;  [:!Creturn_or_enter {:pkey :button2}]
                  ; *hyper delete  
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
@@ -221,7 +239,8 @@
                  [:d [:launch "Drafts"]]
                  [:w [:launch "Obsidian"]]
                  [:e [:launch "Mail"]]
-                 [:t [:launch "Reminders"]] ;;t for Todoist
+                ;;  [:t [:launch "Reminders"]] ;;t for Todoist
+                 [:t [:launch "TickTick"]] ;;t for Todoist
                  [:p [:launch "Photos"]]
                  [:i [:launch "iTerm"]]
                  [:j [:launch "IntelliJ IDEA CE"]]
@@ -309,6 +328,34 @@
         ;;          ]}
 ;; *shortcuts
 
+        {:des "accent keys"
+         :rules [:accent
+                [:e :semicolon] ;é
+                [:u :close_bracket] ;ú
+                [:i :grave_accent_and_tilde] ;í
+                [:o :equal_sign] ;ó
+                [:a :quote] ;á
+                [:!Se :!Ssemicolon] ;É
+                [:!Su :!Sclose_bracket] ;Ú
+                [:!Si :!Sgrave_accent_and_tilde] ;Í
+                [:!So :!Sequal_sign] ;Ó
+                [:!Sa :!Squote] ;Á
+
+                ]}
+        {:des "accent2"
+         :rules [:accent2
+                [:o :0] ;ö
+                [:u :hyphen] ;ü
+                [:!So :!S0] ;Ö
+                [:!Su :!Shyphen] ;Ü
+                ]}
+        {:des "accent3"
+         :rules [:accent3
+                [:o :open_bracket]
+                [:u :backslash]
+                [:!So :!Sopen_bracket]
+                [:!Su :!Sbackslash]
+         ]}
         {:des "window management (w-key)"
          :rules [:w-key
                 ;  [:s :same_wind_app]
@@ -398,7 +445,7 @@
                  [:z :!SOz] ;<
                  [:x :!SOx] ;>
                  ]}
-        {:des "workmandead" ;for testing purposes rn
+        {:des "workmandead" 
          :rules [:workmandead
                 [:tab :!Obackslash] ;`
                 [:q :!S5] ;%
