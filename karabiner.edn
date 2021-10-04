@@ -119,11 +119,11 @@
 
         ;;turning off arrow keys
         ;; {:des "left arrow" :rules [[:##left_arrow :vk_none :internal]]}
-        {:des "left arrow" :rules [:internal [:##left_arrow :vk_none nil {:alone :!STtab}]]}
-        {:des "up arrow" :rules [[:##up_arrow :vk_none :internal]]}
-        {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
+        ;; {:des "left arrow" :rules [:internal [:##left_arrow :vk_none nil {:alone :!STtab}]]}
+        ;; {:des "up arrow" :rules [[:##up_arrow :vk_none :internal]]}
+        ;; {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
-        {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
+        ;; {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
 
         {:des "mouse"
          :rules [:mouse
