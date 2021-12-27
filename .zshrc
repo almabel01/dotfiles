@@ -8,8 +8,8 @@ export ZSH="/Users/abel/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="dracula"
-# zplug "dracula/zsh", as:theme
+#ZSH_THEME="dracula"
+#zplug "dracula/zsh",as:theme
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -50,7 +50,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -70,9 +70,12 @@ DISABLE_UPDATE_PROMPT="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	vscode
+	git
+	brew
+	macos
 	z
-#	zsh-syntax-highlighting
-#	zsh-autosuggestions
+	zsh-syntax-highlighting
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,11 +97,11 @@ source $ZPLUG_HOME/init.zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 # aliases:
-alias karc="vim ~/dotfiles/karabiner.edn"
+alias karc="vim ~/mydotfiles/karabiner.edn"
 alias hmsp="~/.hammerspoon/"
-alias zshconfig="vim ~/dotfiles/.zshrc"
-alias sozsh="source ~/dotfiles/.zshrc"
-alias vimconfig="vim ~/dotfiles/.vimrc"
+alias zshconfig="vim ~/mydotfiles/.zshrc"
+alias sozsh="source ~/mydotfiles/.zshrc"
+alias vimconfig="vim ~/mydotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias wiki="~/wiki/"
