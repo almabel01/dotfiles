@@ -71,8 +71,8 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
 	vscode
 	z
-	zsh-syntax-highlighting
-	zsh-autosuggestions
+#	zsh-syntax-highlighting
+#	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,6 +101,6 @@ alias sozsh="source ~/dotfiles/.zshrc"
 alias vimconfig="vim ~/dotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
-# alias wiki="~/wiki/"
-alias wiki="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/wiki/wiki"
+alias wiki="~/wiki/"
+# alias wiki="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/wiki/wiki"
 alias bin="/usr/local/bin/"

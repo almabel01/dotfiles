@@ -114,7 +114,7 @@
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
-        {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension ;! TODO: make it only ( if in front
+        {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
         ;; {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
 
         ;;turning off arrow keys
@@ -124,6 +124,9 @@
         ;; {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
+
+        ;;reparing function keys
+;;        {:des "spotlight (f4) to launchpad" :rules [[:spotlight :f16]]}
 
         {:des "mouse"
          :rules [:mouse

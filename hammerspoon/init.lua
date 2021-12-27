@@ -3,7 +3,7 @@ require "utilities"
 -- require "apps"
 require "windows"
 require "altTab"
-require "Spotify"
+-- require "Spotify"
 
 -- require "moveWindows"
 
