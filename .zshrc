@@ -8,8 +8,6 @@ export ZSH="/Users/abel/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="dracula"
-#zplug "dracula/zsh",as:theme
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -105,5 +103,4 @@ alias vimconfig="vim ~/mydotfiles/.vimrc"
 alias gitconfig="git config --global --edit"
 alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias wiki="~/wiki/"
-# alias wiki="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/wiki/wiki"
 alias bin="/usr/local/bin/"
