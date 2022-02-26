@@ -74,7 +74,7 @@
                 ;; :safari ["^com\\.apple\\.Safari$"]
                 ;; :browser ["^com\\.apple\\.Safari$"]
                 :java ["^com.jetbrains.intellij.ce$"]
-                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                ;; :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 } ;;applications
  :layers {
           :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
@@ -95,7 +95,8 @@
              :d-key {:key :d} ; essentials
              :m-key {:key :m} ; markdown mode
              :q-key {:key :q} ; control mode
-             :comma-mode {:key :comma}
+             :dot-mode {:key :period}
+             :F-keys {:key :comma}
              :focus-mode {:key :f}
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
@@ -189,20 +190,19 @@
                  [:w [:launch "Obsidian"]]
                  [:e [:launch "Mail"]]
                 ;;  [:t [:launch "Reminders"]] ;;t for Todoist
-                 [:t [:launch "TickTick"]] ;;t for Todoist
+                 [:t [:launch "TickTick"]] ;;t for todo
                  [:p [:launch "Photos"]]
                  [:i [:launch "iTerm"]]
                  [:j [:launch "IntelliJ IDEA CE"]]
                  [:v [:launch "Visual Studio Code"]]
-                ;;  [:u [[:launch "Google Chrome"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Chrome
-                ;;  [:u [[:launch "Firefox"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] ; opening my setup for Java learning, assuming that Udemy is the last page opened in Firefox
                  [:u [[:open "https://www.udemy.com"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] 
                  ]}
         {:des "s-key (social)"
          :rules [:s-key
                  [:f [:launch "Messenger"]]
-                 [:t [:launch "Telegram Lite"]]
-                 [:d [:launch "Discord"]]]}
+                ;;  [:t [:launch "Telegram Lite"]]
+                ;;  [:d [:launch "Discord"]]
+                ]}
         {:des "u-key (utilities)"
          :rules [:u-key
                  [:p [:launch "System Preferences"]]
@@ -279,18 +279,10 @@
          ; shortcuts
                  [:b :!CTOSb] ; show/hide Bartender items
                  [:c :!Ff14] ; show control center
-                ;  [:c :applescript "controlCenter.scpt"]
                  [:a :!Ff15] ; start new amphetamie session
-                 [:r :!Ff16] ; add new reminder via Alfred 
                  [:s :!Ff17] ; search menubar with Alfred
-                ;  [:n [:alfred "darkmode" "com.sirshanksalot.dark-mode-toggle"]]
                  [:n :!Ff18] ; toogle darkmode via Alfred shortcut
-                ;  [:k [:alfred "keprofile" "com.alfred.karabinerelements.profileswitcher"]]
                  [:k :!Ff19] ; change karabiner profile with Alfred
-                ;;  [:j [[:launch "Drafts"] :!Ej]] ;;jotting with Drafts
-                 [:j :!QWERj] ;;jotting with Drafts
-                 [:j :!QRj]
-                ;;  [:d :!QWERt] ;Alfred text actions
          ; *text modification ;!TODO
                  ;;;;;;;;;;;;;;;;;;;
         ; *Spotify
@@ -320,17 +312,10 @@
                  [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
                  [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
                  ]}
-        {:des "comma-mode" ;;accessing chars used in programming and hard to reach on HUN keyboard
-         :rules [:comma-mode
-                ;;  [:a :!S8] ;( ;!duplicate
-                ;;  [:s :!S9] ;) ;!duplicate
-                ;;  [:d :!O8] ;[ ;!duplicate
-                ;;  [:f :!O9] ;] ;!duplicate
-                ;;  [:g :!O7] ;{ ;!duplicate
-                ;;  [:h :!O0] ;} ;!duplicate
+        {:des "dot-mode" ;;accessing chars used in programming and hard to reach on HUN keyboard
+         :rules [:dot-mode
                  [:q :!Speriod] ;:
                  [:w :!Operiod] ;;
-                ;;  [:e :!Obackslash] ;`
                  [:z :!SOz] ;<
                  [:x :!SOx] ;>
                  ]}
@@ -360,6 +345,7 @@
                 [:semicolon :slash] ;-
                 [:quote :!SO3] ;#
                 ;;;
+                [:left_shift :!Operiod] ;;
                 [:z :6]
                 [:x :7]
                 [:c :8]
@@ -371,6 +357,21 @@
                 [:period :4]
                 [:slash :5]
                 [:right_shift :!Oquote] ;^
+         ]}
+        {:des "F-keys"
+         :rules [:F-keys
+                [:q :!Ff1]
+                [:w :!Ff2]
+                [:e :!Ff3]
+                [:r :!Ff4]
+                [:t :!Ff5]
+                [:y :!Ff6]
+                [:u :!Ff7]
+                [:i :!Ff8]
+                [:o :!Ff9]
+                [:p :!Ff10]
+                [:open_bracket :!Ff11]
+                [:close_bracket :!Ff12]
          ]}
         {:des "moving focus"
          :rules [:focus-mode
