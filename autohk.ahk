@@ -58,12 +58,17 @@ CapsLock & u::
 Send {PgDn}
 Return
 
-; !TODO: jump one word back/forward (& highlight)
-; !TODO: jump to the beginning/end of the line
+CapsLock & SC027::
+Send ^{Left}
+Return
+
+CapsLock & SC028::
+Send ^{Right}
+Return
 
 ;;hyper deletion
 CapsLock & n::
-Send {Control down}{BackSpace}{Control up}
+Send ^{BackSpace}
 Return
 
 CapsLock & m::
@@ -75,7 +80,7 @@ Send {Delete}
 Return
 
 CapsLock & .::
-Send {Control down}{Delete}{Control up}
+Send ^{Delete}
 Return
 
 ;;hyper shortcuts
@@ -87,102 +92,115 @@ CapsLock & a::
 Send {Enter}
 Return
 
+CapsLock & Enter::
+Send ^{Enter}
+Return
+
 CapsLock & q::
 Send {LControl}
 Return
 
+;;CapsLock & 1::
+
+
+;;Send a +{Tab} a +{Tab} Batch +{Tab}APPLICATION{Down}{Enter}{Tab}BATCH
+;;{Down}{Enter}{Tab}NA{Down}{Enter}{Tab}NA{Down}{Enter}
+
+
+;;Return
+
 ;workmandead
 $space::send,{space} ; allow spaces still
 
-Space & Tab::
+Space & Tab:: ;`
 Send ^!7
 Return
 
-Space & q::
+Space & q:: ;%
 Send +5
 Return
 
-Space & w::
+Space & w::  ;&
 Send ^!c
 Return
 
-Space & e::
+Space & e:: ;?
 Send +,
 Return
 
-Space & r::
+Space & r:: ;+
 Send +3
 Return
 
-Space & t::
+Space & t:: ;@
 Send ^!v
 Return
 
-Space & z::
+Space & z:: ;$
 Send $
 Return
 
-Space & u::
+Space & u:: ;_
 Send +-
 Return
 
-Space & i::
+Space & i:: ;[
 Send ^!f
 Return
 
-Space & o::
+Space & o:: ;]
 Send ^!g
 Return
 
-Space & p::
+Space & p:: ;!
 Send +4
 Return
 
-Space & a::
+Space & a:: ;/
 Send +6
 Return
 
-Space & s::
+Space & s:: ;(
 Send +8
 Return
 
-Space & d::
+Space & d:: ;=
 Send +7
 Return
 
-Space & f::
+Space & f:: ;0
 Send 0
 Return
 
-Space & g::
+Space & g:: ;{
 Send ^!b
 Return
 
-Space & h::
+Space & h:: ;}
 Send ^!n
 Return
 
-Space & j::
+Space & j:: ;1
 Send 1
 Return
 
-Space & k::
+Space & k:: ;*
 Send ^!-
 Return
 
-Space & l::
+Space & l:: ;)
 Send +9
 Return
 
-Space & SC027::
+Space & SC027:: ;-
 Send -
 Return
 
-Space & SC028::
+Space & SC028:: ;#
 Send ^!x
 Return
 
-Space & LShift::
+Space & LShift:: ;;
 Send ^!,
 Return
 
@@ -202,11 +220,11 @@ Space & v::
 Send 9
 Return
 
-Space & b::
+Space & b:: ;|
 Send ^!w
 Return
 
-Space & n::
+Space & n:: ;\
 Send ^!q
 Return
 
@@ -226,7 +244,7 @@ Space & -::
 Send 5
 Return
 
-Space & RShift::
+Space & RShift:: ;^
 Send ^!3
 Return
 
@@ -281,106 +299,32 @@ Return
 Send {F12}
 Return
 
+;;;;;;;;;;
+;;open apps
+$l::send,{l} ; allow spaces still
 
-; LShift & Tab::
-; Send ´
-; Return
-; LShift & q::
-; Send  {+5}
-; Return
-; LShift & w::
-; Send &
-; Return
-; LShift & e::
-; Send ?
-; Return
-; LShift & r::
-; Send +
-; Return
-; LShift & t::
-; Send @
-; Return
-; LShift & z::
-; Send $
-; Return
-; LShift & u::
-; Send _
-; Return
-; LShift & i::
-; Send [
-; Return
-; LShift & p::
-; Send ]
-; Return
-; ; LShift & ő::
-; ; Send !
-; ; Return
-; ; LShift & ú::
-; ; Send BackLShift
-; ; Return
-; LShift & a::
-; Send /
-; Return
-; LShift & s::
-; Send (
-; Return
-; LShift & d::
-; Send =
-; Return
-; LShift & f::
-; Send 0
-; Return
-; LShift & g::
-; Send {
-; Return
-; LShift & h::
-; Send }
-; Return
-; LShift & j::
-; Send 1
-; Return
-; LShift & k::
-; Send *
-; Return
-; LShift & l::
-; Send )
-; Return
-; ; LShift & é::
-; ; Send -
-; ; Return
-; ; LShift & á::
-; ; Send {#}
-; ; Return
-; LShift & y::
-; Send 6
-; Return
-; LShift & x::
-; Send 7
-; Return
-; LShift & c::
-; Send 8
-; Return
-; LShift & v::
-; Send 9
-; Return
-; LShift & b::
-; Send |
-; Return
-; LShift & n::
-; Send \
-; Return
-; LShift & m::
-; Send 2
-; Return
-; LShift & ,::
-; Send 3
-; Return
-; LShift & .::
-; Send 4
-; Return
-; LShift & -::
-; Send 5
-; Return
-; LShift & RShift::
-; Send ^
-; Return 
+; l & f::
+; IfWinExist ahk_exe firefox.exe
+;     WinActivate ahk_exe firefox.exe
+; else
+;     Run "C:\Program Files\Mozilla Firefox\firefox.exe"
+; WinWait ahk_exe firefox.exe
+; WinActivate ahk_exe firefox.exe
+
+
+;;insert text
+::cdt::
+Send, %A_YYYY%-%A_MM%-%A_DD%
+Return
+
+::CTRYOCDE::
+Send CTRYCODE
+Return
+
+::xdept::
+Send SELECT *{Enter}FROM ECA.ECAPDEPT{Enter}WHERE{Enter}CTRYCODE{Shift down}44{Shift up}COMPCODE='
+Return
+
+::xew::
+Send abel.almassy@ibm.com
+Return
