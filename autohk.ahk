@@ -320,11 +320,3 @@ Return
 ::CTRYOCDE::
 Send CTRYCODE
 Return
-
-::xdept::
-Send SELECT *{Enter}FROM ECA.ECAPDEPT{Enter}WHERE{Enter}CTRYCODE{Shift down}44{Shift up}COMPCODE='
-Return
-
-::xew::
-Send abel.almassy@ibm.com
-Return
