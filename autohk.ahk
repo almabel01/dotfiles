@@ -112,8 +112,24 @@ Return
 ;workmandead
 $space::send,{space} ; allow spaces still
 
-Space & Tab:: ;`
+Space & 3:: ;~
+Send ^!1
+Return
+
+Space & 4:: ;`
 Send ^!7
+Return
+
+Space & 6:: ;#
+Send ^!x
+Return
+
+Space & 7:: ;^
+Send ^!3
+Return
+
+Space & Tab:: ;: - not in workman
+Send +.
 Return
 
 Space & q:: ;%
@@ -196,11 +212,11 @@ Space & SC027:: ;-
 Send -
 Return
 
-Space & SC028:: ;#
-Send ^!x
+Space & SC028:: ;"
+Send +2
 Return
 
-Space & LShift:: ;;
+Space & LShift:: ;; - not in workman
 Send ^!,
 Return
 

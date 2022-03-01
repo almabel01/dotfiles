@@ -38,7 +38,8 @@
          :alone 120
          :held 70
  }
-}
+} ;;profiles
+
 
 :devices{
         :internal [{:vendor_id 1452 :product_id 657}]
@@ -312,7 +313,7 @@
                  [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
                  [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
                  ]}
-        {:des "dot-mode" ;;accessing chars used in programming and hard to reach on HUN keyboard
+        {:des "dot-mode" ;;accessing characters used in programming and hard to reach on HUN keyboard
          :rules [:dot-mode
                  [:q :!Speriod] ;:
                  [:w :!Operiod] ;;
@@ -321,7 +322,12 @@
                  ]}
         {:des "workmandead" 
          :rules [:workmandead
-                [:tab :!Obackslash] ;`
+                [:3 :!Oclose_bracket] ;~
+                [:4 :!Obackslash] ;`
+                [:6 :!SO3] ;#
+                [:7 :!Oquote] ;^
+                ;;
+                [:tab :!Scomma] ;:
                 [:q :!S5] ;%
                 [:w :!O1] ;&
                 [:e :!Scomma] ;?
@@ -343,9 +349,9 @@
                 [:k :!SOcomma] ;*
                 [:l :!S9] ;)
                 [:semicolon :slash] ;-
-                [:quote :!SO3] ;#
+                [:quote :!SO3] ;"
                 ;;;
-                [:left_shift :!Operiod] ;;
+                [:left_shift :!Operiod] ;; (not part of workmandead)
                 [:z :6]
                 [:x :7]
                 [:c :8]
@@ -356,7 +362,9 @@
                 [:comma :3]
                 [:period :4]
                 [:slash :5]
-                [:right_shift :!Oquote] ;^
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                ;;workman option
+                ;; [:!Onon_us_backslash :!]
          ]}
         {:des "F-keys"
          :rules [:F-keys
