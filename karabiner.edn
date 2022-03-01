@@ -79,7 +79,7 @@
                 } ;;applications
  :layers {
           :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
-          :mouse {:key :tab}
+        ;;   :mouse {:key :tab}
           :workmandead {:key :spacebar}
          } ;;layers
  :simlayers {;    
@@ -130,17 +130,17 @@
         ;;reparing function keys
 ;;        {:des "spotlight (f4) to launchpad" :rules [[:spotlight :f16]]}
 
-        {:des "mouse"
-         :rules [:mouse
-                 [:j {:mkey {:y 1036}} [:mouse]]
-                 [:k {:mkey {:y -1036}} [:mouse]]
-                 [:h {:mkey {:x -1036}} [:mouse]]
-                 [:l {:mkey {:x 1036}} [:mouse]]
-                 [:n {:pkey :button1} [:mouse]]
-                 [:m {:pkey :button2} [:mouse]]
-                 ;TODO: button3
-         ]
-        }
+        ;; {:des "mouse"
+        ;;  :rules [:mouse
+        ;;          [:j {:mkey {:y 1036}} [:mouse]]
+        ;;          [:k {:mkey {:y -1036}} [:mouse]]
+        ;;          [:h {:mkey {:x -1036}} [:mouse]]
+        ;;          [:l {:mkey {:x 1036}} [:mouse]]
+        ;;          [:n {:pkey :button1} [:mouse]]
+        ;;          [:m {:pkey :button2} [:mouse]]
+        ;;          ;TODO: button3
+        ;;  ]
+        ;; }
 
         {:des "hyper (caps_lock)"
          :rules [:hyper
@@ -327,7 +327,7 @@
                 [:6 :!SO3] ;#
                 [:7 :!Oquote] ;^
                 ;;
-                [:tab :!Scomma] ;:
+                [:tab :!Speriod] ;:
                 [:q :!S5] ;%
                 [:w :!O1] ;&
                 [:e :!Scomma] ;?
@@ -349,7 +349,7 @@
                 [:k :!SOcomma] ;*
                 [:l :!S9] ;)
                 [:semicolon :slash] ;-
-                [:quote :!SO3] ;"
+                [:quote :!S2] ;"
                 ;;;
                 [:left_shift :!Operiod] ;; (not part of workmandead)
                 [:z :6]
