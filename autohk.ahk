@@ -326,13 +326,3 @@ $l::send,{l} ; allow spaces still
 ;     Run "C:\Program Files\Mozilla Firefox\firefox.exe"
 ; WinWait ahk_exe firefox.exe
 ; WinActivate ahk_exe firefox.exe
-
-
-;;insert text
-::cdt::
-Send, %A_YYYY%-%A_MM%-%A_DD%
-Return
-
-::CTRYOCDE::
-Send CTRYCODE
-Return
