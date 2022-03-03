@@ -10,22 +10,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ^ Control
 ; + Shift
 ;;;;;;;;;;;;;;;;;
-;;; simple modifications
-; Esc::CapsLock
+
 CapsLock::Esc
+
+; paste without formatting
+^+v::
+    Clipboard := Clipboard
+    Send ^v
+Return
+
 ;;; hyper mode (using caps lock)
 ;; movement
-; LAlt::LControl
-; LWin::LAlt
-; LControl::LWin
-; ; RAlt::RControl
-; RControl::RAlt
-
-; !Tab::
-; Send {!Tab}
-; Return
-
-
 CapsLock & h::
 Send {Left}
 Return
@@ -100,14 +95,42 @@ CapsLock & q::
 Send {LControl}
 Return
 
-;;CapsLock & 1::
+;;window management
+$w::send,w
++w::W ;needed for uppercase letter
+^w::^w
 
+w & h::
+Send #{Left}
+Return
 
-;;Send a +{Tab} a +{Tab} Batch +{Tab}APPLICATION{Down}{Enter}{Tab}BATCH
-;;{Down}{Enter}{Tab}NA{Down}{Enter}{Tab}NA{Down}{Enter}
+w & j::
+Send #{Down}
+Return
 
+w & k::
+Send #{Up}
+Return
 
-;;Return
+w & l::
+Send #{Right}
+Return
+
+w & i:: ; change to virtual desktop to the left
+Send #^{Left}
+Return
+
+w & o:: ; change to virtual desktop to the right
+Send #^{Right}
+Return
+
+w & n:: ; send window to next monitor
+Send #+{Right}
+Return
+
+w & p::  ; send window to previous monitor
+Send #+{Left}
+Return
 
 ;workmandead
 $space::send,{space} ; allow spaces still
@@ -265,7 +288,8 @@ Send ^!3
 Return
 
 ;;F keys
-$,::send,{,} ; allow spaces still
+$,::send,{,} ; allow comma still
++,::Send ?
 
 , & q::
 Send {F1}
@@ -315,9 +339,59 @@ Return
 Send {F12}
 Return
 
+;;control button
+; $a::send,{a}
+; +a::A
+; ^a::^a
+
+; a & c::
+; Send ^c
+; Return
+
+; a & v::
+; Send ^v
+; Return
+
+; a & s::
+; Send ^s
+; Return
+
+; a & f::
+; Send ^f
+; Return
+
+; a & b::
+; Send ^b
+; Return
+
+; a & i::
+; Send ^i
+; Return
+
+; a & k::
+; Send ^k
+; Return
+
+; a & n::
+; Send ^n
+; Return
+
+; a & t::
+; Send ^t
+; Return
+
+; a & x::
+; Send ^x
+; Return
+
+; a & o::
+; Send ^o
+; Return
+
 ;;;;;;;;;;
 ;;open apps
 $l::send,{l} ; allow spaces still
++l::L
 
 ; l & f::
 ; IfWinExist ahk_exe firefox.exe
