@@ -95,10 +95,10 @@
              :w-key {:key :w} ; window management
              :d-key {:key :d} ; essentials
              :m-key {:key :m} ; markdown mode
-             :q-key {:key :q} ; control mode
+        ;;      :q-key {:key :q} ; control mode
              :dot-mode {:key :period}
              :F-keys {:key :comma}
-             :focus-mode {:key :f}
+        ;;      :focus-mode {:key :f}
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
  :main [;;; 
@@ -381,60 +381,60 @@
                 [:open_bracket :!Ff11]
                 [:close_bracket :!Ff12]
          ]}
-        {:des "moving focus"
-         :rules [:focus-mode
-                 [:d :!FTf3]
-                 [:n :!FTf4] ; move focus to active or next window
-                 [:w :!FTf9] ; move focus to next window
-                 ]}
-        {:des "control mode"
-         :rules [:q-key
-                 [:##non_us_backslash :!Tnon_us_backslash]
-                 [:##1 :!T1]
-                 [:##2 :!T2]
-                 [:##3 :!T3]
-                 [:##4 :!T4]
-                 [:##5 :!T5]
-                 [:##6 :!T6]
-                 [:##7 :!T7]
-                 [:##8 :!T8]
-                 [:##9 :!T9]
-                 [:##0 :!T0]
-                 [:##hyphen :!Thyphen]
-                 [:##equal_sign :!Tequal_sign]
-                 [:##w :!Tw]
-                 [:##e :!Te]
-                 [:##r :!Tr]
-                 [:##t :!Tt]
-                 [:##y :!Ty]
-                 [:##u :!Tu]
-                 [:##i :!Ti]
-                 [:##o :!To]
-                 [:##p :!Tp]
-                 [:##open_bracket :!Topen_bracket]
-                 [:##close_bracket :!Tclose_bracket]
-                 [:##a :!Ta]
-                 [:##s :!Ts]
-                 [:##d :!Td]
-                 [:##f :!Tf]
-                 [:##g :!Tg]
-                 [:##h :!Th]
-                 [:##j :!Tj]
-                 [:##k :!Tk]
-                 [:##l :!Tl]
-                 [:##semicolon :!Tsemicolon]
-                 [:##quote :!Tquote]
-                 [:##backslash :!Tbackslash]
-                 [:##grave_accent_and_tilde :!Tgrave_accent_and_tilde]
-                 [:##z :!Tz]
-                 [:##x :!Tx]
-                 [:##c :!Tc]
-                 [:##v :!Tv]
-                 [:##b :!Tb]
-                 [:##n :!Tn]
-                 [:##m :!Tm]
-                 [:##comma :!Tcomma]
-                 [:##period :!Tperiod]
-                 [:##slash :!Tslash]
-                ]}
+        ;; {:des "moving focus"
+        ;;  :rules [:focus-mode
+        ;;          [:d :!FTf3]
+        ;;          [:n :!FTf4] ; move focus to active or next window
+        ;;          [:w :!FTf9] ; move focus to next window
+        ;;          ]}
+        ;; {:des "control mode"
+        ;;  :rules [:q-key
+        ;;          [:##non_us_backslash :!Tnon_us_backslash]
+        ;;          [:##1 :!T1]
+        ;;          [:##2 :!T2]
+        ;;          [:##3 :!T3]
+        ;;          [:##4 :!T4]
+        ;;          [:##5 :!T5]
+        ;;          [:##6 :!T6]
+        ;;          [:##7 :!T7]
+        ;;          [:##8 :!T8]
+        ;;          [:##9 :!T9]
+        ;;          [:##0 :!T0]
+        ;;          [:##hyphen :!Thyphen]
+        ;;          [:##equal_sign :!Tequal_sign]
+        ;;          [:##w :!Tw]
+        ;;          [:##e :!Te]
+        ;;          [:##r :!Tr]
+        ;;          [:##t :!Tt]
+        ;;          [:##y :!Ty]
+        ;;          [:##u :!Tu]
+        ;;          [:##i :!Ti]
+        ;;          [:##o :!To]
+        ;;          [:##p :!Tp]
+        ;;          [:##open_bracket :!Topen_bracket]
+        ;;          [:##close_bracket :!Tclose_bracket]
+        ;;          [:##a :!Ta]
+        ;;          [:##s :!Ts]
+        ;;          [:##d :!Td]
+        ;;          [:##f :!Tf]
+        ;;          [:##g :!Tg]
+        ;;          [:##h :!Th]
+        ;;          [:##j :!Tj]
+        ;;          [:##k :!Tk]
+        ;;          [:##l :!Tl]
+        ;;          [:##semicolon :!Tsemicolon]
+        ;;          [:##quote :!Tquote]
+        ;;          [:##backslash :!Tbackslash]
+        ;;          [:##grave_accent_and_tilde :!Tgrave_accent_and_tilde]
+        ;;          [:##z :!Tz]
+        ;;          [:##x :!Tx]
+        ;;          [:##c :!Tc]
+        ;;          [:##v :!Tv]
+        ;;          [:##b :!Tb]
+        ;;          [:##n :!Tn]
+        ;;          [:##m :!Tm]
+        ;;          [:##comma :!Tcomma]
+        ;;          [:##period :!Tperiod]
+        ;;          [:##slash :!Tslash]
+        ;;         ]}
         ]}
