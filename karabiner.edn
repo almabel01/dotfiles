@@ -271,9 +271,11 @@
                  [:3 :!CTO3] ; maximize window to monitor 3
                  [:n :!CTOn] ; move window to next monitor
                  [:p :!CTOp] ; move window to previous monitor
-                 [:o :!CTOo] ; switch to the next window
-                 [:!So :!TOSo] ; switch to the previous window
+                 [:r :!CTOo] ; switch to the next window
+                 [:!Sr :!TOSo] ; switch to the previous window
                  [:s :!TOh] ;show keyboard hint for window switch
+                 [:i :!Tleft_arrow] ;switch to left Workspace
+                 [:o :!Tright_arrow] ;switch to right Workspace
                  ]}
         {:des "d-key (essentials)"
          :rules [:d-key
@@ -315,8 +317,8 @@
                  ]}
         {:des "dot-mode" ;;accessing characters used in programming and hard to reach on HUN keyboard
          :rules [:dot-mode
-                 [:q :!Speriod] ;:
-                 [:w :!Operiod] ;;
+                ;;  [:q :!Speriod] ;:
+                ;;  [:w :!Operiod] ;;
                  [:z :!SOz] ;<
                  [:x :!SOx] ;>
                  ]}
