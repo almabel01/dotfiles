@@ -2,8 +2,8 @@
 ;; I learned to use Karabiner and goku from many sources but special thanks to @nikitavoloboev and @ttscoff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    ;; !  | means mandatory -   modifier(s) alone when pressend change behavior
-    ;; #  | means optional  -   modifiers are optional (but atleast one necessary)
+    ;; !  | means mandatory -   modifier(s) alone when pressed change behavior
+    ;; #  | means optional  -   modifiers are optional (but at least one necessary)
 
     ;; :!Ca is keycode :a and prefix a with !C
 
@@ -76,15 +76,17 @@
                 ;; :browser ["^com\\.apple\\.Safari$"]
                 :java ["^com.jetbrains.intellij.ce$"]
                 ;; :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                :photos ["^com.apple.Photos$"]
                 } ;;applications
  :layers {
           :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
         ;;   :mouse {:key :tab}
           :workmandead {:key :spacebar}
+        ;;   :dead_test {:key :x :alone {[:dead 1]}}
          } ;;layers
  :simlayers {;    
 ; *launchers 
-             :launch-mode {:key :l} ; launch frequnetly used apps
+             :launch-mode {:key :l} ; launch frequently used apps
              :s-key {:key :s} ; social media apps
              :u-key {:key :u} ; launch utilities
              :o-key {:key :o} ; open websites
@@ -110,6 +112,15 @@
         {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
         {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
+        {:des "photos navigation"
+         :rules [
+                 [:##h :left_arrow :photos]
+                 [:##j :down_arrow :photos]
+                 [:##k :up_arrow :photos]
+                 [:##l :right_arrow :photos]
+         ]}
+        
+        ;; {:des "dead" :rules [:x ["dead" 1]]}
 
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
