@@ -86,6 +86,7 @@
          } ;;layers
  :simlayers {;    
 ; *launchers 
+        ;;      :test-mode {:key :a}
              :launch-mode {:key :l} ; launch frequently used apps
              :s-key {:key :s} ; social media apps
              :u-key {:key :u} ; launch utilities
@@ -103,7 +104,19 @@
         ;;      :focus-mode {:key :f}
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
- :main [;;; 
+ :main [;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;testing;;;;;;;;;;;;;;;
+        ;; {:des "test" 
+        ;;  :rules [[{:sim [:a]
+        ;;  :simo {:interrupt true
+        ;;         :disorder :insensitive
+        ;;         :uorder :insensitive
+        ;;         :afterup {:set ["test-mode" 0]}}} {:set ["test-mode" 1]}]]}
+        ;; {:des "launch spotify" :rules [:test-mode [:m [:toggle "Spotify"]]]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
         ;;4Tech keyboard settings
         ;; {:des "changing control to command" :rules [:fortech [:left_control :left_command nil {:alone :!Ttab}]]}
         ;; {:des "changing control to command" :rules [:fortech [:right_control :right_command]]}
@@ -112,6 +125,15 @@
         {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
         {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
+;;
+        ;; {:des "dead" :rules [:x ["dead" 1]]}
+;;
+        {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
+        {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
+        {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
+        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
+        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
+        {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
         {:des "photos navigation"
          :rules [
                  [:##h :left_arrow :photos]
@@ -119,17 +141,7 @@
                  [:##k :up_arrow :photos]
                  [:##l :right_arrow :photos]
          ]}
-        
-        ;; {:des "dead" :rules [:x ["dead" 1]]}
-
-        {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
-        {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
-        {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
-        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
-        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
-        {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
-        ;; {:des "q for ctlr" :rules [[:q :left_control nil {:alone :q}]]}
-
+;;
         ;;turning off arrow keys
         ;; {:des "left arrow" :rules [[:##left_arrow :vk_none :internal]]}
         ;; {:des "left arrow" :rules [:internal [:##left_arrow :vk_none nil {:alone :!STtab}]]}
@@ -137,10 +149,7 @@
         ;; {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
-
-        ;;reparing function keys
-;;        {:des "spotlight (f4) to launchpad" :rules [[:spotlight :f16]]}
-
+;;
         ;; {:des "mouse"
         ;;  :rules [:mouse
         ;;          [:j {:mkey {:y 1036}} [:mouse]]
@@ -152,7 +161,7 @@
         ;;          ;TODO: button3
         ;;  ]
         ;; }
-
+;;
         {:des "hyper (caps_lock)"
          :rules [:hyper
                  ; *hyper navigation  
@@ -191,34 +200,37 @@
         {:des "l-key (launch mode)"
          :rules [:launch-mode
                  [:1 :!Cbackslash] ; show 1Password mini or fill password
-                 [:s [:launch "Safari"]]
-                 [:m [:launch "Spotify"]]
-                 [:f [:launch "Finder"]]
-                 [:c [:launch "Calendar"]]
+                 [:s [:toggle "Safari"]]
+                 [:m [:toggle "Spotify"]]
+                 [:f [:toggle "Finder"]]
+                 [:c [:toggle "Calendar"]]
                 ;;  [:g [:launch "Google Chrome"]]
-                 [:b [:launch "Firefox"]] ;b for browser i guess
-                 [:n [:launch "Notes"]]
-                 [:d [:launch "Drafts"]]
-                 [:w [:launch "Obsidian"]]
-                 [:e [:launch "Mail"]]
-                ;;  [:t [:launch "Reminders"]] ;;t for Todoist
-                 [:t [:launch "TickTick"]] ;;t for todo
-                 [:p [:launch "Photos"]]
-                 [:i [:launch "iTerm"]]
-                 [:j [:launch "IntelliJ IDEA CE"]]
-                 [:v [:launch "Visual Studio Code"]]
+                ;;  [:b [:launch "Firefox"]] ;b for browser i guess
+                 [:n [:toggle "Notes"]]
+                 [:d [:toggle "Drafts"]]
+                 [:w [:toggle "Obsidian"]]
+                 [:e [:toggle "Mail"]]
+                ;;  [:t [:launch "Reminders"]]
+                 [:t [:toggle "TickTick"]] ;;t for todo
+                 [:p [:toggle "Photos"]]
+                 [:i [:toggle "iTerm"]]
+                 [:j [:toggle "IntelliJ IDEA CE"]]
+                 [:v [:toggle "Visual Studio Code"]]
                  [:u [[:open "https://www.udemy.com"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] 
                  ]}
+;;
         {:des "s-key (social)"
          :rules [:s-key
-                 [:f [:launch "Messenger"]]
+                 [:f [:toggle "Messenger"]]
                 ;;  [:t [:launch "Telegram Lite"]]
                 ;;  [:d [:launch "Discord"]]
                 ]}
+;;
         {:des "u-key (utilities)"
          :rules [:u-key
-                 [:p [:launch "System Preferences"]]
+                 [:p [:toggle "System Preferences"]]
          ]}
+;;
         {:des "o-key (open websites)"
          :rules [:o-key
                  [:k [:open "https://docs.google.com/spreadsheets/d/1-quGQWvYoeEuMf1jDeKJUIY-DZytnpBJcL-JrFs6Tvw/edit#gid=656760228"]] ; open my finances spreadsheet 
@@ -229,34 +241,37 @@
                  ]}
 ;; *shortcuts
 
-        {:des "accent keys"
-         :rules [:accent
-                [:e :semicolon] ;é
-                [:u :close_bracket] ;ú
-                [:i :grave_accent_and_tilde] ;í
-                [:o :equal_sign] ;ó
-                [:a :quote] ;á
-                [:!Se :!Ssemicolon] ;É
-                [:!Su :!Sclose_bracket] ;Ú
-                [:!Si :!Sgrave_accent_and_tilde] ;Í
-                [:!So :!Sequal_sign] ;Ó
-                [:!Sa :!Squote] ;Á
+;;
+        ;; {:des "accent keys"
+        ;;  :rules [:accent
+        ;;         [:e :semicolon] ;é
+        ;;         [:u :close_bracket] ;ú
+        ;;         [:i :grave_accent_and_tilde] ;í
+        ;;         [:o :equal_sign] ;ó
+        ;;         [:a :quote] ;á
+        ;;         [:!Se :!Ssemicolon] ;É
+        ;;         [:!Su :!Sclose_bracket] ;Ú
+        ;;         [:!Si :!Sgrave_accent_and_tilde] ;Í
+        ;;         [:!So :!Sequal_sign] ;Ó
+        ;;         [:!Sa :!Squote] ;Á
 
-                ]}
-        {:des "accent2"
-         :rules [:accent2
-                [:o :0] ;ö
-                [:u :hyphen] ;ü
-                [:!So :!S0] ;Ö
-                [:!Su :!Shyphen] ;Ü
-                ]}
-        {:des "accent3"
-         :rules [:accent3
-                [:o :open_bracket]
-                [:u :backslash]
-                [:!So :!Sopen_bracket]
-                [:!Su :!Sbackslash]
-         ]}
+        ;;         ]}
+        ;; {:des "accent2"
+        ;;  :rules [:accent2
+        ;;         [:o :0] ;ö
+        ;;         [:u :hyphen] ;ü
+        ;;         [:!So :!S0] ;Ö
+        ;;         [:!Su :!Shyphen] ;Ü
+        ;;         ]}
+        ;; {:des "accent3"
+        ;;  :rules [:accent3
+        ;;         [:o :open_bracket]
+        ;;         [:u :backslash]
+        ;;         [:!So :!Sopen_bracket]
+        ;;         [:!Su :!Sbackslash]
+        ;;  ]}
+
+;;
         {:des "window management (w-key)"
          :rules [:w-key
                 ;  [:s :same_wind_app]
@@ -288,6 +303,7 @@
                  [:i :!Tleft_arrow] ;switch to left Workspace
                  [:o :!Tright_arrow] ;switch to right Workspace
                  ]}
+;;
         {:des "d-key (essentials)"
          :rules [:d-key
          ; shortcuts
@@ -308,6 +324,7 @@
                  [:o :!QTRo] ;hs.spotify.volumeUp
                  [:spacebar :!QERspacebar] ;hs.spotify.displayCurrentTrack
                  ]}
+;;
         {:des "m-key (markdown)"
          :rules [:m-key
                  [:b [:!SOcomma :!SOcomma :!SOcomma :!SOcomma :left_arrow :left_arrow]] ; bold
@@ -326,13 +343,13 @@
                  [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
                  [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
                  ]}
-        {:des "dot-mode" ;;accessing characters used in programming and hard to reach on HUN keyboard
+;;
+        {:des "dot-mode"
          :rules [:dot-mode
-                ;;  [:q :!Speriod] ;:
-                ;;  [:w :!Operiod] ;;
                  [:z :!SOz] ;<
                  [:x :!SOx] ;>
                  ]}
+;;
         {:des "workmandead" 
          :rules [:workmandead
                 [:3 :!Oclose_bracket] ;~
@@ -394,6 +411,8 @@
                 [:open_bracket :!Ff11]
                 [:close_bracket :!Ff12]
          ]}
+
+;;
         ;; {:des "moving focus"
         ;;  :rules [:focus-mode
         ;;          [:d :!FTf3]
@@ -450,4 +469,6 @@
         ;;          [:##period :!Tperiod]
         ;;          [:##slash :!Tslash]
         ;;         ]}
+;;
+
         ]}
