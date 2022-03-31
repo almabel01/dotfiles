@@ -75,7 +75,7 @@
                 ;; :safari ["^com\\.apple\\.Safari$"]
                 ;; :browser ["^com\\.apple\\.Safari$"]
                 :java ["^com.jetbrains.intellij.ce$"]
-                ;; :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 :photos ["^com.apple.Photos$"]
                 } ;;applications
  :layers {
