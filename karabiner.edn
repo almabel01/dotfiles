@@ -86,35 +86,24 @@
          } ;;layers
  :simlayers {;    
 ; *launchers 
-        ;;      :test-mode {:key :a}
+        ;;      :test-mode {:key :q}
+             :mouse {:key :a}     
              :launch-mode {:key :l} ; launch frequently used apps
              :s-key {:key :s} ; social media apps
              :u-key {:key :u} ; launch utilities
              :o-key {:key :o} ; open websites
 ; *shortcuts  
-             :accent {:key :p} ; accent keys
-             :accent2 {:key :open_bracket}
-             :accent3 {:key :close_bracket}
              :w-key {:key :w} ; window management
              :d-key {:key :d} ; essentials
              :m-key {:key :m} ; markdown mode
-        ;;      :q-key {:key :q} ; control mode
-             :dot-mode {:key :period}
              :F-keys {:key :comma}
-        ;;      :focus-mode {:key :f}
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
  :main [;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;testing;;;;;;;;;;;;;;;
-        ;; {:des "test" 
-        ;;  :rules [[{:sim [:a]
-        ;;  :simo {:interrupt true
-        ;;         :disorder :insensitive
-        ;;         :uorder :insensitive
-        ;;         :afterup {:set ["test-mode" 0]}}} {:set ["test-mode" 1]}]]}
-        ;; {:des "launch spotify" :rules [:test-mode [:m [:toggle "Spotify"]]]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ;;4Tech keyboard settings
@@ -125,8 +114,6 @@
         {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
         {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
-;;
-        ;; {:des "dead" :rules [:x ["dead" 1]]}
 ;;
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
@@ -150,17 +137,17 @@
         ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
         ;; {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
 ;;
-        ;; {:des "mouse"
-        ;;  :rules [:mouse
-        ;;          [:j {:mkey {:y 1036}} [:mouse]]
-        ;;          [:k {:mkey {:y -1036}} [:mouse]]
-        ;;          [:h {:mkey {:x -1036}} [:mouse]]
-        ;;          [:l {:mkey {:x 1036}} [:mouse]]
-        ;;          [:n {:pkey :button1} [:mouse]]
-        ;;          [:m {:pkey :button2} [:mouse]]
-        ;;          ;TODO: button3
-        ;;  ]
-        ;; }
+        {:des "mouse"
+         :rules [:mouse
+                 [:j {:mkey {:y 1036}} [:mouse]]
+                 [:k {:mkey {:y -1036}} [:mouse]]
+                 [:h {:mkey {:x -1036}} [:mouse]]
+                 [:l {:mkey {:x 1036}} [:mouse]]
+                 [:n {:pkey :button1} [:mouse]]
+                 [:m {:pkey :button2} [:mouse]]
+                 ;TODO: button3
+         ]
+        }
 ;;
         {:des "hyper (caps_lock)"
          :rules [:hyper
@@ -204,13 +191,11 @@
                  [:m [:toggle "Spotify"]]
                  [:f [:toggle "Finder"]]
                  [:c [:toggle "Calendar"]]
-                ;;  [:g [:launch "Google Chrome"]]
                 ;;  [:b [:launch "Firefox"]] ;b for browser i guess
                  [:n [:toggle "Notes"]]
                  [:d [:toggle "Drafts"]]
                  [:w [:toggle "Obsidian"]]
                  [:e [:toggle "Mail"]]
-                ;;  [:t [:launch "Reminders"]]
                  [:t [:toggle "TickTick"]] ;;t for todo
                  [:p [:toggle "Photos"]]
                  [:i [:toggle "iTerm"]]
@@ -240,37 +225,6 @@
                  [:u [:open "https://www.udemy.com"]]
                  ]}
 ;; *shortcuts
-
-;;
-        ;; {:des "accent keys"
-        ;;  :rules [:accent
-        ;;         [:e :semicolon] ;é
-        ;;         [:u :close_bracket] ;ú
-        ;;         [:i :grave_accent_and_tilde] ;í
-        ;;         [:o :equal_sign] ;ó
-        ;;         [:a :quote] ;á
-        ;;         [:!Se :!Ssemicolon] ;É
-        ;;         [:!Su :!Sclose_bracket] ;Ú
-        ;;         [:!Si :!Sgrave_accent_and_tilde] ;Í
-        ;;         [:!So :!Sequal_sign] ;Ó
-        ;;         [:!Sa :!Squote] ;Á
-
-        ;;         ]}
-        ;; {:des "accent2"
-        ;;  :rules [:accent2
-        ;;         [:o :0] ;ö
-        ;;         [:u :hyphen] ;ü
-        ;;         [:!So :!S0] ;Ö
-        ;;         [:!Su :!Shyphen] ;Ü
-        ;;         ]}
-        ;; {:des "accent3"
-        ;;  :rules [:accent3
-        ;;         [:o :open_bracket]
-        ;;         [:u :backslash]
-        ;;         [:!So :!Sopen_bracket]
-        ;;         [:!Su :!Sbackslash]
-        ;;  ]}
-
 ;;
         {:des "window management (w-key)"
          :rules [:w-key
@@ -313,7 +267,6 @@
                  [:s :!Ff17] ; search menubar with Alfred
                  [:n :!Ff18] ; toogle darkmode via Alfred shortcut
                  [:k :!Ff19] ; change karabiner profile with Alfred
-         ; *text modification ;!TODO
                  ;;;;;;;;;;;;;;;;;;;
         ; *Spotify
                  [:m :!QERm] ; open Spotify playlist in Alfred mini player
@@ -344,14 +297,10 @@
                  [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
                  ]}
 ;;
-        {:des "dot-mode"
-         :rules [:dot-mode
-                 [:z :!SOz] ;<
-                 [:x :!SOx] ;>
-                 ]}
-;;
         {:des "workmandead" 
          :rules [:workmandead
+                [:1 :!S1] ;'
+                [:2 :!S2]
                 [:3 :!Oclose_bracket] ;~
                 [:4 :!Obackslash] ;`
                 [:6 :!SO3] ;#
@@ -411,64 +360,5 @@
                 [:open_bracket :!Ff11]
                 [:close_bracket :!Ff12]
          ]}
-
-;;
-        ;; {:des "moving focus"
-        ;;  :rules [:focus-mode
-        ;;          [:d :!FTf3]
-        ;;          [:n :!FTf4] ; move focus to active or next window
-        ;;          [:w :!FTf9] ; move focus to next window
-        ;;          ]}
-        ;; {:des "control mode"
-        ;;  :rules [:q-key
-        ;;          [:##non_us_backslash :!Tnon_us_backslash]
-        ;;          [:##1 :!T1]
-        ;;          [:##2 :!T2]
-        ;;          [:##3 :!T3]
-        ;;          [:##4 :!T4]
-        ;;          [:##5 :!T5]
-        ;;          [:##6 :!T6]
-        ;;          [:##7 :!T7]
-        ;;          [:##8 :!T8]
-        ;;          [:##9 :!T9]
-        ;;          [:##0 :!T0]
-        ;;          [:##hyphen :!Thyphen]
-        ;;          [:##equal_sign :!Tequal_sign]
-        ;;          [:##w :!Tw]
-        ;;          [:##e :!Te]
-        ;;          [:##r :!Tr]
-        ;;          [:##t :!Tt]
-        ;;          [:##y :!Ty]
-        ;;          [:##u :!Tu]
-        ;;          [:##i :!Ti]
-        ;;          [:##o :!To]
-        ;;          [:##p :!Tp]
-        ;;          [:##open_bracket :!Topen_bracket]
-        ;;          [:##close_bracket :!Tclose_bracket]
-        ;;          [:##a :!Ta]
-        ;;          [:##s :!Ts]
-        ;;          [:##d :!Td]
-        ;;          [:##f :!Tf]
-        ;;          [:##g :!Tg]
-        ;;          [:##h :!Th]
-        ;;          [:##j :!Tj]
-        ;;          [:##k :!Tk]
-        ;;          [:##l :!Tl]
-        ;;          [:##semicolon :!Tsemicolon]
-        ;;          [:##quote :!Tquote]
-        ;;          [:##backslash :!Tbackslash]
-        ;;          [:##grave_accent_and_tilde :!Tgrave_accent_and_tilde]
-        ;;          [:##z :!Tz]
-        ;;          [:##x :!Tx]
-        ;;          [:##c :!Tc]
-        ;;          [:##v :!Tv]
-        ;;          [:##b :!Tb]
-        ;;          [:##n :!Tn]
-        ;;          [:##m :!Tm]
-        ;;          [:##comma :!Tcomma]
-        ;;          [:##period :!Tperiod]
-        ;;          [:##slash :!Tslash]
-        ;;         ]}
-;;
 
         ]}
