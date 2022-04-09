@@ -115,7 +115,18 @@
         {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
         {:des "4Tech app key to FN" :rules [[:application :fn [:fortech]]]}
 ;;
-        {:des "q to control" :rules [[:q :left_control nil {:alone :q} ]]}
+        ;;home row
+;;        {:des "a to ctrl" :rules [[:##a :left_control nil {:alone :a}]]}
+;;        {:des "s to option" :rules [[:##s :left_option nil {:alone :s}]]}
+;;        {:des "d to command" :rules [[:##d :left_command nil {:alone :d}]]}
+;;        {:des "f to shift" :rules [[:##f :left_shift nil {:alone :f}]]}
+        ;
+;;        {:des "j to shift" :rules [[:##j :right_shift nil {:alone :j}]]}
+;;        {:des "k to command" :rules [[:##k :right_command nil {:alone :k}]]}
+;;        {:des "l to option" :rules [[:##l :right_option nil {:alone :l}]]}
+;;        {:des "semicolon (é) to ctrl" :rules [[:##semicolon :right_control nil {:alone :semicolon}]]}
+;;
+;;        {:des "q to control" :rules [[:q :left_control nil {:alone :q} ]]}
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
@@ -129,14 +140,6 @@
                  [:##k :up_arrow :photos]
                  [:##l :right_arrow :photos]
          ]}
-;;
-        ;;turning off arrow keys
-        ;; {:des "left arrow" :rules [[:##left_arrow :vk_none :internal]]}
-        ;; {:des "left arrow" :rules [:internal [:##left_arrow :vk_none nil {:alone :!STtab}]]}
-        ;; {:des "up arrow" :rules [[:##up_arrow :vk_none :internal]]}
-        ;; {:des "down arrow" :rules [[:##down_arrow :vk_none :internal]]}
-        ;; {:des "right arrow" :rules [[:##right_arrow :vk_none :internal]]}
-        ;; {:des "right arrow" :rules [:internal [:##right_arrow :vk_none nil {:alone :!Ttab}]]}
 ;;
         {:des "mouse"
          :rules [:mouse
@@ -182,7 +185,7 @@
                  [:c :!QWERc] ; Alfred clipboard history
                  [:e :!QWERe] ; Alfred emoji search
                  [:s :!QWERs] ; Alfred search snippets
-                 [:f :!QWERf] ;Fastdiff Alfred shortcut
+                 [:f :!QWERf] ; Alfred shortcut
                  ]}
 ;; *launchers
         {:des "l-key (launch mode)"
@@ -202,13 +205,13 @@
                  [:i [:toggle "iTerm"]]
                  [:j [:toggle "IntelliJ IDEA CE"]]
                  [:v [:toggle "Visual Studio Code"]]
-                 [:u [[:open "https://www.udemy.com"] [:launch "IntelliJ IDEA CE"] [:launch "Obsidian"]]] 
+;;                 [:u [[:open "https://www.udemy.com"] [:launch "IntelleJ IDEA CE"] [:launch "Obsidian"]]] 
                  ]}
 ;;
         {:des "s-key (social)"
          :rules [:s-key
                  [:f [:toggle "Messenger"]]
-                ;;  [:t [:launch "Telegram Lite"]]
+                 [:t [:launch "Telegram"]]
                 ;;  [:d [:launch "Discord"]]
                 ]}
 ;;
@@ -270,13 +273,13 @@
                  [:k :!Ff19] ; change karabiner profile with Alfred
                  ;;;;;;;;;;;;;;;;;;;
         ; *Spotify
-                 [:m :!QERm] ; open Spotify playlist in Alfred mini player
-                 [:p :!QERp] ;hs.spotify.play/pause
-                 [:period :!QERn] ;hs.spotify.next
-                 [:comma :!QERi] ;hs.spotify.previous
-                 [:i :!QTRi] ;hs.spotify.volumeDown
-                 [:o :!QTRo] ;hs.spotify.volumeUp
-                 [:spacebar :!QERspacebar] ;hs.spotify.displayCurrentTrack
+                 [:m :!CTSm] ; open Spotify playlist in Alfred mini player
+                 [:p :!CTSp] ;hs.spotify.play/pause
+                 [:period :!CTSn] ;hs.spotify.next
+                 [:comma :!CTSi] ;hs.spotify.previous
+                 [:i :!CTSi] ;hs.spotify.volumeDown
+                 [:o :!CTSo] ;hs.spotify.volumeUp
+                 [:spacebar :!CTSspacebar] ;hs.spotify.displayCurrentTrack
                  ]}
 ;;
         {:des "m-key (markdown)"
@@ -301,7 +304,7 @@
         {:des "workmandead" 
          :rules [:workmandead
                 [:1 :!S1] ;'
-                [:2 :!S2]
+                [:2 :!S2] ;"
                 [:3 :!Oclose_bracket] ;~
                 [:4 :!Obackslash] ;`
                 [:6 :!SO3] ;#

@@ -1,9 +1,9 @@
 require "winmov"
-require "utilities"
+require "utilities" --type clipboard w/ cmd+shift+v
 -- require "apps"
 require "windows"
 require "altTab"
--- require "Spotify"
+require "Spotify"
 
 -- require "moveWindows"
 
