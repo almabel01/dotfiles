@@ -43,7 +43,7 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == ''
 " let g:winresizer_start_key = '<C-T>'
 
 "keymap
-nmap H ^
+nmap H 0
 nmap L $
 
 "basics
