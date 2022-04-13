@@ -20,8 +20,8 @@ call plug#begin()
     Plug 'vim-autoformat/vim-autoformat' "https://github.com/vim-autoformat/vim-autoformat
     Plug 'ntpeters/vim-better-whitespace' "https://github.com/ntpeters/vim-better-whitespace
     Plug 'tommcdo/vim-exchange' "https://github.com/tommcdo/vim-exchange
-    " Plug 'inkarnat/vim-ingo-library'
-    " Plug 'inkarnat/vim-SearchPosition'
+    Plug 'inkarkat/vim-ingo-library'
+    Plug 'inkarkat/vim-SearchPosition'
     Plug 'VonHeikemen/searchbox.nvim'
 call plug#end()
 
@@ -61,4 +61,3 @@ exec 'set tabstop=4'
 exec 'set textwidth=0'
 exec 'set shiftwidth=4'
 exec 'set softtabstop=4'
-
