@@ -181,11 +181,11 @@ Space & 4:: ;`
 Send ^!7
 Return
 
-Space & 6:: ;#
+Space & 7:: ;#
 Send ^!x
 Return
 
-Space & 7:: ;^
+Space & 8:: ;^
 Send ^!3
 Return
 
@@ -329,15 +329,11 @@ Space & -::
 Send 5
 Return
 
-Space & RShift:: ;^
-Send ^!3
-Return
-
 ;;F keys
-$.::send,{.} ; allow comma still
+$.::send,{.} ; allow period still
 +.::Send :
 
-, & q::
+. & q::
 Send {F1}
 Return
 
