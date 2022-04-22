@@ -79,7 +79,7 @@
                 :photos ["^com.apple.Photos$"]
                 } ;;applications
  :layers {
-          :hyper {:key :caps_lock :alone {:key :escape}} ; navigation, shortcuts
+          :hyper {:key :caps_lock :alone {:key :escape}}
         ;;   :mouse {:key :tab}
           ; :workmandead {:key :spacebar}
          } ;;layers
@@ -103,7 +103,7 @@
              :w-key {:key :w} ; window management
              :x-key {:key :x} ; essentials
              :m-key {:key :m} ; markdown mode
-             :F-keys {:key :period}
+             :F-keys {:key :comma}
              } ;;simlayers
 ;;;;;;;;;;;;;;;;
  :main [;;;
@@ -583,13 +583,13 @@
                  [:##slash :!Rslash]
 ]}
 ;;
-;;        {:des "q to control" :rules [[:q :left_control nil {:alone :q} ]]}
         {:des "right command to f13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
+        ; {:des "cmd + . to cmd + ," :rules [[:!Cperiod :!Ccomma]]} ; ! TODO
         {:des "photos navigation"
          :rules [
                  [:##h :left_arrow :photos]
@@ -622,12 +622,12 @@
                  [:##o :end]
                  [:##u :page_down]
                  [:##a :return_or_enter]
-                 [:semicolon :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
-                 [:quote :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)
+                 [:quote :!Oleft_arrow] ; jump one word back (é on HUN keyboard)
+                 [:backslash :!Oright_arrow] ; jump one word ahead (á on HUN keyboard)
                  [:open_bracket :!SOleft_arrow] ; highlight/select previous word (ő on HUN keyboard)
                  [:close_bracket :!SOright_arrow] ; highlight/select next word (ú on HUN keyboard)
-                 [:hyphen :!Cleft_arrow] ; ü on HUN keyboard
-                 [:equal_sign :!Cright_arrow] ; ó on HUN keyboard
+                 [:hyphen :!Cleft_arrow] ; jump to the beginning of the line  (ü on HUN keyboard)
+                 [:equal_sign :!Cright_arrow] ; jump to the end of the line (ó on HUN keyboard)
                  ; *hyper delete
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
