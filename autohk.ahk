@@ -115,6 +115,47 @@ CapsLock & 1::
 Send {Enter 15}
 Return
 
+;;numpad
+LAlt & i::
+Send 7
+Return
+
+LAlt & o::
+Send 8
+Return
+
+LAlt & p::
+Send 9
+Return
+
+LAlt & k::
+Send 4
+Return
+
+LAlt & l::
+Send 5
+Return
+
+LAlt & SC027::
+Send 6
+Return
+
+LAlt & ,::
+Send 1
+Return
+
+LAlt & .::
+Send 2
+Return
+
+LAlt & -::
+Send 3
+Return
+
+LAlt & m::
+Send 0
+Return
+
 ;;essentials
 $x::send,x
 +x::X
@@ -330,54 +371,54 @@ Send 5
 Return
 
 ;;F keys
-$.::send,{.} ; allow period still
-+.::Send :
+$,::send,{,} ; allow period still
++,::Send ?
 
-. & q::
+,  & q::
 Send {F1}
 Return
 
-. & w::
+, & w::
 Send {F2}
 Return
 
-. & e::
+, & e::
 Send {F3}
 Return
 
-. & r::
+, & r::
 Send {F4}
 Return
 
-. & t::
+, & t::
 Send {F5}
 Return
 
-. & z::
+, & z::
 Send {F6}
 Return
 
-. & u::
+, & u::
 Send {F7}
 Return
 
-. & i::
+, & i::
 Send {F8}
 Return
 
-. & o::
+, & o::
 Send {F9}
 Return
 
-. & p::
+, & p::
 Send {F10}
 Return
 
-. & SC01A::
+, & SC01A::
 Send {F11}
 Return
 
-. & SC01B::
+, & SC01B::
 Send {F12}
 Return
 
