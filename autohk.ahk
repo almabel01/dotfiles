@@ -1,16 +1,26 @@
+#NoEnv ;Recommended for performance and compatibility with future AutoHotkey releases
+#Warn ;Enable warnings to assist with detecting common errors
+SetWorkingDir %A_ScriptDir% ;Ensures a consistent starting directory
+#SingleInstance, Force ;Only launch 1 instance of this script
+#Hotstring EndChars `t ;The only character that completes a hotstring is Tab
+#WinActivateForce ;Forces windows to be activated, skipping the gentle method
+#InputLevel 5 ;Makes sure hotkeys can't activate themselves, looping in the process ($ on every hotkey essentially)
+SendMode Input ;Recommended for new scripts due to its superior speed and reliability
+SetTitleMatchMode, 2 ;Title *consists of* instead of precise title
+SetBatchLines, -1 ;Script takes CPU priority
+CoordMode, Mouse, Screen ;Cursor coordinates are always of the screen, not window
+; if !A_IsAdmin { ;Runs the script as admin if ; are removed
+;    Run,*RunAs "%A_ScriptFullPath%"
+;    ExitApp
+; }
 SetCapsLockState, AlwaysOff
-;;;;;;;;;;;;;;;;;
-;#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #InstallKeybdHook
-;;;;;;;;;;;;;;;;;
-; # Win
-; ! Alt
-; ^ Control
-; + Shift
-;;;;;;;;;;;;;;;;;
+; ;;;;;;;;;;;;;;;;;
+; ; # Win
+; ; ! Alt
+; ; ^ Control
+; ; + Shift
+; ;;;;;;;;;;;;;;;;;
 #Include  %A_LineFile%\..\text.ahk
 #Include  %A_LineFile%\..\ToggleDarkMode.ahk
 
@@ -25,451 +35,133 @@ Return
 
 ;;; hyper mode (using caps lock)
 ;; movement
-CapsLock & h::
-Send {Left}
-Return
-
-CapsLock & l::
-Send {Right}
-Return
-
-CapsLock & j::
-Send {Down}
-Return
-
-CapsLock & k::
-Send {Up}
-Return
-
-CapsLock & p::
-Send {PgUp}
-Return
-
-CapsLock & i::
-Send {Home}
-Return
-
-CapsLock & o::
-Send {End}
-Return
-
-CapsLock & u::
-Send {PgDn}
-Return
-
-CapsLock & SC028::
-Send ^{Left}
-Return
-
-CapsLock & SC02B::
-Send ^{Right}
-Return
-
-CapsLock & SC01A::
-Send +^{Left}
-Return
-
-CapsLock & SC01B::
-Send +^{Right}
-Return
-
-CapsLock & SC00C::
-Send {Home}
-Return
-
-CapsLock & SC00D::
-Send {End}
-Return
+CapsLock & h:: Left
+CapsLock & l:: Right
+CapsLock & j:: Down
+CapsLock & k:: Up
+CapsLock & p:: PgUp
+CapsLock & i:: Home
+CapsLock & o:: End
+CapsLock & u:: PgDn
+CapsLock & SC028:: Send ^{Left}
+CapsLock & SC02B:: Send ^{Right}
+CapsLock & SC01A:: Send +^{Left}
+CapsLock & SC01B:: Send +^{Right}
+; CapsLock & SC00C:: Send {Home}
+; CapsLock & SC00D:: Send {End}
 
 ;;hyper deletion
-CapsLock & n::
-Send ^{BackSpace}
-Return
-
-CapsLock & m::
-Send {BackSpace}
-Return
-
-CapsLock & ,::
-Send {Delete}
-Return
-
-CapsLock & .::
-Send ^{Delete}
-Return
+CapsLock & n:: Send ^{BackSpace}
+CapsLock & m:: Send {BackSpace}
+CapsLock & ,:: Send {Delete}
+CapsLock & .:: Send ^{Delete}
 
 ;;hyper shortcuts
-CapsLock & c:: ;open system clipboard history
-Send #v
-Return
-
-CapsLock & a::
-Send {Enter}
-Return
-
-CapsLock & Enter::
-Send ^{Enter}
-Return
-
-CapsLock & 1::
-Send {Enter 15}
-Return
+CapsLock & c:: Send #v ;open system clipboard history
+CapsLock & a:: Send {Enter}
+CapsLock & Enter:: Send ^{Enter}
+CapsLock & 1:: Send {Enter 15}
 
 ;;numpad
-LAlt & i::
-Send 7
-Return
-
-LAlt & o::
-Send 8
-Return
-
-LAlt & p::
-Send 9
-Return
-
-LAlt & k::
-Send 4
-Return
-
-LAlt & l::
-Send 5
-Return
-
-LAlt & SC027::
-Send 6
-Return
-
-LAlt & ,::
-Send 1
-Return
-
-LAlt & .::
-Send 2
-Return
-
-LAlt & -::
-Send 3
-Return
-
-LAlt & m::
-Send 0
-Return
+<!u:: Send 7
+<!i:: Send 8
+<!o:: Send 9
+<!j:: Send 4
+<!k:: Send 5
+<!l:: Send 6
+<!m:: Send 1
+<!,:: Send 2
+<!.:: Send 3
+<!n:: Send 0
 
 ;;essentials
-$x::send,x
-+x::X
-^x::^x
+; $x::send,x
+; +x::X
+; ^x::^x
+x::x
+
 x & n::
 Send ^#t ;;toggle dark mode
-Return
 
 ;;window management
-$w::send,w
-+w::W ;needed for uppercase letter
-^w::^w
+; $w::send,w
+; +w::W ;needed for uppercase letter
+; ^w::^w
+w::w 
 
-w & h::
-Send #{Left}
-Return
+w & h:: Send #{Left}
+w & j:: Send #{Down}
+w & k:: Send #{Up}
+w & l:: Send #{Right}
+w & i:: Send #^{Left} ; change to virtual desktop to the left
+w & o:: Send #^{Right} ; change to virtual desktop to the right
+w & n:: Send #+{Right} ; send window to next monitor
+w & p:: Send #+{Left} ; send window to previous monitor
 
-w & j::
-Send #{Down}
-Return
+;workman-dead like symbols
+; $space::send,{space} ; allow spaces still
+space::space
 
-w & k::
-Send #{Up}
-Return
+Space & 1:: Send, {'} ;'
+Space & 2:: Send, {"} ; "
+Space & 3:: Send, {~} ;~
+Space & 4:: Send, `` ;`
+Space & 7:: Send, {#} ;#
+Space & 8:: Send, {^} ;^
 
-w & l::
-Send #{Right}
-Return
-
-w & i:: ; change to virtual desktop to the left
-Send #^{Left}
-Return
-
-w & o:: ; change to virtual desktop to the right
-Send #^{Right}
-Return
-
-w & n:: ; send window to next monitor
-Send #+{Right}
-Return
-
-w & p::  ; send window to previous monitor
-Send #+{Left}
-Return
-
-;workman"dead"
-$space::send,{space} ; allow spaces still
-
-;;not in workman
-Space & 1:: ;'
-Send +1
-Return
-
-Space & 2::
-Send +2
-Return
-;;
-
-Space & 3:: ;~
-Send ^!1
-Return
-
-Space & 4:: ;`
-Send ^!7
-Return
-
-Space & 7:: ;#
-Send ^!x
-Return
-
-Space & 8:: ;^
-Send ^!3
-Return
-
-Space & Tab:: ;: - not in workman
-Send +.
-Return
-
-Space & q:: ;%
-Send +5
-Return
-
-Space & w::  ;&
-Send ^!c
-Return
-
-Space & e:: ;?
-Send +,
-Return
-
-Space & r:: ;+
-Send +3
-Return
-
-Space & t:: ;@
-Send ^!v
-Return
-
-Space & z:: ;$
-Send $
-Return
-
-Space & u:: ;_
-Send +-
-Return
-
-Space & i:: ;[
-Send ^!f
-Return
-
-Space & o:: ;]
-Send ^!g
-Return
-
-Space & p:: ;!
-Send +4
-Return
-
-Space & a:: ;/
-Send +6
-Return
-
-Space & s:: ;(
-Send +8
-Return
-
-Space & d:: ;=
-Send +7
-Return
-
-Space & f:: ;0
-Send 0
-Return
-
-Space & g:: ;{
-Send ^!b
-Return
-
-Space & h:: ;}
-Send ^!n
-Return
-
-Space & j:: ;1
-Send 1
-Return
-
-Space & k:: ;*
-Send ^!-
-Return
-
-Space & l:: ;)
-Send +9
-Return
-
-Space & SC027:: ;-
-Send -
-Return
-
-Space & SC028:: ;"
-Send +2
-Return
-
-Space & SC02B:: ;'
-Send +1
-Return
-
-Space & LShift:: ;; - not in workman
-Send ^!,
-Return
-
-Space & SC056:: ;:
-Send +.
-Return
-
-Space & y::
-Send 6
-Return
-
-Space & x::
-Send 7
-Return
-
-Space & c::
-Send 8
-Return
-
-Space & v::
-Send 9
-Return
-
-Space & b:: ;|
-Send ^!w
-Return
-
-Space & n:: ;\
-Send ^!q
-Return
-
-Space & m::
-Send 2
-Return
-
-Space & ,::
-Send 3
-Return
-
-Space & .::
-Send 4
-Return
-
-Space & -::
-Send 5
-Return
-
+Space & Tab:: Send, {:}  ;: - not in workman
+Space & q:: Send, `% ;%
+Space & w:: Send, & ;&
+Space & e:: Send, ? ;?
+Space & r:: Send, {+}
+Space & t:: Send, {@}
+Space & z:: Send, $
+Space & u:: Send, {_}
+Space & i:: Send, [
+Space & o:: Send, ]
+Space & p:: Send, {!}
+Space & a:: Send, {/}
+Space & s:: Send, (
+Space & d:: Send, {=}
+Space & f:: Send 0
+Space & g:: Send, {{}
+Space & h:: Send, {}}
+Space & j:: Send 1
+Space & k:: Send, {*}
+Space & l:: Send, )
+Space & SC027:: Send, {-}
+Space & SC028:: Send, {"}
+Space & SC02B:: Send, {'}
+Space & LShift:: Send, {;}
+Space & SC056:: Send, {:}
+Space & y:: Send 6
+Space & x:: Send 7
+Space & c:: Send 8
+Space & v:: Send 9
+Space & b:: Send {|}
+Space & n:: Send {\}
+Space & m:: Send 2
+Space & ,:: Send 3
+Space & .:: Send 4
+Space & -:: Send 5
 ;;F keys
-$,::send,{,} ; allow period still
-+,::Send ?
+; $,::send,{,} ; allow period still
+; +,::Send ?
+,::,
 
-,  & q::
-Send {F1}
-Return
+, & q:: Send {F1}
+, & w:: Send {F2}
+, & e:: Send {F3}
+, & r:: Send {F4}
+, & t:: Send {F5}
+, & z:: Send {F6}
+, & u:: Send {F7}
+, & i:: Send {F8}
+, & o:: Send {F9}
+, & p:: Send {F10}
+, & SC01A:: Send {F11}
+, & SC01B:: Send {F12}
 
-, & w::
-Send {F2}
-Return
-
-, & e::
-Send {F3}
-Return
-
-, & r::
-Send {F4}
-Return
-
-, & t::
-Send {F5}
-Return
-
-, & z::
-Send {F6}
-Return
-
-, & u::
-Send {F7}
-Return
-
-, & i::
-Send {F8}
-Return
-
-, & o::
-Send {F9}
-Return
-
-, & p::
-Send {F10}
-Return
-
-, & SC01A::
-Send {F11}
-Return
-
-, & SC01B::
-Send {F12}
-Return
-
-;;control button
-; $a::send,{a}
-; +a::A
-; ^a::^a
-
-; a & c::
-; Send ^c
-; Return
-
-; a & v::
-; Send ^v
-; Return
-
-; a & s::
-; Send ^s
-; Return
-
-; a & f::
-; Send ^f
-; Return
-
-; a & b::
-; Send ^b
-; Return
-
-; a & i::
-; Send ^i
-; Return
-
-; a & k::
-; Send ^k
-; Return
-
-; a & n::
-; Send ^n
-; Return
-
-; a & t::
-; Send ^t
-; Return
-
-; a & x::
-; Send ^x
-; Return
-
-; a & o::
-; Send ^o
-; Return
 
 ;;;;;;;;;;
 ;;open apps
