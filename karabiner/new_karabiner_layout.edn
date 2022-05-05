@@ -1,0 +1,1027 @@
+;;----------------------------------------------------------------------------------------------------------
+;;TOC:
+;;   1. description
+;;   2. profiles
+;;   3. devices
+;;   4. froms
+;;   5. tos
+;;   6. templates
+;;   7. applications
+;;   8. layers
+;;   9. simlayers
+;;      9.1 shortcuts
+;;      9.2 launchers
+;;      9.3 home-row modifiers
+;;   10. main
+;;      10.1 layout rotation
+;;      10.2 external keyboard settings
+;;      10.3 simple modifications
+;;      10.4 keyboard mouse
+;;      10.5 hyper key settings
+;;      10.6 shortcuts
+;;          10.6.1 window management
+;;          10.6.2 misc shortcuts & Spotify control
+;;          10.6.3 markdown shortcuts
+;;      10.7 launchers
+;;          10.7.1 launch mode (frequently used apps)
+;;          10.7.2 open mode (frequently used websites)
+;;      10.8 home-row mods
+;;      10.10 F-keys
+;;      10.11 layouts
+;;          10.11.1 dead-keys
+;;          10.11.2 programming layout (sets QWERTZ international layout)
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; DESCRIPTION
+;; This is my karabiner setup on my personal MBA which has **Hungarian layout**, thus the strange combinations.
+;; Special thanks to @nikitavoloboev, @ttscoff and @kiinoda.
+
+    ;; !  | means mandatory -   modifier(s) alone when pressed change behavior
+    ;; #  | means optional  -   modifiers are optional (but at least one necessary)
+
+    ;; :!Ca is keycode :a and prefix a with !C
+
+    ;; C  | left_command
+    ;; T  | left_control
+    ;; O  | left_option
+    ;; S  | left_shift
+    ;; F  | fn
+    ;; Q  | right_command
+    ;; W  | right_control
+    ;; E  | right_option
+    ;; R  | right_shift
+    ;; P  | caps_lock
+
+    ;; ## | optional any (this has no effect when used on the RHS; only LHS)
+    ;; !! | command + control + optional + shift (hyper)
+
+    ;; to understand better how modifiers work in karabiner
+    ;; karabiner definition of mandatory and optional
+    ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
+
+
+    ;; need to prefix C T O S F with ! or #
+    ;;
+    ;; code for all this:
+    ;; https://github.com/yqrashawn/GokuRakuJoudo/blob/b9b334a187379f9bc8182ad59e2cca2a1789e9c0/src/karabiner_configurator/keys.clj#L68
+
+;;----------------------------------------------------------------------------------------------------------
+
+{ ;;This curly bracket marks the beginning of the whole config.
+;;Each section starts with a colon, the section's name and the section is bordered with curly brackets.
+
+;; PROFILES
+:profiles
+ {:goku {:default true ;;"default true means" rules default goes into this rule if no profiles specified
+         :sim 50
+        ;; simultaneous key press threshold
+        ;; simlayer is implemented with to_if_alone and simultaneous key press feature
+         :delay 80
+        ;; to_delayed_action_delay_milliseconds
+        ;; checkout karabiner's documentation
+        ;; https://pqrs.org/osx/karabiner/json.html
+        ;; basically it means time after which the key press is count delayed
+         :alone 120
+        ;; https://pqrs.org/osx/karabiner/json.html#to-if-alone
+        ;; to_if_alone_timeout_milliseconds
+        ;; affects to_if_alone behavior
+        ;; simlayer is implemented with to_if_alone and simultaneous key press feature
+         :held 70
+        ;; to_if_held_down_threshold_milliseconds
+        ;; check the doc, I don't know what does this mean.
+        ;; maybe press this many milliseconds counts a "held" ?
+        }
+ }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; DEVICES
+:devices{
+        :internal [{:vendor_id 1452 :product_id 657}]
+        ;; :fortech [{:vendor_id 7247 :product_id 38}] ;;This is an old keyboard I do not use anymore.
+        }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; FROMS
+:froms {
+        ;; aliases
+        :delete {:key :delete_or_backspace}
+        :return {:key :return_or_enter}
+}
+
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; TOS
+;; Here we can define to-s, which I do not really use.
+;; There are shortcuts for to-s in rules, like string to shell commands and multiple to definitions in vector.
+;; You only need to use to definition if you want to use or set select_input_source, mouse_key, lazy, repeat, halt, hold_down_milliseconds.
+
+ :tos {
+        ;;:same_wind_app   {:key :grave_accent_and_tilde :modi [:left_command] :lazy true}
+;;        :prev_app        {:key :tab :modi [:left_command] :lazy true}
+;;        :left_paren      {:key :8 :modi [:left_shift] :lazy true}
+;;        :right_paren     {:key :9 :modi [:left_shift] :lazy true}
+;;        :home_dir        [{:key :grave_accent_and_tilde :modi [:left_shift] :lazy true} {:key :slash}]
+;;        :regex_match_any [{:key :period} {:key :8 :modi [:left_shift] :lazy true}]
+;;        :select_cn       {:select_input_source
+;;                          {:input_mode_id   ""
+;;                           :input_source_id "com.apple.keylayout.US"
+;;                           :language        "en"}
+;;                         }
+;;        :select_abc      {:select_input_source
+;;                          {:input_source_id "^com\\.apple\\.keylayout\\.ABC$"}
+;;                         }
+        ;; symbols
+        :plus {:key :3 :modi :shift}
+        :minus {:key :slash}
+        :multiply {:key :comma :modi [:shift :option]}
+        :divide {:key :6 :modi :shift}
+      }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; TEMPLATES
+;; When we use karabiner to run shell commands or applescripts, we write them as string.
+;; The problem is these strings are often similar and really long. So there's predefined templates.
+;; It's the same with those string templates in some programming languages.
+;; In fact, it uses the clojure's string templates, which is actually java's string templates implementation.
+
+:templates {
+             :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :open "open \"%s\""
+             :applescript "osascript '~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/%s'"
+             :hs "open -g hammerspoon://%s"
+             :launch "osascript -e 'tell application \"%s\" to activate'"
+             :show "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'\n"
+             :toggle "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
+             :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
+            }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; APPLICATIONS
+;; Here we can define applications to use them as a condition.
+:applications {
+                :vscode ["^com.microsoft.VSCode$"]
+                :safari ["^com\\.apple\\.Safari$"]
+                :java ["^com.jetbrains.intellij.ce$"]
+                :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
+                :photos ["^com.apple.Photos$"]
+              }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; LAYERS
+:layers {
+          :mouse {:key :z :alone {:key :z}}
+          :hyper {:key :caps_lock :alone {:key :escape}}
+          :num {:key :tab}
+        }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; SIMLAYERS
+:simlayers {;
+; *shortcuts
+             :w-key {:key :w} ; window management
+             :x-key {:key :x} ; misc
+             :m-key {:key :m} ; markdown mode
+             :F-keys {:key :comma}
+; *launchers
+             :launch-mode {:key :q} ; launch frequently used apps
+             :o-key {:key :o} ; open websites
+; *home-row mods
+             :left_ctrl {:key :a}
+             :left_alt {:key :s}
+             :left_cmd {:key :d}
+             :left_shift {:key :f}
+             ;
+             :right_ctrl {:key :semicolon}
+             :right_alt {:key :l}
+             :right_cmd {:key :k}
+             :right_shift {:key :j}
+           }
+
+;;----------------------------------------------------------------------------------------------------------
+
+;; MAIN
+:main[
+
+;; For examples on layers, here’s how I rotate with Fn+spacebar between 4 settings:
+;; my default - Colemak with extended layer and mod-wide,
+;; QWERTY with extended layer,
+;; Gaming layer (QWERTY with IJKL locked to arrows),
+;; and reset to “bare”, computer default, QWERTY.
+
+;; {
+;;     :des "Rotate between Game Layer, QWERTY w/ layers and Karabiner Toggle w/ FN+SpaceBar"
+;;     :rules [
+;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 1]["layer" 1][:noti :layers "QWERTY w/ layers [Fn+Space]"]]["layer" 0]]
+;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 1]["layer" 2][:noti :layers "QWERTY w/ IJKL locked to arrows [Fn+Space]"]]["layer" 1]]
+;;         [:!F#Pspacebar [["blocked" 1]["qwerty" 1]["layer" 3][:noti :layers "Karabiner Disabled [Fn+Space]"]]["layer" 2]]
+;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 0]["layer" 0][:noti :layers ""]]["layer" 3]]
+;;     ]
+;; }
+
+;;layout rotation ;; ! TODO: anybar visualisation
+        ;; { ;; ! TODO: implement
+        ;; :des "Rotate between Game Layer, QWERTY w/ layers and Karabiner Toggle w/ FN+SpaceBar"
+        ;; :rules [
+        ;; [:!F#Pspacebar [["blocked" 0]["qwertz" 1][:noti :layers "QWERTZ w/ Karabiner [Fn+Space]"]]["layer" 0]]
+        ;; [:!F#Pspacebar [["blocked" 1]["qwertz" 1][:noti :layers "QWERTZ w/ Karabiner Disabled [Fn+Space]"]]["layer" 1]]
+        ;; [:!F#Pspacebar [["blocked" 0]["prog" 1][:noti :layers "QWERTZ International w/ Karabiner [Fn+Space]"]]["layer" 2]]
+        ;;        ]
+        ;; }
+
+        {:des "Cmd+Option+Shift+Esc to Reset All Layers (when/if something goes horribly wrong)"
+                :rules [[:!COTescape [["blocked" 1] ["qwerty" 0] ["dead" 0]]]]
+        }
+
+;; external keyboard settings
+        ;;4Tech keyboard settings
+        ;; {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
+        ;; {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
+        ;; {:des "4Tech app key to FN" :rules [:fortech [:application :fn ]]}
+
+;; simple modifications ;; ! TODO: add blocked layer
+        {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
+        {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
+        {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
+        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
+        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
+        ;; {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
+        {:des "photos navigation"
+         :rules [:photos
+                ;;  [:condi :!blocked]
+                 [:##h :left_arrow]
+                 [:##j :down_arrow]
+                 [:##k :up_arrow]
+                 [:##l :right_arrow]
+                ]
+        }
+
+;; keyboard mouse
+        {:des "mouse"
+        :rules [:mouse
+                ;; [:condi :!blocked]
+                [:j {:mkey {:y 1036}}]
+                [:k {:mkey {:y -1036}}]
+                [:h {:mkey {:x -1036}}]
+                [:l {:mkey {:x 1036}}]
+                [:n {:pkey :button1}]
+                [:m {:pkey :button2}]
+                ;TODO: button3
+                ]
+        }
+
+;; hyper key settings
+        {:des "hyper (caps_lock)"
+         :rules [:hyper
+                ;;  [:condi :!blocked]
+                 ; *hyper navigation
+                 [:##k :up_arrow]
+                 [:##j :down_arrow]
+                 [:##h :left_arrow]
+                 [:##l :right_arrow]
+                 [:##p :page_up]
+                 [:##i :home]
+                 [:##o :end]
+                 [:##u :page_down]
+                 [:##a :return_or_enter]
+                 [:quote :!Oleft_arrow] ; jump one word back (á on HUN keyboard)
+                 [:backslash :!Oright_arrow] ; jump one word ahead (ű on HUN keyboard)
+                 [:open_bracket :!SOleft_arrow] ; highlight/select previous word (ő on HUN keyboard)
+                 [:close_bracket :!SOright_arrow] ; highlight/select next word (ú on HUN keyboard)
+                 [:hyphen :!Cleft_arrow] ; jump to the beginning of the line  (ü on HUN keyboard)
+                 [:equal_sign :!Cright_arrow] ; jump to the end of the line (ó on HUN keyboard)
+                 ; *hyper delete
+                 [:n :!Odelete_or_backspace] ; delete previous word
+                 [:m :delete_or_backspace] ; simple backspace
+                 [:!Cn :!Cdelete_or_backspace] ; delete back to the beginning of the line
+                 [:comma :delete_forward] ; delete forward
+                 [:period :!Odelete_forward] ; delete next word
+                 [:!Ccomma :!Cdelete_forward] ; delete to the end of the line
+                 ; *hyper shortcuts
+                 [:c :!QWERc] ; Alfred clipboard history
+                 [:e :!QWERe] ; Alfred emoji search
+                 [:s :!QWERs] ; Alfred search snippets
+                ]
+        }
+;; numpad
+        {:des "numpad"
+         :rules [:num
+                ;;  [:condi :!blocked]
+                [:m :1] [:comma :2] [:period :3]
+                [:j :4] [:k :5] [:l :6]
+                [:u :7] [:i :8] [:o :9]
+                [:n :non_us_backslash] ;; 0
+                [:0 :plus] [:hyphen :minus] [:p :multiply] [:open_bracket :divide]
+                ;; [:0 :!S3] [:hyphen :slash] [:p :!OScomma] [:open_bracket :!S6]
+                ]
+        }
+
+;; shortcuts
+;;;; window management
+        {:des "window management (w-key)"
+         :rules [:w-key
+                ;;  [:condi :!blocked]
+                 ;; *system shortcuts  
+                 ;; NOTE: you need to specify most of these keyboard shortcuts in System Preferences too
+                 [:a :!CTOSh] ; tile window to left side of screen
+                 [:d :!CTOSl] ; tile window to right side of screen
+                 [:f :!CTf] ; toogle fullscreen 
+                 [:t :!Ctab] ; change apps
+                 ;;  [:!St :!CStab]
+                 [:y :!Ch] ; hide app
+                 [:q :!Cq] ; quit app
+                 [:e :!Cw] ; close window
+                 ;; *hammerspoon
+                 [:m :!CTOm] ; maximize
+                 [:c :!CTOc] ; center window
+                 [:k :!CTOk] ; top half
+                 [:j :!CTOj] ; bottom half
+                 [:h :!CTOh] ; left half
+                 [:l :!CTOl] ; right half
+                 [:1 :!CTO1] ; maximize window to monitor 1
+                 [:2 :!CTO2] ; maximize window to monitor 2
+                 [:3 :!CTO3] ; maximize window to monitor 3
+                 [:n :!CTOn] ; move window to next monitor
+                 [:p :!CTOp] ; move window to previous monitor
+                 [:r :!CTOo] ; switch to the next window
+                 [:!Sr :!TOSo] ; switch to the previous window
+                 [:s :!TOh] ;show keyboard hint for window switch
+                 [:i :!Tleft_arrow] ;switch to left Workspace
+                 [:o :!Tright_arrow] ;switch to right Workspace
+                ]
+        }
+
+;;;; misc shortcuts & Spotify control
+        {:des "x-key (misc)"
+         :rules [:x-key
+                ;;  [:condi :!blocked]
+                ; shortcuts
+                 [:b :!CTOSb] ; show/hide Bartender items
+                 [:c :!Ff14] ; show control center
+                 [:a :!Ff15] ; start new amphetamine session
+                 [:s :!Ff17] ; search menubar with Alfred
+                 [:n :!Ff18] ; toggle darkmode via Alfred shortcut
+                 [:k :!Ff19] ; change karabiner profile with Alfred
+                 ;;;;;;;;;;;;;;;;;;;
+                ; *Spotify
+                 [:m :!CTSm] ; open Spotify playlist in Alfred mini player
+                 [:p :!CTSp] ;hs.spotify.play/pause
+                 [:period :!CTSn] ;hs.spotify.next
+                 [:comma :!CTSi] ;hs.spotify.previous
+                 [:i :!CTSi] ;hs.spotify.volumeDown
+                 [:o :!CTSo] ;hs.spotify.volumeUp
+                 [:spacebar :!CTSspacebar] ;hs.spotify.displayCurrentTrack
+                ]
+        }
+
+;;;; markdown shortcuts
+        {:des "m-key (markdown)"
+         :rules [:m-key
+                ;;  [:condi :!blocked]
+                 [:b [:!SOcomma :!SOcomma :!SOcomma :!SOcomma :left_arrow :left_arrow]] ; bold
+                 [:i [:!SOcomma :!SOcomma :left_arrow]] ; italic
+                 [:1 [:!SO3 :spacebar]] ; heading 1
+                 [:2 [:!SO3 :!SO3 :spacebar]] ; heading 2
+                 [:3 [:!SO3 :!SO3 :!SO3 :spacebar]] ; heading 3
+                 [:4 [:!SO3 :!SO3 :!SO3 :!SO3 :spacebar]] ; heading 4
+                 [:5 [:!SO3 :!SO3 :!SO3 :!SO3 :!SO3 :spacebar]] ; heading 5
+                 [:s [:!Oclose_bracket :!Oclose_bracket :!Oclose_bracket :!Oclose_bracket :left_arrow :left_arrow]] ; striketrough
+                 [:x [:!Oclose_bracket :!Oclose_bracket :left_arrow]] ; alt striketrough
+                 [:c [:!Obackslash :!Obackslash :!Obackslash]] ; code block
+                 [:j [:!Obackslash :!Obackslash :!Obackslash :j :a :v :a :return_or_enter :return_or_enter :!Obackslash :!Obackslash :!Obackslash :up_arrow]] ; java code block
+                 [:q [:!SOx :spacebar]] ; quote
+                 [:h [:!S7 :!S7 :!S7 :!S7 :left_arrow :left_arrow]] ; highlight
+                 [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
+                 [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
+                ]
+        }
+
+;; launchers
+;;;; launch mode (frequently used apps)
+        {:des "q-key (launch mode)"
+         :rules [:launch-mode
+                ;;  [:condi :!blocked]
+                 [:s [:toggle "Safari"]]
+                 [:m [:toggle "Spotify"]]
+                 [:f [:toggle "Finder"]]
+                 [:c [:toggle "Calendar"]]
+                ;;  [:b [:launch "Firefox"]] ;;b for browser i guess
+                 [:n [:toggle "Notes"]]
+                 [:d [:toggle "Drafts"]]
+                 [:w [:toggle "Obsidian"]]
+                 [:e [:toggle "Mail"]]
+                 [:t [:toggle "TickTick"]]
+                 [:p [:toggle "Photos"]]
+                 [:i [:toggle "iTerm"]]
+                 [:j [:toggle "IntelliJ IDEA CE"]]
+                 [:v [:toggle "Visual Studio Code"]]
+                ]
+        }
+
+;;;; open mode (frequently used websites)
+        {:des "o-key (open websites)"
+         :rules [:o-key
+                ;;  [:condi :!blocked]
+                 [:k [:open "https://docs.google.com/spreadsheets/d/1-quGQWvYoeEuMf1jDeKJUIY-DZytnpBJcL-JrFs6Tvw/edit#gid=656760228"]] ; open my finances spreadsheet 
+                 ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1EoYVZFFO_S77Lp0awYrRCq44Zz5X2VRgcQG_rdnVlZk/edit?usp=sharing
+                 [:t [:open "https://telex.hu"]]
+                 [:g [:open "https://github.com"]]
+                 [:u [:open "https://www.udemy.com"]]
+                ]
+        }
+
+;; home-row mods
+        {:des "a to left_ctrl"
+         :rules [:left_ctrl
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Tnon_us_backslash]
+                 [:##1 :!T1]
+                 [:##2 :!T2]
+                 [:##3 :!T3]
+                 [:##4 :!T4]
+                 [:##5 :!T5]
+                 [:##6 :!T6]
+                 [:##7 :!T7]
+                 [:##8 :!T8]
+                 [:##9 :!T9]
+                 [:##0 :!T0]
+                 [:##hyphen :!Thyphen]
+                 [:##equal_sign :!Tequal_sign]
+                 [:##delete_or_backspace :!Tdelete_or_backspace]
+                 ;;
+                 [:##tab :!Ttab]
+                 [:##q :!Tq]
+                 [:##w :!Tw]
+                 [:##e :!Te]
+                 [:##r :!Tr]
+                 [:##t :!Tt]
+                 [:##y :!Ty]
+                 [:##u :!Tu]
+                 [:##i :!Ti]
+                 [:##o :!To]
+                 [:##p :!Tp]
+                 [:##open_bracket :!Topen_bracket]
+                 [:##close_bracket :!Tclose_bracket]
+                 [:##return_or_enter :!Treturn_or_enter]
+                 ;;
+                 ;[:##a :!Ta]
+                 [:##s :!Ts]
+                 [:##d :!Td]
+                 [:##f :!Tf]
+                 [:##g :!Tg]
+                 [:##h :!Th]
+                 [:##j :!Tj]
+                 [:##k :!Tk]
+                 [:##l :!Tl]
+                 [:##semicolon :!Tsemicolon]
+                 [:##quote :!Tquote]
+                 [:##backslash :!Tbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Tgrave_accent_and_tilde]
+                 [:##z :!Tz]
+                 [:##x :!Tx]
+                 [:##c :!Tc]
+                 [:##v :!Tv]
+                 [:##b :!Tb]
+                 [:##n :!Tn]
+                 [:##m :!Tm]
+                 [:##comma :!Tcomma]
+                 [:##period :!Tperiod]
+                 [:##slash :!Tslash]
+                ]
+        }
+        ;;
+        {:des "s to left_option"
+         :rules [:left_alt
+                ;;  [:condi :!blocked]
+                [:##non_us_backslash :!Onon_us_backslash]
+                [:##1 :!O1]
+                [:##2 :!O2]
+                [:##3 :!O3]
+                [:##4 :!O4]
+                [:##5 :!O5]
+                [:##6 :!O6]
+                [:##7 :!O7]
+                [:##8 :!O8]
+                [:##9 :!O9]
+                [:##0 :!O0]
+                [:##hyphen :!Ohyphen]
+                [:##equal_sign :!Oequal_sign]
+                [:##delete_or_backspace :!Odelete_or_backspace]
+                ;;
+                [:##tab :!Otab]
+                [:##q :!Oq]
+                [:##w :!Ow]
+                [:##e :!Oe]
+                [:##r :!Or]
+                [:##t :!Ot]
+                [:##y :!Oy]
+                [:##u :!Ou]
+                [:##i :!Oi]
+                [:##o :!Oo]
+                [:##p :!Op]
+                [:##open_bracket :!Oopen_bracket]
+                [:##close_bracket :!Oclose_bracket]
+                [:##return_or_enter :!Oreturn_or_enter]
+                ;;
+                [:##a :!Oa]
+                ; [:s :!Os]
+                [:##d :!Od]
+                [:##f :!Of]
+                [:##g :!Og]
+                [:##h :!Oh]
+                [:##j :!Oj]
+                [:##k :!Ok]
+                [:##l :!Ol]
+                [:##semicolon :!Osemicolon]
+                [:##quote :!Oquote]
+                [:##backslash :!Obackslash]
+                ;;
+                [:##grave_accent_and_tilde :!Ograve_accent_and_tilde]
+                [:##z :!Oz]
+                [:##x :!Ox]
+                [:##c :!Oc]
+                [:##v :!Ov]
+                [:##b :!Ob]
+                [:##n :!On]
+                [:##m :!Om]
+                [:##comma :!Ocomma]
+                [:##period :!Operiod]
+                [:##slash :!Oslash]
+                ]
+        }
+        ;;
+        {:des "d to left_command"
+         :rules [:left_cmd
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Cnon_us_backslash]
+                 [:##1 :!C1]
+                 [:##2 :!C2]
+                 [:##3 :!C3]
+                 [:##4 :!C4]
+                 [:##5 :!C5]
+                 [:##6 :!C6]
+                 [:##7 :!C7]
+                 [:##8 :!C8]
+                 [:##9 :!C9]
+                 [:##0 :!C0]
+                 [:##hyphen :!Chyphen]
+                 [:##equal_sign :!Cequal_sign]
+                 [:##delete_or_backspace :!Cdelete_or_backspace]
+                 ;;
+                 [:##tab :!Ctab]
+                 [:##q :!Cq]
+                 [:##w :!Cw]
+                 [:##e :!Ce]
+                 [:##r :!Cr]
+                 [:##t :!Ct]
+                 [:##y :!Cy]
+                 [:##u :!Cu]
+                 [:##i :!Ci]
+                 [:##o :!Co]
+                 [:##p :!Cp]
+                 [:##open_bracket :!Copen_bracket]
+                 [:##close_bracket :!Cclose_bracket]
+                 [:##return_or_enter :!Creturn_or_enter]
+                 ;;
+                 [:##a :!Ca]
+                 [:##s :!Cs]
+                 ; [:##d :!Cd]
+                 [:##f :!Cf]
+                 [:##g :!Cg]
+                 [:##h :!Ch]
+                 [:##j :!Cj]
+                 [:##k :!Ck]
+                 [:##l :!Cl]
+                 [:##semicolon :!Csemicolon]
+                 [:##quote :!Cquote]
+                 [:##backslash :!Cbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Cgrave_accent_and_tilde]
+                 [:##z :!Cz]
+                 [:##x :!Cx]
+                 [:##c :!Cc]
+                 [:##v :!Cv]
+                 [:##b :!Cb]
+                 [:##n :!Cn]
+                 [:##m :!Cm]
+                 [:##comma :!Ccomma]
+                 [:##period :!Cperiod]
+                 [:##slash :!Cslash]
+                ]
+        }
+        ;;
+        {:des "f to left_shift"
+         :rules [:left_shift
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Snon_us_backslash]
+                 [:##1 :!S1]
+                 [:##2 :!S2]
+                 [:##3 :!S3]
+                 [:##4 :!S4]
+                 [:##5 :!S5]
+                 [:##6 :!S6]
+                 [:##7 :!S7]
+                 [:##8 :!S8]
+                 [:##9 :!S9]
+                 [:##0 :!S0]
+                 [:##hyphen :!Shyphen]
+                 [:##equal_sign :!Sequal_sign]
+                 [:##delete_or_backspace :!Sdelete_or_backspace]
+                 ;;
+                 [:##tab :!Stab]
+                 [:##q :!Sq]
+                 [:##w :!Sw]
+                 [:##e :!Se]
+                 [:##r :!Sr]
+                 [:##t :!St]
+                 [:##y :!Sy]
+                 [:##u :!Su]
+                 [:##i :!Si]
+                 [:##o :!So]
+                 [:##p :!Sp]
+                 [:##open_bracket :!Sopen_bracket]
+                 [:##close_bracket :!Sclose_bracket]
+                 [:##return_or_enter :!Sreturn_or_enter]
+                 ;;
+                 [:##a :!Sa]
+                 [:##s :!Ss]
+                 [:##d :!Sd]
+                 ; [:##f :!Sf]
+                 [:##g :!Sg]
+                 [:##h :!Sh]
+                 [:##j :!Sj]
+                 [:##k :!Sk]
+                 [:##l :!Sl]
+                 [:##semicolon :!Ssemicolon]
+                 [:##quote :!Squote]
+                 [:##backslash :!Sbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Sgrave_accent_and_tilde]
+                 [:##z :!Sz]
+                 [:##x :!Sx]
+                 [:##c :!Sc]
+                 [:##v :!Sv]
+                 [:##b :!Sb]
+                 [:##n :!Sn]
+                 [:##m :!Sm]
+                 [:##comma :!Scomma]
+                 [:##period :!Speriod]
+                 [:##slash :!Sslash]
+                ]
+        }
+        ;;;;;;;;;;;;;;;
+        {:des "semicolon to right_ctrl"
+         :rules [:right_ctrl
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Wnon_us_backslash]
+                 [:##1 :!W1]
+                 [:##2 :!W2]
+                 [:##3 :!W3]
+                 [:##4 :!W4]
+                 [:##5 :!W5]
+                 [:##6 :!W6]
+                 [:##7 :!W7]
+                 [:##8 :!W8]
+                 [:##9 :!W9]
+                 [:##0 :!W0]
+                 [:##hyphen :!Whyphen]
+                 [:##equal_sign :!Wequal_sign]
+                 [:##delete_or_backspace :!Wdelete_or_backspace]
+                 ;;
+                 [:##tab :!Wtab]
+                 [:##q :!Wq]
+                 [:##w :!Ww]
+                 [:##e :!We]
+                 [:##r :!Wr]
+                 [:##t :!Wt]
+                 [:##y :!Wy]
+                 [:##u :!Wu]
+                 [:##i :!Wi]
+                 [:##o :!Wo]
+                 [:##p :!Wp]
+                 [:##open_bracket :!Wopen_bracket]
+                 [:##close_bracket :!Wclose_bracket]
+                 [:##return_or_enter :!Wreturn_or_enter]
+                 ;;
+                 [:##a :!Wa]
+                 [:##s :!Ws]
+                 [:##d :!Wd]
+                 [:##f :!Wf]
+                 [:##g :!Wg]
+                 [:##h :!Wh]
+                 [:##j :!Wj]
+                 [:##k :!Wk]
+                 [:##l :!Wl]
+                 ; [:##semicolon :!Wsemicolon]
+                 [:##quote :!Wquote]
+                 [:##backslash :!Wbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Wgrave_accent_and_tilde]
+                 [:##z :!Wz]
+                 [:##x :!Wx]
+                 [:##c :!Wc]
+                 [:##v :!Wv]
+                 [:##b :!Wb]
+                 [:##n :!Wn]
+                 [:##m :!Wm]
+                 [:##comma :!Wcomma]
+                 [:##period :!Wperiod]
+                 [:##slash :!Wslash]
+                ]
+        }
+        ;;
+        {:des "l to right_option"
+         :rules [:right_alt
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Enon_us_backslash]
+                 [:##1 :!E1]
+                 [:##2 :!E2]
+                 [:##3 :!E3]
+                 [:##4 :!E4]
+                 [:##5 :!E5]
+                 [:##6 :!E6]
+                 [:##7 :!E7]
+                 [:##8 :!E8]
+                 [:##9 :!E9]
+                 [:##0 :!E0]
+                 [:##hyphen :!Ehyphen]
+                 [:##equal_sign :!Eequal_sign]
+                 [:##delete_or_backspace :!Edelete_or_backspace]
+                 ;;
+                 [:##tab :!Etab]
+                 [:##q :!Eq]
+                 [:##w :!Ew]
+                 [:##e :!Ee]
+                 [:##r :!Er]
+                 [:##t :!Et]
+                 [:##y :!Ey]
+                 [:##u :!Eu]
+                 [:##i :!Ei]
+                 [:##o :!Eo]
+                 [:##p :!Ep]
+                 [:##open_bracket :!Eopen_bracket]
+                 [:##close_bracket :!Eclose_bracket]
+                 [:##return_or_enter :!Ereturn_or_enter]
+                 ;;
+                 [:##a :!Ea]
+                 [:s :!Es]
+                 [:##d :!Ed]
+                 [:##f :!Ef]
+                 [:##g :!Eg]
+                 [:##h :!Eh]
+                 [:##j :!Ej]
+                 [:##k :!Ek]
+                 ; [:##l :!El]
+                 [:##semicolon :!Esemicolon]
+                 [:##quote :!Equote]
+                 [:##backslash :!Ebackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Egrave_accent_and_tilde]
+                 [:##z :!Ez]
+                 [:##x :!Ex]
+                 [:##c :!Ec]
+                 [:##v :!Ev]
+                 [:##b :!Eb]
+                 [:##n :!En]
+                 [:##m :!Em]
+                 [:##comma :!Ecomma]
+                 [:##period :!Eperiod]
+                 [:##slash :!Eslash]
+                ]
+        }
+        ;;
+        {:des "k to right_command"
+         :rules [:right_cmd
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Qnon_us_backslash]
+                 [:##1 :!Q1]
+                 [:##2 :!Q2]
+                 [:##3 :!Q3]
+                 [:##4 :!Q4]
+                 [:##5 :!Q5]
+                 [:##6 :!Q6]
+                 [:##7 :!Q7]
+                 [:##8 :!Q8]
+                 [:##9 :!Q9]
+                 [:##0 :!Q0]
+                 [:##hyphen :!Qhyphen]
+                 [:##equal_sign :!Qequal_sign]
+                 [:##delete_or_backspace :!Qdelete_or_backspace]
+                 ;;
+                 [:##tab :!Qtab]
+                 [:##q :!Qq]
+                 [:##w :!Qw]
+                 [:##e :!Qe]
+                 [:##r :!Qr]
+                 [:##t :!Qt]
+                 [:##y :!Qy]
+                 [:##u :!Qu]
+                 [:##i :!Qi]
+                 [:##o :!Qo]
+                 [:##p :!Qp]
+                 [:##open_bracket :!Qopen_bracket]
+                 [:##close_bracket :!Qclose_bracket]
+                 [:##return_or_enter :!Qreturn_or_enter]
+                 ;;
+                 [:##a :!Qa]
+                 [:##s :!Qs]
+                 [:##d :!Qd]
+                 [:##f :!Qf]
+                 [:##g :!Qg]
+                 [:##h :!Qh]
+                 [:##j :!Qj]
+                 ; [:##k :!Qk]
+                 [:##l :!Ql]
+                 [:##semicolon :!Qsemicolon]
+                 [:##quote :!Qquote]
+                 [:##backslash :!Qbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Qgrave_accent_and_tilde]
+                 [:##z :!Qz]
+                 [:##x :!Qx]
+                 [:##c :!Qc]
+                 [:##v :!Qv]
+                 [:##b :!Qb]
+                 [:##n :!Qn]
+                 [:##m :!Qm]
+                 [:##comma :!Qcomma]
+                 [:##period :!Qperiod]
+                 [:##slash :!Qslash]
+                ]
+        }
+        ;;
+        {:des "j to right_shift"
+         :rules [:right_shift
+                ;;  [:condi :!blocked]
+                 [:##non_us_backslash :!Rnon_us_backslash]
+                 [:##1 :!R1]
+                 [:##2 :!R2]
+                 [:##3 :!R3]
+                 [:##4 :!R4]
+                 [:##5 :!R5]
+                 [:##6 :!R6]
+                 [:##7 :!R7]
+                 [:##8 :!R8]
+                 [:##9 :!R9]
+                 [:##0 :!R0]
+                 [:##hyphen :!Rhyphen]
+                 [:##equal_sign :!Requal_sign]
+                 [:##delete_or_backspace :!Rdelete_or_backspace]
+                 ;;
+                 [:##tab :!Rtab]
+                 [:##q :!Rq]
+                 [:##w :!Rw]
+                 [:##e :!Re]
+                 [:##r :!Rr]
+                 [:##t :!Rt]
+                 [:##y :!Ry]
+                 [:##u :!Ru]
+                 [:##i :!Ri]
+                 [:##o :!Ro]
+                 [:##p :!Rp]
+                 [:##open_bracket :!Ropen_bracket]
+                 [:##close_bracket :!Rclose_bracket]
+                 [:##return_or_enter :!Rreturn_or_enter]
+                 ;;
+                 [:##a :!Ra]
+                 [:##s :!Rs]
+                 [:##d :!Rd]
+                 [:##f :!Rf]
+                 [:##g :!Rg]
+                 [:##h :!Rh]
+                 ; [:##j :!Rj]
+                 [:##k :!Rk]
+                 [:##l :!Rl]
+                 [:##semicolon :!Rsemicolon]
+                 [:##quote :!Rquote]
+                 [:##backslash :!Rbackslash]
+                 ;;
+                 [:##grave_accent_and_tilde :!Rgrave_accent_and_tilde]
+                 [:##z :!Rz]
+                 [:##x :!Rx]
+                 [:##c :!Rc]
+                 [:##v :!Rv]
+                 [:##b :!Rb]
+                 [:##n :!Rn]
+                 [:##m :!Rm]
+                 [:##comma :!Rcomma]
+                 [:##period :!Rperiod]
+                 [:##slash :!Rslash]
+                ]
+        }
+
+;; F-keys
+        {:des "F-keys"
+         :rules [:F-keys
+                ;;  [:condi :!blocked]
+                [:q :!Ff1]
+                [:w :!Ff2]
+                [:e :!Ff3]
+                [:r :!Ff4]
+                [:t :!Ff5]
+                [:y :!Ff6]
+                [:u :!Ff7]
+                [:i :!Ff8]
+                [:o :!Ff9]
+                [:p :!Ff10]
+                [:open_bracket :!Ff11]
+                [:close_bracket :!Ff12]
+                ]
+        }
+
+;; layouts
+
+
+;;;; dead-keys
+        ;;  {:des "toggle dead" ;; ! TODO: anybar visualisation
+        ;;    :rules [
+        ;; ;;     [: condi ["blocked" 0]]
+        ;;     [:comma ["dead" 1]]
+        ;;    ]
+        ;;  }
+         ;; This is a modified copy of the workman layout's dead state.
+         {:des "dead layer"
+          :rules
+          [:dead
+             [:4 :!Oclose_bracket] ;; ~
+             [:5 :!Obackslash] ;; `
+             [:7 :!OS3] ;; #
+             [:8 :!Oquote], ;; ^
+             [:hyphen :!SOz] ;<
+             [:equal_sign :!SOx] ;>
+             ;;
+             [:q :!S5 nil {:afterup ["dead" 0]}] ;; %
+             [:w :!O1 nil {:afterup ["dead" 0]}] ;; &
+             [:e :!Scomma nil {:afterup ["dead" 0]}] ;; ?
+             [:r :!S3 nil {:afterup ["dead" 0]}] ;; +
+             [:t :!Oq nil {:afterup ["dead" 0]}] ;; @
+             [:y :!O4 nil {:afterup ["dead" 0]}] ;; $
+             [:u :!Sslash nil {:afterup ["dead" 0]}] ;; _
+             [:i :!O8 nil {:afterup ["dead" 0]}] ;; [
+             [:o :!O9 nil {:afterup ["dead" 0]}] ;; ]
+             [:p :!S4 nil {:afterup ["dead" 0]}] ;; p 
+             [:open_bracket :!Operiod nil {:afterup ["dead" 0]}] ;; ;
+        ;     [:close_bracket :!S5 nil {:afterup ["dead" 0]}]
+             [:return_or_enter [:comma :return_or_enter] nil {:afterup ["dead" 0]}]
+              ;;
+             [:a :!S6 nil {:afterup ["dead" 0]}] ;; /
+             [:s :!S8 nil {:afterup ["dead" 0]}] ;; (
+             [:d :!S7 nil {:afterup ["dead" 0]}] ;; =
+             [:f :non_us_backslash nil {:afterup ["dead" 0]}] ;; 0
+             [:g :!O7 nil {:afterup ["dead" 0]}] ;; {
+             [:h :!O0 nil {:afterup ["dead" 0]}] ;; }
+             [:j :1 nil {:afterup ["dead" 0]}] ;; 1
+             [:k :!OScomma nil {:afterup ["dead" 0]}] ;; *
+             [:l :!S9 {:afterup ["dead" 0]}] ;; )
+             [:semicolon :slash nil {:afterup ["dead" 0]}] ;; -
+             [:quote :!S2 nil {:afterup ["dead" 0]}] ;; "
+             [:backslash :!S1 nil {:afterup ["dead" 0]}] ;; '
+              ;;
+             [:left_shift :comma nil {:afterup ["dead" 0]}] ;; 
+             [:grave_accent_and_tilde :!Speriod nil {:afterup ["dead" 0]}] ;; :
+             [:z :6 nil {:afterup ["dead" 0]}] ;; 6
+             [:x :7 nil {:afterup ["dead" 0]}] ;; 7
+             [:c :8 nil {:afterup ["dead" 0]}] ;; 8
+             [:v :9 nil {:afterup ["dead" 0]}] ;; 9
+             [:b :!Ograve_accent_and_tilde nil {:afterup ["dead" 0]}] ;; |
+             [:n :!Ohyphen nil {:afterup ["dead" 0]}] ;; \
+             [:m :2 nil {:afterup ["dead" 0]}] ;; 2
+             [:comma :3 nil {:afterup ["dead" 0]}] ;; 3
+             [:period :4 nil {:afterup ["dead" 0]}] ;; 4
+             [:slash :5 nil {:afterup ["dead" 0]}] ;; 5
+             [:right_shift :comma nil {:afterup ["dead" 0]}] ;; 
+              ;;
+             [:spacebar [:comma :spacebar] nil {:afterup ["dead" 0]}]
+          ]
+         }
+
+;;;; programming layout
+        ;; {:des "prog layout"
+        ;;  :rules [:prog
+        ;;         [:non_us_backslash :!Snon_us_backslash]
+        ;;         [:0 :non_us_backslash]
+        ;;         [:y :z]
+        ;;         [:z :y]
+        ;;         [:hyphen :slash]
+        ;;         [:slash :hyphen]
+        ;;         [:equal_sign :!S7]
+        ;;         [:open_bracket :!O8]
+        ;;         [:close_bracket :!O9]
+        ;;         [:semicolon :!Operiod]
+        ;;         [:!Ssemicolon :!Speriod]
+        ;;         ;; [:quote :]
+        ;;         ;; [:backslash :!]
+        ;;         [:grave_accent_and_tilde :!Obackslash]
+        ;;         ]
+        ;; }
+
+     ] ;; end of main
+} ;; end of config
