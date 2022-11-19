@@ -352,10 +352,10 @@
         ;; ; :rules [:workmandead
         ;; ;        [:1 :!S1] ;'
         ;; ;        [:2 :!S2] ;"
-        ;; ;        [:3 :!Oclose_bracket] ;~
-        ;; ;        [:4 :!Obackslash] ;`
-        ;; ;        [:6 :!SO3] ;#
-        ;; ;        [:7 :!Oquote] ;^
+        ;; ;        [:4 :!Oclose_bracket] ;~
+        ;; ;        [:5 :!Obackslash] ;`
+        ;; ;        [:7 :!SO3] ;#
+        ;; ;        [:8 :!Oquote] ;^
         ;; ;        ;;
         ;; ;        [:tab :!Speriod] ;:
         ;; ;        [:q :!S5] ;%

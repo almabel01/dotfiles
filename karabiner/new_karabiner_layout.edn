@@ -158,6 +158,7 @@
              :show "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'\n"
              :toggle "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
              :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
+        ;;      :redbar      "echo -n "blue" | nc -4u -w0 localhost 1738"
             }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -179,6 +180,8 @@
           :mouse {:key :z :alone {:key :z}}
           :hyper {:key :caps_lock :alone {:key :escape}}
           :num {:key :tab}
+          :symbols {:key :spacebar}  ;; :alone {:key :spacebar}}
+        ;;   :change-layout {:key :FN :alone {:key :FN}}
         }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -189,7 +192,7 @@
              :w-key {:key :w} ; window management
              :x-key {:key :x} ; misc
              :m-key {:key :m} ; markdown mode
-             :F-keys {:key :comma}
+             :F-keys {:key :comma :alone ["dead" 1]}
 ; *launchers
              :launch-mode {:key :q} ; launch frequently used apps
              :o-key {:key :o} ; open websites
@@ -197,7 +200,7 @@
              :left_ctrl {:key :a}
              :left_alt {:key :s}
              :left_cmd {:key :d}
-             :left_shift {:key :f}
+        ;;      :left_shift {:key ["left_shift" 1] :alone {:key :f}}
              ;
              :right_ctrl {:key :semicolon}
              :right_alt {:key :l}
@@ -210,58 +213,27 @@
 ;; MAIN
 :main[
 
-;; For examples on layers, here’s how I rotate with Fn+spacebar between 4 settings:
-;; my default - Colemak with extended layer and mod-wide,
-;; QWERTY with extended layer,
-;; Gaming layer (QWERTY with IJKL locked to arrows),
-;; and reset to “bare”, computer default, QWERTY.
-
-;; {
-;;     :des "Rotate between Game Layer, QWERTY w/ layers and Karabiner Toggle w/ FN+SpaceBar"
-;;     :rules [
-;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 1]["layer" 1][:noti :layers "QWERTY w/ layers [Fn+Space]"]]["layer" 0]]
-;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 1]["layer" 2][:noti :layers "QWERTY w/ IJKL locked to arrows [Fn+Space]"]]["layer" 1]]
-;;         [:!F#Pspacebar [["blocked" 1]["qwerty" 1]["layer" 3][:noti :layers "Karabiner Disabled [Fn+Space]"]]["layer" 2]]
-;;         [:!F#Pspacebar [["blocked" 0]["qwerty" 0]["layer" 0][:noti :layers ""]]["layer" 3]]
-;;     ]
-;; }
-
-;;layout rotation ;; ! TODO: anybar visualisation
-        ;; { ;; ! TODO: implement
-        ;; :des "Rotate between Game Layer, QWERTY w/ layers and Karabiner Toggle w/ FN+SpaceBar"
-        ;; :rules [
-        ;; [:!F#Pspacebar [["blocked" 0]["qwertz" 1][:noti :layers "QWERTZ w/ Karabiner [Fn+Space]"]]["layer" 0]]
-        ;; [:!F#Pspacebar [["blocked" 1]["qwertz" 1][:noti :layers "QWERTZ w/ Karabiner Disabled [Fn+Space]"]]["layer" 1]]
-        ;; [:!F#Pspacebar [["blocked" 0]["prog" 1][:noti :layers "QWERTZ International w/ Karabiner [Fn+Space]"]]["layer" 2]]
-        ;;        ]
-        ;; }
-
-        {:des "Cmd+Option+Shift+Esc to Reset All Layers (when/if something goes horribly wrong)"
-                :rules [[:!COTescape [["blocked" 1] ["qwerty" 0] ["dead" 0]]]]
-        }
-
 ;; external keyboard settings
         ;;4Tech keyboard settings
         ;; {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
         ;; {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
         ;; {:des "4Tech app key to FN" :rules [:fortech [:application :fn ]]}
 
-;; simple modifications ;; ! TODO: add blocked layer
+;; simple modifications
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
         {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
         {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         ;; {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
-        {:des "photos navigation"
-         :rules [:photos
-                ;;  [:condi :!blocked]
-                 [:##h :left_arrow]
-                 [:##j :down_arrow]
-                 [:##k :up_arrow]
-                 [:##l :right_arrow]
-                ]
-        }
+ ;       {:des "photos navigation"
+ ;        :rules [:photos
+ ;                [:##h :left_arrow]
+ ;                [:##j :down_arrow]
+ ;                [:##k :up_arrow]
+ ;                [:##l :right_arrow]
+ ;               ]
+ ;       }
 
 ;; keyboard mouse
         {:des "mouse"
@@ -280,23 +252,22 @@
 ;; hyper key settings
         {:des "hyper (caps_lock)"
          :rules [:hyper
-                ;;  [:condi :!blocked]
                  ; *hyper navigation
                  [:##k :up_arrow]
                  [:##j :down_arrow]
                  [:##h :left_arrow]
                  [:##l :right_arrow]
                  [:##p :page_up]
-                 [:##i :home]
-                 [:##o :end]
+                 [:##i :!Cleft_arrow]
+                 [:##o :!Cright_arrow]
                  [:##u :page_down]
                  [:##a :return_or_enter]
                  [:quote :!Oleft_arrow] ; jump one word back (á on HUN keyboard)
                  [:backslash :!Oright_arrow] ; jump one word ahead (ű on HUN keyboard)
                  [:open_bracket :!SOleft_arrow] ; highlight/select previous word (ő on HUN keyboard)
                  [:close_bracket :!SOright_arrow] ; highlight/select next word (ú on HUN keyboard)
-                 [:hyphen :!Cleft_arrow] ; jump to the beginning of the line  (ü on HUN keyboard)
-                 [:equal_sign :!Cright_arrow] ; jump to the end of the line (ó on HUN keyboard)
+                ;;  [:hyphen :!Cleft_arrow] ; jump to the beginning of the line  (ü on HUN keyboard)
+                ;;  [:equal_sign :!Cright_arrow] ; jump to the end of the line (ó on HUN keyboard)
                  ; *hyper delete
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
@@ -311,17 +282,62 @@
                 ]
         }
 ;; numpad
-        {:des "numpad"
-         :rules [:num
-                ;;  [:condi :!blocked]
-                [:m :1] [:comma :2] [:period :3]
-                [:j :4] [:k :5] [:l :6]
-                [:u :7] [:i :8] [:o :9]
-                [:n :non_us_backslash] ;; 0
-                [:0 :plus] [:hyphen :minus] [:p :multiply] [:open_bracket :divide]
-                ;; [:0 :!S3] [:hyphen :slash] [:p :!OScomma] [:open_bracket :!S6]
-                ]
-        }
+        ;; {:des "numpad"
+        ;;  :rules [:num
+        ;;         ;; [:condi :!blocked]
+        ;;         [:m :1] [:comma :2] [:period :3]
+        ;;         [:j :4] [:k :5] [:l :6]
+        ;;         [:u :7] [:i :8] [:o :9]
+        ;;         [:n :non_us_backslash] ;; 0
+        ;;         [:0 :plus] [:hyphen :minus] [:p :multiply] [:open_bracket :divide]
+        ;;         ]
+        ;; }
+
+{:des "symbols and numbers" 
+         :rules [:symbols
+                [:1 :!S1] ;'
+                [:2 :!S2] ;"
+                [:4 :!Oclose_bracket] ;~
+                [:5 :!Obackslash] ;`
+                [:7 :!SO3] ;#
+                [:8 :!Oquote] ;^
+                ;;
+                [:tab :!Speriod] ;:
+                [:q :!S5] ;%
+                [:w :!O1] ;&
+                [:e :!Scomma] ;?
+                [:r :!S3] ;+
+                [:t :!Oq] ;@
+                [:y :!O4] ;$
+                [:u :!Sslash] ;_
+                [:i :!O8] ;[
+                [:o :!O9] ;]
+                [:p :!S4] ;!
+                ;;;
+                [:a :!S6] ;/
+                [:s :!S8] ;(
+                [:d :!S7] ;=
+                [:f :non_us_backslash] ;0
+                [:g :!O7] ;{
+                [:h :!O0] ;}
+                [:j :1]
+                [:k :!SOcomma] ;*
+                [:l :!S9] ;)
+                [:semicolon :slash] ;-
+                [:quote :!S2] ;"
+                ;;;
+                [:left_shift :!Operiod] ;; (not part of workmandead)
+                [:z :6]
+                [:x :7]
+                [:c :8]
+                [:v :9]
+                [:b :!Ograve_accent_and_tilde] ;|
+                [:n :!Ohyphen] ;\
+                [:m :2]
+                [:comma :3]
+                [:period :4]
+                [:slash :5]
+         ]}
 
 ;; shortcuts
 ;;;; window management
@@ -332,7 +348,7 @@
                  ;; NOTE: you need to specify most of these keyboard shortcuts in System Preferences too
                  [:a :!CTOSh] ; tile window to left side of screen
                  [:d :!CTOSl] ; tile window to right side of screen
-                 [:f :!CTf] ; toogle fullscreen 
+                 [:f :!CTf] ; toggle fullscreen 
                  [:t :!Ctab] ; change apps
                  ;;  [:!St :!CStab]
                  [:y :!Ch] ; hide app
@@ -364,11 +380,11 @@
                 ;;  [:condi :!blocked]
                 ; shortcuts
                  [:b :!CTOSb] ; show/hide Bartender items
-                 [:c :!Ff14] ; show control center
+                 [:c :!Ff14] ; show control center by calling an Alfred shortcut
                  [:a :!Ff15] ; start new amphetamine session
                  [:s :!Ff17] ; search menubar with Alfred
                  [:n :!Ff18] ; toggle darkmode via Alfred shortcut
-                 [:k :!Ff19] ; change karabiner profile with Alfred
+                ;;  [:k :!Ff19] ; change karabiner profile with Alfred
                  ;;;;;;;;;;;;;;;;;;;
                 ; *Spotify
                  [:m :!CTSm] ; open Spotify playlist in Alfred mini player
@@ -412,7 +428,7 @@
                  [:m [:toggle "Spotify"]]
                  [:f [:toggle "Finder"]]
                  [:c [:toggle "Calendar"]]
-                ;;  [:b [:launch "Firefox"]] ;;b for browser i guess
+                 [:b [:launch "Firefox"]] ;;b for browser i guess
                  [:n [:toggle "Notes"]]
                  [:d [:toggle "Drafts"]]
                  [:w [:toggle "Obsidian"]]
@@ -420,7 +436,7 @@
                  [:t [:toggle "TickTick"]]
                  [:p [:toggle "Photos"]]
                  [:i [:toggle "iTerm"]]
-                 [:j [:toggle "IntelliJ IDEA CE"]]
+                ;;  [:j [:toggle "IntelliJ IDEA CE"]]
                  [:v [:toggle "Visual Studio Code"]]
                 ]
         }
@@ -619,7 +635,9 @@
         }
         ;;
         {:des "f to left_shift"
-         :rules [:left_shift
+         :rules [
+                ;;  [:f ["left_shift" 1] [:!blocked] {:afterup ["left_shift" 0] :alone :f}]
+                 :left_shift
                 ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Snon_us_backslash]
                  [:##1 :!S1]
@@ -943,65 +961,66 @@
 ;;;; dead-keys
         ;;  {:des "toggle dead" ;; ! TODO: anybar visualisation
         ;;    :rules [
-        ;; ;;     [: condi ["blocked" 0]]
+        ;; ;;     [: condi ["game" 0]]
         ;;     [:comma ["dead" 1]]
         ;;    ]
         ;;  }
          ;; This is a modified copy of the workman layout's dead state.
-         {:des "dead layer"
-          :rules
-          [:dead
-             [:4 :!Oclose_bracket] ;; ~
-             [:5 :!Obackslash] ;; `
-             [:7 :!OS3] ;; #
-             [:8 :!Oquote], ;; ^
-             [:hyphen :!SOz] ;<
-             [:equal_sign :!SOx] ;>
-             ;;
-             [:q :!S5 nil {:afterup ["dead" 0]}] ;; %
-             [:w :!O1 nil {:afterup ["dead" 0]}] ;; &
-             [:e :!Scomma nil {:afterup ["dead" 0]}] ;; ?
-             [:r :!S3 nil {:afterup ["dead" 0]}] ;; +
-             [:t :!Oq nil {:afterup ["dead" 0]}] ;; @
-             [:y :!O4 nil {:afterup ["dead" 0]}] ;; $
-             [:u :!Sslash nil {:afterup ["dead" 0]}] ;; _
-             [:i :!O8 nil {:afterup ["dead" 0]}] ;; [
-             [:o :!O9 nil {:afterup ["dead" 0]}] ;; ]
-             [:p :!S4 nil {:afterup ["dead" 0]}] ;; p 
-             [:open_bracket :!Operiod nil {:afterup ["dead" 0]}] ;; ;
-        ;     [:close_bracket :!S5 nil {:afterup ["dead" 0]}]
-             [:return_or_enter [:comma :return_or_enter] nil {:afterup ["dead" 0]}]
-              ;;
-             [:a :!S6 nil {:afterup ["dead" 0]}] ;; /
-             [:s :!S8 nil {:afterup ["dead" 0]}] ;; (
-             [:d :!S7 nil {:afterup ["dead" 0]}] ;; =
-             [:f :non_us_backslash nil {:afterup ["dead" 0]}] ;; 0
-             [:g :!O7 nil {:afterup ["dead" 0]}] ;; {
-             [:h :!O0 nil {:afterup ["dead" 0]}] ;; }
-             [:j :1 nil {:afterup ["dead" 0]}] ;; 1
-             [:k :!OScomma nil {:afterup ["dead" 0]}] ;; *
-             [:l :!S9 {:afterup ["dead" 0]}] ;; )
-             [:semicolon :slash nil {:afterup ["dead" 0]}] ;; -
-             [:quote :!S2 nil {:afterup ["dead" 0]}] ;; "
-             [:backslash :!S1 nil {:afterup ["dead" 0]}] ;; '
-              ;;
-             [:left_shift :comma nil {:afterup ["dead" 0]}] ;; 
-             [:grave_accent_and_tilde :!Speriod nil {:afterup ["dead" 0]}] ;; :
-             [:z :6 nil {:afterup ["dead" 0]}] ;; 6
-             [:x :7 nil {:afterup ["dead" 0]}] ;; 7
-             [:c :8 nil {:afterup ["dead" 0]}] ;; 8
-             [:v :9 nil {:afterup ["dead" 0]}] ;; 9
-             [:b :!Ograve_accent_and_tilde nil {:afterup ["dead" 0]}] ;; |
-             [:n :!Ohyphen nil {:afterup ["dead" 0]}] ;; \
-             [:m :2 nil {:afterup ["dead" 0]}] ;; 2
-             [:comma :3 nil {:afterup ["dead" 0]}] ;; 3
-             [:period :4 nil {:afterup ["dead" 0]}] ;; 4
-             [:slash :5 nil {:afterup ["dead" 0]}] ;; 5
-             [:right_shift :comma nil {:afterup ["dead" 0]}] ;; 
-              ;;
-             [:spacebar [:comma :spacebar] nil {:afterup ["dead" 0]}]
-          ]
-         }
+        ;;  {:des "dead layer"
+        ;;   :rules
+        ;;   [[:comma ["dead" 1] [:!blocked]]
+        ;;   :dead
+        ;;      [:4 :!Oclose_bracket] ;; ~
+        ;;      [:5 :!Obackslash] ;; `
+        ;;      [:7 :!OS3] ;; #
+        ;;      [:8 :!Oquote], ;; ^
+        ;;      [:hyphen :!SOz] ;<
+        ;;      [:equal_sign :!SOx] ;>
+        ;;      ;;
+        ;;      [:q :!S5 nil {:afterup ["dead" 0]}] ;; %
+        ;;      [:w :!O1 nil {:afterup ["dead" 0]}] ;; &
+        ;;      [:e :!Scomma nil {:afterup ["dead" 0]}] ;; ?
+        ;;      [:r :!S3 nil {:afterup ["dead" 0]}] ;; +
+        ;;      [:t :!Oq nil {:afterup ["dead" 0]}] ;; @
+        ;;      [:y :!O4 nil {:afterup ["dead" 0]}] ;; $
+        ;;      [:u :!Sslash nil {:afterup ["dead" 0]}] ;; _
+        ;;      [:i :!O8 nil {:afterup ["dead" 0]}] ;; [
+        ;;      [:o :!O9 nil {:afterup ["dead" 0]}] ;; ]
+        ;;      [:p :!S4 nil {:afterup ["dead" 0]}] ;; p 
+        ;;      [:open_bracket :!Operiod nil {:afterup ["dead" 0]}] ;; ;
+        ;; ;     [:close_bracket :!S5 nil {:afterup ["dead" 0]}]
+        ;;      [:return_or_enter [:comma :return_or_enter] nil {:afterup ["dead" 0]}]
+        ;;       ;;
+        ;;      [:a :!S6 nil {:afterup ["dead" 0]}] ;; /
+        ;;      [:s :!S8 nil {:afterup ["dead" 0]}] ;; (
+        ;;      [:d :!S7 nil {:afterup ["dead" 0]}] ;; =
+        ;;      [:f :non_us_backslash nil {:afterup ["dead" 0]}] ;; 0
+        ;;      [:g :!O7 nil {:afterup ["dead" 0]}] ;; {
+        ;;      [:h :!O0 nil {:afterup ["dead" 0]}] ;; }
+        ;;      [:j :1 nil {:afterup ["dead" 0]}] ;; 1
+        ;;      [:k :!OScomma nil {:afterup ["dead" 0]}] ;; *
+        ;;      [:l :!S9 {:afterup ["dead" 0]}] ;; )
+        ;;      [:semicolon :slash nil {:afterup ["dead" 0]}] ;; -
+        ;;      [:quote :!S2 nil {:afterup ["dead" 0]}] ;; "
+        ;;      [:backslash :!S1 nil {:afterup ["dead" 0]}] ;; '
+        ;;       ;;
+        ;;      [:left_shift :comma nil {:afterup ["dead" 0]}] ;; 
+        ;;      [:grave_accent_and_tilde :!Speriod nil {:afterup ["dead" 0]}] ;; :
+        ;;      [:z :6 nil {:afterup ["dead" 0]}] ;; 6
+        ;;      [:x :7 nil {:afterup ["dead" 0]}] ;; 7
+        ;;      [:c :8 nil {:afterup ["dead" 0]}] ;; 8
+        ;;      [:v :9 nil {:afterup ["dead" 0]}] ;; 9
+        ;;      [:b :!Ograve_accent_and_tilde nil {:afterup ["dead" 0]}] ;; |
+        ;;      [:n :!Ohyphen nil {:afterup ["dead" 0]}] ;; \
+        ;;      [:m :2 nil {:afterup ["dead" 0]}] ;; 2
+        ;;      [:comma :3 nil {:afterup ["dead" 0]}] ;; 3
+        ;;      [:period :4 nil {:afterup ["dead" 0]}] ;; 4
+        ;;      [:slash :5 nil {:afterup ["dead" 0]}] ;; 5
+        ;;      [:right_shift :comma nil {:afterup ["dead" 0]}] ;; 
+        ;;       ;;
+        ;;      [:spacebar [:comma :spacebar] nil {:afterup ["dead" 0]}]
+        ;;   ]
+        ;;  }
 
 ;;;; programming layout
         ;; {:des "prog layout"
