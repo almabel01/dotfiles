@@ -445,11 +445,11 @@
         {:des "o-key (open websites)"
          :rules [:o-key
                 ;;  [:condi :!blocked]
-                 [:k [:open "https://docs.google.com/spreadsheets/d/1-quGQWvYoeEuMf1jDeKJUIY-DZytnpBJcL-JrFs6Tvw/edit#gid=656760228"]] ; open my finances spreadsheet 
+                 [:k [:open "https://docs.google.com/spreadsheets/d/16_r4x1c4Gq17x5P2SNo8IYqmmHJ70uTjeLEqjrCiWjE/edit#gid=0"]] ; open my finances spreadsheet 
                  ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1EoYVZFFO_S77Lp0awYrRCq44Zz5X2VRgcQG_rdnVlZk/edit?usp=sharing
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
-                 [:u [:open "https://www.udemy.com"]]
+                ;;  [:u [:open "https://www.udemy.com"]]
                 ]
         }
 

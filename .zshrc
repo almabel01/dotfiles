@@ -20,7 +20,7 @@ prompt pure
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 ZSH_DISABLE_COMPFIX=true
 
@@ -79,6 +79,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
+
+zplug "wookayin/anybar-zsh"
 
 # User configuration
 
