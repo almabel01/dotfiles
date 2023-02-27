@@ -4,7 +4,9 @@
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-commentary' " https://github.com/tpope/vim-commentary
+    Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
+colorscheme dracula
 " }}}
 
 syntax on
