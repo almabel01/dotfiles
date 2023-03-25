@@ -278,8 +278,8 @@
                  ; *hyper shortcuts
 ;;                 [:c :!QWERc] ; Alfred clipboard history
                  [:c :f19] ; Raycast clipboard history
-                 [:e :!QWERe] ; Alfred emoji search
-                 [:s :!QWERs] ; Alfred search snippets
+                 [:e :!QWERe] ; Raycast/Alfred emoji search
+                 [:s :!QWERs] ; Raycast/Alfred search snippets
                 ]
         }
 ;; numpad
