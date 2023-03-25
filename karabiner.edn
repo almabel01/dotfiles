@@ -276,7 +276,8 @@
                  [:period :!Odelete_forward] ; delete next word
                  [:!Ccomma :!Cdelete_forward] ; delete to the end of the line
                  ; *hyper shortcuts
-                 [:c :!QWERc] ; Alfred clipboard history
+;;                 [:c :!QWERc] ; Alfred clipboard history
+                 [:c :f19] ; Raycast clipboard history
                  [:e :!QWERe] ; Alfred emoji search
                  [:s :!QWERs] ; Alfred search snippets
                 ]
