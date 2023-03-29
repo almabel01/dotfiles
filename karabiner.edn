@@ -171,6 +171,7 @@
                 :java ["^com.jetbrains.intellij.ce$"]
                 :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 :photos ["^com.apple.Photos$"]
+                :obsidian ["^md.obsidian$"]
               }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -280,6 +281,8 @@
                  [:c :f19] ; Raycast clipboard history
                  [:e :!QWERe] ; Raycast/Alfred emoji search
                  [:s :!QWERs] ; Raycast/Alfred search snippets
+                 ; *app specific
+                 [:d :!Wt]
                 ]
         }
 ;; numpad
