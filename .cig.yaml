@@ -1,5 +1,5 @@
 dotfiles: ~/dotfiles/
 notes: /Users/abel/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/
   # notes: ~/Obsidian/notes/
-log: ~/Logseq/log/
+  # log: ~/Logseq/log/
 german-notes: ~/Obsidian/german/  
