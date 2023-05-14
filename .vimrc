@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 colorscheme dracula
 
+set rtp+=/usr/local/opt/fzf
+
 syntax on
 set number
 set nowrap
