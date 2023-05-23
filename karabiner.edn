@@ -235,7 +235,6 @@
  ;                [:##l :right_arrow]
  ;               ]
  ;       }
-       {:des "obsidian hyper" :rules[:hyper :obsidian [:f :!We]]} ;; omnisearch in Obsidian
 
 ;; keyboard mouse
         {:des "mouse"
@@ -283,7 +282,8 @@
                  [:e :!QWERe] ; Raycast/Alfred emoji search
                  [:s :!QWERs] ; Raycast/Alfred search snippets
                  ; *app specific
-                 [:d :!Wt]
+                 [:d :!Wt :obsidian] ;;insert template in Obsidian
+                 [:e :!We :obsidian] ;;Omnisearch in Obsidian
                 ]
         }
 ;; numpad
