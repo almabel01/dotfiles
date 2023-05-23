@@ -283,7 +283,7 @@
                  [:s :!QWERs] ; Raycast/Alfred search snippets
                  ; *app specific
                  [:d :!Wt :obsidian] ;;insert template in Obsidian
-                 [:e :!We :obsidian] ;;Omnisearch in Obsidian
+                 [:f :!We :obsidian] ;;Omnisearch in Obsidian
                 ]
         }
 ;; numpad
