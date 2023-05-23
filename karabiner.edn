@@ -235,6 +235,7 @@
  ;                [:##l :right_arrow]
  ;               ]
  ;       }
+       {:des "obsidian hyper" :rules[:hyper :obsidian [:f :!We]]} ;; omnisearch in Obsidian
 
 ;; keyboard mouse
         {:des "mouse"
