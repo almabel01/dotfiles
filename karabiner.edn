@@ -194,6 +194,7 @@
              :x-key {:key :x} ; misc
              :m-key {:key :m} ; markdown mode
              :F-keys {:key :comma :alone ["dead" 1]}
+             :german-letters {:key :g}
 ; *launchers
              :launch-mode {:key :q} ; launch frequently used apps
              :o-key {:key :o} ; open websites
@@ -424,6 +425,13 @@
                 ]
         }
 
+
+        {:des "German chars"
+          :rules [:german-letters
+                  [:a [:!Eu :a]]
+                  [:s [:!Es]] ;ß
+                  ]
+         }
 ;; launchers
 ;;;; launch mode (frequently used apps)
         {:des "q-key (launch mode)"
