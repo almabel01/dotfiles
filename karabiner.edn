@@ -100,6 +100,7 @@
 :devices{
         :internal [{:vendor_id 1452 :product_id 657}]
         ;; :fortech [{:vendor_id 7247 :product_id 38}] ;;This is an old keyboard I do not use anymore.
+        ;; :atreus
         }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -168,7 +169,7 @@
 :applications {
                 :vscode ["^com.microsoft.VSCode$"]
                 :safari ["^com\\.apple\\.Safari$"]
-                :java ["^com.jetbrains.intellij.ce$"]
+                :java ["^com.jetbrains.inteluflij.ce$"]
                 :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
                 :photos ["^com.apple.Photos$"]
                 :obsidian ["^md.obsidian$"]
@@ -193,7 +194,7 @@
              :w-key {:key :w} ; window management
              :x-key {:key :x} ; misc
              :m-key {:key :m} ; markdown mode
-             :F-keys {:key :comma :alone ["dead" 1]}
+             :F-keys {:key :comma}
              :german-letters {:key :g}
 ; *launchers
              :launch-mode {:key :q} ; launch frequently used apps
@@ -285,6 +286,7 @@
                  ; *app specific
                  [:d :!Wt :obsidian] ;;insert template in Obsidian
                  [:f :!We :obsidian] ;;Omnisearch in Obsidian
+                 [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
                 ]
         }
 ;; numpad
