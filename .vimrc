@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-commentary' " https://github.com/tpope/vim-commentary
-    Plug 'dracula/vim',{'as':'dracula'}
+"    Plug 'dracula/vim',{'as':'dracula'}
     Plug 'vim-airline/vim-airline'
     Plug 'jiangmiao/auto-pairs'
 call plug#end()
