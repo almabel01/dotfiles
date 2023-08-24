@@ -226,8 +226,8 @@
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
-        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
-        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
+;        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
+;        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         ;; {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
  ;       {:des "photos navigation"
  ;        :rules [:photos
