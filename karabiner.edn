@@ -281,7 +281,7 @@
                  ; *hyper shortcuts
 ;;                 [:c :!QWERc] ; Alfred clipboard history
                  [:c :f19] ; Raycast clipboard history
-                 [:d :!QWERe] ; Raycast/Alfred emoji search
+                 [:w :!QWERe] ; Raycast/Alfred emoji search
                  [:q :!QWERs] ; Raycast/Alfred search snippets
                  ; *app specific
                  [:d :!Wt :obsidian] ;;insert template in Obsidian
