@@ -282,13 +282,14 @@
 ;;                 [:c :!QWERc] ; Alfred clipboard history
                  [:c :f19] ; Raycast clipboard history
                  [:d :!QWERe] ; Raycast/Alfred emoji search
-                 [:s :!QWERs] ; Raycast/Alfred search snippets
+                 [:q :!QWERs] ; Raycast/Alfred search snippets
                  ; *app specific
                  [:d :!Wt :obsidian] ;;insert template in Obsidian
 ;;                 [:f :!We :obsidian] ;;Omnisearch in Obsidian
                  [:e :!We :obsidian] ; Omnisearch in Obsidian
                  [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
                  [:d :!Qp :obsidian] ;;command palette
+                 [:s :!Qo :obsidian] ;;quick open
                 ]
         }
 ;; numpad
