@@ -1,0 +1,134 @@
+{
+    "enabled": true,
+    "fetchNews": true,
+    "theme": {
+        "mode": 1,
+        "brightness": 100,
+        "contrast": 100,
+        "grayscale": 0,
+        "sepia": 0,
+        "useFont": false,
+        "fontFamily": "system-ui",
+        "textStroke": 0,
+        "engine": "dynamicTheme",
+        "stylesheet": "",
+        "darkSchemeBackgroundColor": "#282b36",
+        "darkSchemeTextColor": "#e8e6e3",
+        "lightSchemeBackgroundColor": "#dcdad7",
+        "lightSchemeTextColor": "#181a1b",
+        "scrollbarColor": "auto",
+        "selectionColor": "#44475a",
+        "styleSystemControls": true,
+        "lightColorScheme": "Default",
+        "darkColorScheme": "Dracula",
+        "immediateModify": false
+    },
+    "presets": [
+        {
+            "id": "preset-c40e4840e0c7818cdfda44dc685c9259",
+            "name": "Theme 1",
+            "urls": [
+                "github.com",
+                "w3.ibm.com",
+                "trello.com",
+                "jsw.ibm.com"
+            ],
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 88,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Segoe UI",
+                "textStroke": 0,
+                "engine": "dynamicTheme",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#282a36",
+                "darkSchemeTextColor": "#f8f8f2",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "auto",
+                "selectionColor": "#44475a",
+                "styleSystemControls": true,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            }
+        }
+    ],
+    "customThemes": [],
+    "siteList": [
+        "ibmrr.performnet.com",
+        "www-969.ibm.com",
+        "translate-at-ibm.mybluemix.net",
+        "procurement-academy.dal1a.cirrus.ibm.com",
+        "github.com",
+        "wd5.myworkday.com",
+        "ibm.idaccesshub.com",
+        "treasurehunt.atti.me",
+        "mosselen.hu",
+        "www.samsung.com",
+        "fanyuvo.hu",
+        "sai360-ibmtraining.csod.com",
+        "www.google.com",
+        "www.terraclues.com",
+        "aukcio.intergavel.com",
+        "www.scribd.com",
+        "cioisim1.az2.ash.cpc.ibm.com",
+        "cioisim2.az2.ash.cpc.ibm.com",
+        "gre.tririga.com",
+        "www.credly.com"
+    ],
+    "siteListEnabled": [
+        "vplanner.dal1a.cirrus.ibm.com"
+    ],
+    "applyToListedOnly": false,
+    "changeBrowserTheme": false,
+    "syncSettings": true,
+    "syncSitesFixes": false,
+    "automation": {
+        "enabled": true,
+        "mode": "system",
+        "behavior": "OnOff"
+    },
+    "time": {
+        "activation": "18:00",
+        "deactivation": "9:00"
+    },
+    "location": {
+        "latitude": null,
+        "longitude": null
+    },
+    "previewNewDesign": true,
+    "enableForPDF": true,
+    "enableForProtectedPages": false,
+    "enableContextMenus": false,
+    "detectDarkTheme": true,
+    "notifyOfNews": false,
+    "automationBehaviour": "OnOff",
+    "displayedNews": [
+        "mobile"
+    ],
+    "readNews": [
+        "v4-9-16",
+        "v4-9",
+        "attention",
+        "dr-5-announcement",
+        "2m-users",
+        "automation",
+        "product-hunt-golden-kitty-2018",
+        "time-settings",
+        "safari",
+        "500k-users",
+        "stylish",
+        "product-hunt",
+        "custom-site-settings",
+        "thanks-for-contribution",
+        "dynamic-theme",
+        "mobile",
+        "v5-survey",
+        "filter-mode",
+        "news-2023"
+    ]
+}
