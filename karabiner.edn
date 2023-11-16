@@ -269,8 +269,6 @@
                  [:backslash :!Oright_arrow] ; jump one word ahead (ű on HUN keyboard)
                  [:open_bracket :!SOleft_arrow] ; highlight/select previous word (ő on HUN keyboard)
                  [:close_bracket :!SOright_arrow] ; highlight/select next word (ú on HUN keyboard)
-                ;;  [:hyphen :!Cleft_arrow] ; jump to the beginning of the line  (ü on HUN keyboard)
-                ;;  [:equal_sign :!Cright_arrow] ; jump to the end of the line (ó on HUN keyboard)
                  ; *hyper delete
                  [:n :!Odelete_or_backspace] ; delete previous word
                  [:m :delete_or_backspace] ; simple backspace
@@ -285,7 +283,6 @@
                  [:q :!QWERs] ; Raycast/Alfred search snippets
                  ; *app specific
                  [:t :!Wt :obsidian] ;;insert template in Obsidian
-;;                 [:f :!We :obsidian] ;;Omnisearch in Obsidian
                  [:e :!We :obsidian] ; Omnisearch in Obsidian
                  [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
                  [:d :!Qp :obsidian] ;;command palette
@@ -398,13 +395,13 @@
                 ;;  [:k :!Ff19] ; change karabiner profile with Alfred
                  ;;;;;;;;;;;;;;;;;;;
                 ; *Spotify
-                 [:m :!CTSm] ; open Spotify playlist in Alfred mini player
-                 [:p :!CTSp] ;hs.spotify.play/pause
-                 [:period :!CTSn] ;hs.spotify.next
-                 [:comma :!CTSi] ;hs.spotify.previous
-                 [:i :!CTSi] ;hs.spotify.volumeDown
-                 [:o :!CTSo] ;hs.spotify.volumeUp
-                 [:spacebar :!CTSspacebar] ;hs.spotify.displayCurrentTrack
+;;                 [:m :!CTSm] ; open Spotify playlist in Alfred mini player
+;;                [:p :!CTSp] ;hs.spotify.play/pause
+;;                 [:period :!CTSn] ;hs.spotify.next
+;;                 [:comma :!CTSi] ;hs.spotify.previous
+;;                 [:i :!CTSi] ;hs.spotify.volumeDown
+;;                 [:o :!CTSo] ;hs.spotify.volumeUp
+;;                 [:spacebar :!CTSspacebar] ;hs.spotify.displayCurrentTrack
                 ]
         }
 
@@ -443,7 +440,7 @@
          :rules [:launch-mode
                 ;;  [:condi :!blocked]
                  [:s [:toggle "Safari"]]
-                 [:m [:toggle "Spotify"]]
+;;                 [:m [:toggle "Spotify"]]
                  [:f [:toggle "Finder"]]
                  [:c [:toggle "Calendar"]]
                  [:b [:launch "Firefox"]] ;;b for browser i guess
@@ -451,9 +448,9 @@
                  [:d [:toggle "Drafts"]]
                  [:w [:toggle "Obsidian"]]
                  [:e [:toggle "Mail"]]
-                 [:t [:toggle "TickTick"]]
+;;                 [:t [:toggle "TickTick"]]
                  [:p [:toggle "Photos"]]
-                 [:i [:toggle "iTerm"]]
+                 [:i [:toggle "Terminal"]]
                 ;;  [:j [:toggle "IntelliJ IDEA CE"]]
                  [:v [:toggle "Visual Studio Code"]]
                 ]
@@ -463,8 +460,6 @@
         {:des "o-key (open websites)"
          :rules [:o-key
                 ;;  [:condi :!blocked]
-                 [:k [:open "https://docs.google.com/spreadsheets/d/16_r4x1c4Gq17x5P2SNo8IYqmmHJ70uTjeLEqjrCiWjE/edit#gid=0"]] ; open my finances spreadsheet 
-                 ; if you are interested, a public copy is in the making in English: https://docs.google.com/spreadsheets/d/1EoYVZFFO_S77Lp0awYrRCq44Zz5X2VRgcQG_rdnVlZk/edit?usp=sharing
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
                 ;;  [:u [:open "https://www.udemy.com"]]
@@ -972,93 +967,5 @@
                 [:close_bracket :!Ff12]
                 ]
         }
-
-;; layouts
-
-
-;;;; dead-keys
-        ;;  {:des "toggle dead" ;; ! TODO: anybar visualisation
-        ;;    :rules [
-        ;; ;;     [: condi ["game" 0]]
-        ;;     [:comma ["dead" 1]]
-        ;;    ]
-        ;;  }
-         ;; This is a modified copy of the workman layout's dead state.
-        ;;  {:des "dead layer"
-        ;;   :rules
-        ;;   [[:comma ["dead" 1] [:!blocked]]
-        ;;   :dead
-        ;;      [:4 :!Oclose_bracket] ;; ~
-        ;;      [:5 :!Obackslash] ;; `
-        ;;      [:7 :!OS3] ;; #
-        ;;      [:8 :!Oquote], ;; ^
-        ;;      [:hyphen :!SOz] ;<
-        ;;      [:equal_sign :!SOx] ;>
-        ;;      ;;
-        ;;      [:q :!S5 nil {:afterup ["dead" 0]}] ;; %
-        ;;      [:w :!O1 nil {:afterup ["dead" 0]}] ;; &
-        ;;      [:e :!Scomma nil {:afterup ["dead" 0]}] ;; ?
-        ;;      [:r :!S3 nil {:afterup ["dead" 0]}] ;; +
-        ;;      [:t :!Oq nil {:afterup ["dead" 0]}] ;; @
-        ;;      [:y :!O4 nil {:afterup ["dead" 0]}] ;; $
-        ;;      [:u :!Sslash nil {:afterup ["dead" 0]}] ;; _
-        ;;      [:i :!O8 nil {:afterup ["dead" 0]}] ;; [
-        ;;      [:o :!O9 nil {:afterup ["dead" 0]}] ;; ]
-        ;;      [:p :!S4 nil {:afterup ["dead" 0]}] ;; p 
-        ;;      [:open_bracket :!Operiod nil {:afterup ["dead" 0]}] ;; ;
-        ;; ;     [:close_bracket :!S5 nil {:afterup ["dead" 0]}]
-        ;;      [:return_or_enter [:comma :return_or_enter] nil {:afterup ["dead" 0]}]
-        ;;       ;;
-        ;;      [:a :!S6 nil {:afterup ["dead" 0]}] ;; /
-        ;;      [:s :!S8 nil {:afterup ["dead" 0]}] ;; (
-        ;;      [:d :!S7 nil {:afterup ["dead" 0]}] ;; =
-        ;;      [:f :non_us_backslash nil {:afterup ["dead" 0]}] ;; 0
-        ;;      [:g :!O7 nil {:afterup ["dead" 0]}] ;; {
-        ;;      [:h :!O0 nil {:afterup ["dead" 0]}] ;; }
-        ;;      [:j :1 nil {:afterup ["dead" 0]}] ;; 1
-        ;;      [:k :!OScomma nil {:afterup ["dead" 0]}] ;; *
-        ;;      [:l :!S9 {:afterup ["dead" 0]}] ;; )
-        ;;      [:semicolon :slash nil {:afterup ["dead" 0]}] ;; -
-        ;;      [:quote :!S2 nil {:afterup ["dead" 0]}] ;; "
-        ;;      [:backslash :!S1 nil {:afterup ["dead" 0]}] ;; '
-        ;;       ;;
-        ;;      [:left_shift :comma nil {:afterup ["dead" 0]}] ;; 
-        ;;      [:grave_accent_and_tilde :!Speriod nil {:afterup ["dead" 0]}] ;; :
-        ;;      [:z :6 nil {:afterup ["dead" 0]}] ;; 6
-        ;;      [:x :7 nil {:afterup ["dead" 0]}] ;; 7
-        ;;      [:c :8 nil {:afterup ["dead" 0]}] ;; 8
-        ;;      [:v :9 nil {:afterup ["dead" 0]}] ;; 9
-        ;;      [:b :!Ograve_accent_and_tilde nil {:afterup ["dead" 0]}] ;; |
-        ;;      [:n :!Ohyphen nil {:afterup ["dead" 0]}] ;; \
-        ;;      [:m :2 nil {:afterup ["dead" 0]}] ;; 2
-        ;;      [:comma :3 nil {:afterup ["dead" 0]}] ;; 3
-        ;;      [:period :4 nil {:afterup ["dead" 0]}] ;; 4
-        ;;      [:slash :5 nil {:afterup ["dead" 0]}] ;; 5
-        ;;      [:right_shift :comma nil {:afterup ["dead" 0]}] ;; 
-        ;;       ;;
-        ;;      [:spacebar [:comma :spacebar] nil {:afterup ["dead" 0]}]
-        ;;   ]
-        ;;  }
-
-;;;; programming layout
-        ;; {:des "prog layout"
-        ;;  :rules [:prog
-        ;;         [:non_us_backslash :!Snon_us_backslash]
-        ;;         [:0 :non_us_backslash]
-        ;;         [:y :z]
-        ;;         [:z :y]
-        ;;         [:hyphen :slash]
-        ;;         [:slash :hyphen]
-        ;;         [:equal_sign :!S7]
-        ;;         [:open_bracket :!O8]
-        ;;         [:close_bracket :!O9]
-        ;;         [:semicolon :!Operiod]
-        ;;         [:!Ssemicolon :!Speriod]
-        ;;         ;; [:quote :]
-        ;;         ;; [:backslash :!]
-        ;;         [:grave_accent_and_tilde :!Obackslash]
-        ;;         ]
-        ;; }
-
      ] ;; end of main
 } ;; end of config
