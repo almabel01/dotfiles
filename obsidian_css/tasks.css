@@ -1,0 +1,76 @@
+/* Change the way Backlinks are displayed */
+
+.tasks-backlink {
+    display: block;
+    position: relative;
+    left: 24px;
+    font-size: 0.8em;
+    opacity: 0.8;
+    filter: grayscale(100%);
+}
+
+/* Change the way Priority is displayed */
+
+span.task-priority {
+    display: none;
+}
+
+.task-list-item[data-task-priority="high"] input[type=checkbox] {
+    border-color: var(--color-red);
+}
+
+.task-due {
+    position: relative;
+    left: 0.4em;
+    background-color: #66686A;
+    border: 1px solid;
+    border-color: #66686A;
+    ;
+    color: white;
+    border-radius: 0.4em;
+    padding: 0.2em;
+    font-size: 0.8em;
+}
+
+/* Custom Tag Pills */
+
+.tag[href="#personal"],
+span.cm-tag-personal {
+    color: white;
+    background-color: rgb(38, 139, 210)
+}
+
+.tag[href="#task"],
+span.cm-tag-task {
+    color: white;
+    background-color: rgb(220, 50, 47)
+}
+
+.tag[href="#hold"],
+span.cm-tag-hold {
+    color: white;
+    background-color: rgb(220, 176, 70)
+}
+
+.tag[href="#product"],
+span.cm-tag-hold {
+    color: white;
+    background-color: #C47169
+}
+
+.tag[href="#subtask"],
+span.cm-tag-subtask {
+    color: white;
+    background-color: #0C6F45;
+}
+
+/* Limit Visibility of Tags in Queries */
+
+.tasks-list-text a.tag {
+
+    color: grey;
+    background-color: transparent;
+    border-color: grey;
+    border: 1px solid;
+    font-size: 0.8em;
+}
