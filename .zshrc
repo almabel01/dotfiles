@@ -102,8 +102,8 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/dotfiles/.zshrc"
-alias vimconfig="vim ~/dotfiles/.vimrc"
-alias notes="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/journal/"
-alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
+# alias zshconfig="vim ~/dotfiles/.zshrc"
+# alias vimconfig="vim ~/dotfiles/.vimrc"
+# alias notes="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/journal/"
+# alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 # alias ohmyzsh="vim ~/.oh-my-zsh"

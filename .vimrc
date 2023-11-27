@@ -2,12 +2,17 @@
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-commentary' " https://github.com/tpope/vim-commentary
-    Plug 'dracula/vim',{'as':'dracula'}
-    Plug 'catpuccin/vim',{'as':'catpuccin'}
+"    Plug 'dracula/vim',{'as':'dracula'}
+"    Plug 'catpuccin/vim',{'as':'catpuccin'}
     Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'jiangmiao/auto-pairs'
 call plug#end()
 " colorscheme dracula
+
+" let g:airline_theme='
+
+let g:airline#extensions#tabline#enabled = 1
 
 set rtp+=/usr/local/opt/fzf
 
