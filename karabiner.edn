@@ -53,7 +53,7 @@
     ;; ## | optional any (this has no effect when used on the RHS; only LHS)
     ;; !! | command + control + optional + shift (hyper)
 
-    ;; to understand better how modifiers work in karabiner
+   ;; to understand better how modifiers work in karabiner
     ;; karabiner definition of mandatory and optional
     ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
 
@@ -106,7 +106,6 @@
         :delete {:key :delete_or_backspace}
         :return {:key :return_or_enter}
 }
-
 
 ;;----------------------------------------------------------------------------------------------------------
 
@@ -191,16 +190,6 @@
 ; *launchers
              :launch-mode {:key :q} ; launch frequently used apps
              :o-key {:key :o} ; open websites
-; *home-row mods
-             :left_ctrl {:key :a}
-             :left_alt {:key :s}
-             :left_cmd {:key :d}
-             ; :left_shift {:key ["left_shift" 1] :alone {:key :f}}
-             :left_shift {:key :f}
-             ;
-             :right_ctrl {:key :semicolon}
-             :right_alt {:key :l}
-             :right_cmd {:key :k}
              :right_shift {:key :j}
            }
 
@@ -213,9 +202,19 @@
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
-        ; {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
-;        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
-        ;; {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
+        {:des "homerow mods"
+         :rules [
+                 [:##a :left_control nil {:alone :a}]
+                 [:##s :left_option nil {:alone :s}]
+                 [:##d :left_command nil {:alone :d}]
+                 [:##f :left_shift nil {:alone :f}]
+                 ;;
+                 [:##semicolon :right_control nil {:alone :semicolon}]
+                 [:##l :right_option nil {:alone :l}]
+                 [:##k :right_command nil {:alone :k}]
+                 [:##j :right_shift nil {:alone :j}]
+                ]
+        }
 
 ;; keyboard mouse
         {:des "mouse"
@@ -261,7 +260,7 @@
                  [:t :!Wt :obsidian] ;;insert template in Obsidian
                  [:e :!We :obsidian] ; Omnisearch in Obsidian
                  ; [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
-                 [:b :type "**<font color="]
+                 ; [:b :type "**<font color="]
                  [:d :!Qp :obsidian] ;;command palette in Obsidian
                  [:s :!Qo :obsidian] ;;quick open in Obisidian
                 ]
@@ -372,15 +371,15 @@
 ;;;; markdown shortcuts
         {:des "m-key (markdown)"
          :rules [:m-key
-                 [:b [:type "****"] :left_arrow :left_arrow] ; bold
-                 [:i [:type "**"] :left_arrow] ; italic
-                 [:1 :type "# "]
-                 [:2 :type "## "] ; heading 2
-                 [:3 :type "### "] ; heading 3
-                 [:4 :type "#### "] ; heading 4
-                 [:5 :type "##### "] ; heading 5
-                 [:s [:type "~~~~"] :left_arrow :left_arrow] ; striketrough
-                 [:c :type "```"] ; code block
+                 ; [:b [:type "****"] :left_arrow :left_arrow] ; bold
+                 ; [:i [:type "**"] :left_arrow] ; italic
+                 ; [:1 :type "# "]
+                 ; [:2 :type "## "] ; heading 2
+                 ; [:3 :type "### "] ; heading 3
+                 ; [:4 :type "#### "] ; heading 4
+                 ; [:5 :type "##### "] ; heading 5
+                 ; [:s [:type "~~~~"] :left_arrow :left_arrow] ; striketrough
+                 ; [:c :type "```"] ; code block
                 ]
         }
 
@@ -411,481 +410,6 @@
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
                 ;;  [:u [:open "https://www.udemy.com"]]
-                ]
-        }
-
-;; home-row mods
-        {:des "a to left_ctrl"
-         :rules [:left_ctrl
-                 [:##non_us_backslash :!Tnon_us_backslash]
-                 [:##1 :!T1]
-                 [:##2 :!T2]
-                 [:##3 :!T3]
-                 [:##4 :!T4]
-                 [:##5 :!T5]
-                 [:##6 :!T6]
-                 [:##7 :!T7]
-                 [:##8 :!T8]
-                 [:##9 :!T9]
-                 [:##0 :!T0]
-                 [:##hyphen :!Thyphen]
-                 [:##equal_sign :!Tequal_sign]
-                 [:##delete_or_backspace :!Tdelete_or_backspace]
-                 ;;
-                 [:##tab :!Ttab]
-                 [:##q :!Tq]
-                 [:##w :!Tw]
-                 [:##e :!Te]
-                 [:##r :!Tr]
-                 [:##t :!Tt]
-                 [:##y :!Ty]
-                 [:##u :!Tu]
-                 [:##i :!Ti]
-                 [:##o :!To]
-                 [:##p :!Tp]
-                 [:##open_bracket :!Topen_bracket]
-                 [:##close_bracket :!Tclose_bracket]
-                 [:##return_or_enter :!Treturn_or_enter]
-                 ;;
-                 ;[:##a :!Ta]
-                 [:##s :!Ts]
-                 [:##d :!Td]
-                 [:##f :!Tf]
-                 [:##g :!Tg]
-                 [:##h :!Th]
-                 [:##j :!Tj]
-                 [:##k :!Tk]
-                 [:##l :!Tl]
-                 [:##semicolon :!Tsemicolon]
-                 [:##quote :!Tquote]
-                 [:##backslash :!Tbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Tgrave_accent_and_tilde]
-                 [:##z :!Tz]
-                 [:##x :!Tx]
-                 [:##c :!Tc]
-                 [:##v :!Tv]
-                 [:##b :!Tb]
-                 [:##n :!Tn]
-                 [:##m :!Tm]
-                 [:##comma :!Tcomma]
-                 [:##period :!Tperiod]
-                 [:##slash :!Tslash]
-                ]
-        }
-        ;;
-        {:des "s to left_option"
-         :rules [:left_alt
-                [:##non_us_backslash :!Onon_us_backslash]
-                [:##1 :!O1]
-                [:##2 :!O2]
-                [:##3 :!O3]
-                [:##4 :!O4]
-                [:##5 :!O5]
-                [:##6 :!O6]
-                [:##7 :!O7]
-                [:##8 :!O8]
-                [:##9 :!O9]
-                [:##0 :!O0]
-                [:##hyphen :!Ohyphen]
-                [:##equal_sign :!Oequal_sign]
-                [:##delete_or_backspace :!Odelete_or_backspace]
-                ;;
-                [:##tab :!Otab]
-                [:##q :!Oq]
-                [:##w :!Ow]
-                [:##e :!Oe]
-                [:##r :!Or]
-                [:##t :!Ot]
-                [:##y :!Oy]
-                [:##u :!Ou]
-                [:##i :!Oi]
-                [:##o :!Oo]
-                [:##p :!Op]
-                [:##open_bracket :!Oopen_bracket]
-                [:##close_bracket :!Oclose_bracket]
-                [:##return_or_enter :!Oreturn_or_enter]
-                ;;
-                [:##a :!Oa]
-                ; [:s :!Os]
-                [:##d :!Od]
-                [:##f :!Of]
-                [:##g :!Og]
-                [:##h :!Oh]
-                [:##j :!Oj]
-                [:##k :!Ok]
-                [:##l :!Ol]
-                [:##semicolon :!Osemicolon]
-                [:##quote :!Oquote]
-                [:##backslash :!Obackslash]
-                ;;
-                [:##grave_accent_and_tilde :!Ograve_accent_and_tilde]
-                [:##z :!Oz]
-                [:##x :!Ox]
-                [:##c :!Oc]
-                [:##v :!Ov]
-                [:##b :!Ob]
-                [:##n :!On]
-                [:##m :!Om]
-                [:##comma :!Ocomma]
-                [:##period :!Operiod]
-                [:##slash :!Oslash]
-                ]
-        }
-        ;;
-        {:des "d to left_command"
-         :rules [:left_cmd
-                 [:##non_us_backslash :!Cnon_us_backslash]
-                 [:##1 :!C1]
-                 [:##2 :!C2]
-                 [:##3 :!C3]
-                 [:##4 :!C4]
-                 [:##5 :!C5]
-                 [:##6 :!C6]
-                 [:##7 :!C7]
-                 [:##8 :!C8]
-                 [:##9 :!C9]
-                 [:##0 :!C0]
-                 [:##hyphen :!Chyphen]
-                 [:##equal_sign :!Cequal_sign]
-                 [:##delete_or_backspace :!Cdelete_or_backspace]
-                 ;;
-                 [:##tab :!Ctab]
-                 [:##q :!Cq]
-                 [:##w :!Cw]
-                 [:##e :!Ce]
-                 [:##r :!Cr]
-                 [:##t :!Ct]
-                 [:##y :!Cy]
-                 [:##u :!Cu]
-                 [:##i :!Ci]
-                 [:##o :!Co]
-                 [:##p :!Cp]
-                 [:##open_bracket :!Copen_bracket]
-                 [:##close_bracket :!Cclose_bracket]
-                 [:##return_or_enter :!Creturn_or_enter]
-                 ;;
-                 [:##a :!Ca]
-                 [:##s :!Cs]
-                 ; [:##d :!Cd]
-                 [:##f :!Cf]
-                 [:##g :!Cg]
-                 [:##h :!Ch]
-                 [:##j :!Cj]
-                 [:##k :!Ck]
-                 [:##l :!Cl]
-                 [:##semicolon :!Csemicolon]
-                 [:##quote :!Cquote]
-                 [:##backslash :!Cbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Cgrave_accent_and_tilde]
-                 [:##z :!Cz]
-                 [:##x :!Cx]
-                 [:##c :!Cc]
-                 [:##v :!Cv]
-                 [:##b :!Cb]
-                 [:##n :!Cn]
-                 [:##m :!Cm]
-                 [:##comma :!Ccomma]
-                 [:##period :!Cperiod]
-                 [:##slash :!Cslash]
-                ]
-        }
-        ;;
-        {:des "f to left_shift"
-         :rules [
-                ;;  [:f ["left_shift" 1] [:!blocked] {:afterup ["left_shift" 0] :alone :f}]
-                 :left_shift
-                 [:##non_us_backslash :!Snon_us_backslash]
-                 [:##1 :!S1]
-                 [:##2 :!S2]
-                 [:##3 :!S3]
-                 [:##4 :!S4]
-                 [:##5 :!S5]
-                 [:##6 :!S6]
-                 [:##7 :!S7]
-                 [:##8 :!S8]
-                 [:##9 :!S9]
-                 [:##0 :!S0]
-                 [:##hyphen :!Shyphen]
-                 [:##equal_sign :!Sequal_sign]
-                 [:##delete_or_backspace :!Sdelete_or_backspace]
-                 ;;
-                 [:##tab :!Stab]
-                 [:##q :!Sq]
-                 [:##w :!Sw]
-                 [:##e :!Se]
-                 [:##r :!Sr]
-                 [:##t :!St]
-                 [:##y :!Sy]
-                 [:##u :!Su]
-                 [:##i :!Si]
-                 [:##o :!So]
-                 [:##p :!Sp]
-                 [:##open_bracket :!Sopen_bracket]
-                 [:##close_bracket :!Sclose_bracket]
-                 [:##return_or_enter :!Sreturn_or_enter]
-                 ;;
-                 [:##a :!Sa]
-                 [:##s :!Ss]
-                 [:##d :!Sd]
-                 ; [:##f :!Sf]
-                 [:##g :!Sg]
-                 [:##h :!Sh]
-                 [:##j :!Sj]
-                 [:##k :!Sk]
-                 [:##l :!Sl]
-                 [:##semicolon :!Ssemicolon]
-                 [:##quote :!Squote]
-                 [:##backslash :!Sbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Sgrave_accent_and_tilde]
-                 [:##z :!Sz]
-                 [:##x :!Sx]
-                 [:##c :!Sc]
-                 [:##v :!Sv]
-                 [:##b :!Sb]
-                 [:##n :!Sn]
-                 [:##m :!Sm]
-                 [:##comma :!Scomma]
-                 [:##period :!Speriod]
-                 [:##slash :!Sslash]
-                ]
-        }
-        ;;;;;;;;;;;;;;;
-        {:des "semicolon to right_ctrl"
-         :rules [:right_ctrl
-                 [:##non_us_backslash :!Wnon_us_backslash]
-                 [:##1 :!W1]
-                 [:##2 :!W2]
-                 [:##3 :!W3]
-                 [:##4 :!W4]
-                 [:##5 :!W5]
-                 [:##6 :!W6]
-                 [:##7 :!W7]
-                 [:##8 :!W8]
-                 [:##9 :!W9]
-                 [:##0 :!W0]
-                 [:##hyphen :!Whyphen]
-                 [:##equal_sign :!Wequal_sign]
-                 [:##delete_or_backspace :!Wdelete_or_backspace]
-                 ;;
-                 [:##tab :!Wtab]
-                 [:##q :!Wq]
-                 [:##w :!Ww]
-                 [:##e :!We]
-                 [:##r :!Wr]
-                 [:##t :!Wt]
-                 [:##y :!Wy]
-                 [:##u :!Wu]
-                 [:##i :!Wi]
-                 [:##o :!Wo]
-                 [:##p :!Wp]
-                 [:##open_bracket :!Wopen_bracket]
-                 [:##close_bracket :!Wclose_bracket]
-                 [:##return_or_enter :!Wreturn_or_enter]
-                 ;;
-                 [:##a :!Wa]
-                 [:##s :!Ws]
-                 [:##d :!Wd]
-                 [:##f :!Wf]
-                 [:##g :!Wg]
-                 [:##h :!Wh]
-                 [:##j :!Wj]
-                 [:##k :!Wk]
-                 [:##l :!Wl]
-                 ; [:##semicolon :!Wsemicolon]
-                 [:##quote :!Wquote]
-                 [:##backslash :!Wbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Wgrave_accent_and_tilde]
-                 [:##z :!Wz]
-                 [:##x :!Wx]
-                 [:##c :!Wc]
-                 [:##v :!Wv]
-                 [:##b :!Wb]
-                 [:##n :!Wn]
-                 [:##m :!Wm]
-                 [:##comma :!Wcomma]
-                 [:##period :!Wperiod]
-                 [:##slash :!Wslash]
-                ]
-        }
-        ;;
-        {:des "l to right_option"
-         :rules [:right_alt
-                 [:##non_us_backslash :!Enon_us_backslash]
-                 [:##1 :!E1]
-                 [:##2 :!E2]
-                 [:##3 :!E3]
-                 [:##4 :!E4]
-                 [:##5 :!E5]
-                 [:##6 :!E6]
-                 [:##7 :!E7]
-                 [:##8 :!E8]
-                 [:##9 :!E9]
-                 [:##0 :!E0]
-                 [:##hyphen :!Ehyphen]
-                 [:##equal_sign :!Eequal_sign]
-                 [:##delete_or_backspace :!Edelete_or_backspace]
-                 ;;
-                 [:##tab :!Etab]
-                 [:##q :!Eq]
-                 [:##w :!Ew]
-                 [:##e :!Ee]
-                 [:##r :!Er]
-                 [:##t :!Et]
-                 [:##y :!Ey]
-                 [:##u :!Eu]
-                 [:##i :!Ei]
-                 [:##o :!Eo]
-                 [:##p :!Ep]
-                 [:##open_bracket :!Eopen_bracket]
-                 [:##close_bracket :!Eclose_bracket]
-                 [:##return_or_enter :!Ereturn_or_enter]
-                 ;;
-                 [:##a :!Ea]
-                 [:s :!Es]
-                 [:##d :!Ed]
-                 [:##f :!Ef]
-                 [:##g :!Eg]
-                 [:##h :!Eh]
-                 [:##j :!Ej]
-                 [:##k :!Ek]
-                 ; [:##l :!El]
-                 [:##semicolon :!Esemicolon]
-                 [:##quote :!Equote]
-                 [:##backslash :!Ebackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Egrave_accent_and_tilde]
-                 [:##z :!Ez]
-                 [:##x :!Ex]
-                 [:##c :!Ec]
-                 [:##v :!Ev]
-                 [:##b :!Eb]
-                 [:##n :!En]
-                 [:##m :!Em]
-                 [:##comma :!Ecomma]
-                 [:##period :!Eperiod]
-                 [:##slash :!Eslash]
-                ]
-        }
-        ;;
-        {:des "k to right_command"
-         :rules [:right_cmd
-                 [:##non_us_backslash :!Qnon_us_backslash]
-                 [:##1 :!Q1]
-                 [:##2 :!Q2]
-                 [:##3 :!Q3]
-                 [:##4 :!Q4]
-                 [:##5 :!Q5]
-                 [:##6 :!Q6]
-                 [:##7 :!Q7]
-                 [:##8 :!Q8]
-                 [:##9 :!Q9]
-                 [:##0 :!Q0]
-                 [:##hyphen :!Qhyphen]
-                 [:##equal_sign :!Qequal_sign]
-                 [:##delete_or_backspace :!Qdelete_or_backspace]
-                 ;;
-                 [:##tab :!Qtab]
-                 [:##q :!Qq]
-                 [:##w :!Qw]
-                 [:##e :!Qe]
-                 [:##r :!Qr]
-                 [:##t :!Qt]
-                 [:##y :!Qy]
-                 [:##u :!Qu]
-                 [:##i :!Qi]
-                 [:##o :!Qo]
-                 [:##p :!Qp]
-                 [:##open_bracket :!Qopen_bracket]
-                 [:##close_bracket :!Qclose_bracket]
-                 [:##return_or_enter :!Qreturn_or_enter]
-                 ;;
-                 [:##a :!Qa]
-                 [:##s :!Qs]
-                 [:##d :!Qd]
-                 [:##f :!Qf]
-                 [:##g :!Qg]
-                 [:##h :!Qh]
-                 [:##j :!Qj]
-                 ; [:##k :!Qk]
-                 [:##l :!Ql]
-                 [:##semicolon :!Qsemicolon]
-                 [:##quote :!Qquote]
-                 [:##backslash :!Qbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Qgrave_accent_and_tilde]
-                 [:##z :!Qz]
-                 [:##x :!Qx]
-                 [:##c :!Qc]
-                 [:##v :!Qv]
-                 [:##b :!Qb]
-                 [:##n :!Qn]
-                 [:##m :!Qm]
-                 [:##comma :!Qcomma]
-                 [:##period :!Qperiod]
-                 [:##slash :!Qslash]
-                ]
-        }
-        ;;
-        {:des "j to right_shift"
-         :rules [:right_shift
-                 [:##non_us_backslash :!Rnon_us_backslash]
-                 [:##1 :!R1]
-                 [:##2 :!R2]
-                 [:##3 :!R3]
-                 [:##4 :!R4]
-                 [:##5 :!R5]
-                 [:##6 :!R6]
-                 [:##7 :!R7]
-                 [:##8 :!R8]
-                 [:##9 :!R9]
-                 [:##0 :!R0]
-                 [:##hyphen :!Rhyphen]
-                 [:##equal_sign :!Requal_sign]
-                 [:##delete_or_backspace :!Rdelete_or_backspace]
-                 ;;
-                 [:##tab :!Rtab]
-                 [:##q :!Rq]
-                 [:##w :!Rw]
-                 [:##e :!Re]
-                 [:##r :!Rr]
-                 [:##t :!Rt]
-                 [:##y :!Ry]
-                 [:##u :!Ru]
-                 [:##i :!Ri]
-                 [:##o :!Ro]
-                 [:##p :!Rp]
-                 [:##open_bracket :!Ropen_bracket]
-                 [:##close_bracket :!Rclose_bracket]
-                 [:##return_or_enter :!Rreturn_or_enter]
-                 ;;
-                 [:##a :!Ra]
-                 [:##s :!Rs]
-                 [:##d :!Rd]
-                 [:##f :!Rf]
-                 [:##g :!Rg]
-                 [:##h :!Rh]
-                 ; [:##j :!Rj]
-                 [:##k :!Rk]
-                 [:##l :!Rl]
-                 [:##semicolon :!Rsemicolon]
-                 [:##quote :!Rquote]
-                 [:##backslash :!Rbackslash]
-                 ;;
-                 [:##grave_accent_and_tilde :!Rgrave_accent_and_tilde]
-                 [:##z :!Rz]
-                 [:##x :!Rx]
-                 [:##c :!Rc]
-                 [:##v :!Rv]
-                 [:##b :!Rb]
-                 [:##n :!Rn]
-                 [:##m :!Rm]
-                 [:##comma :!Rcomma]
-                 [:##period :!Rperiod]
-                 [:##slash :!Rslash]
                 ]
         }
 
