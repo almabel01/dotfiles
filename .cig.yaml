@@ -1,7 +1,0 @@
-dotfiles: ~/dotfiles/
-  # notes: /Users/abel/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/
-notes: ~/Obsidian/journal/
-  # log: ~/Logseq/log/
-  # german-notes: ~/Obsidian/german/  
-  # computer-science notes: ~/Obsidian/cs/  
-  # german-notes: /Users/abel/Library/Mobile Documents/iCloud~md~obsidian/Documents/german-notes/
