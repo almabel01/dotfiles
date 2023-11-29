@@ -27,10 +27,7 @@
 ;;          10.7.2 open mode (frequently used websites)
 ;;      10.8 home-row mods
 ;;      10.10 F-keys
-;;      10.11 layouts
-;;          10.11.1 dead-keys
-;;          10.11.2 programming layout (sets QWERTZ international layout)
-
+;;
 ;;----------------------------------------------------------------------------------------------------------
 
 ;; DESCRIPTION
@@ -99,8 +96,6 @@
 ;; DEVICES
 :devices{
         :internal [{:vendor_id 1452 :product_id 657}]
-        ;; :fortech [{:vendor_id 7247 :product_id 38}] ;;This is an old keyboard I do not use anymore.
-        ;; :atreus
         }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -136,10 +131,10 @@
 ;;                          {:input_source_id "^com\\.apple\\.keylayout\\.ABC$"}
 ;;                         }
         ;; symbols
-        :plus {:key :3 :modi :shift}
-        :minus {:key :slash}
-        :multiply {:key :comma :modi [:shift :option]}
-        :divide {:key :6 :modi :shift}
+        ; :plus {:key :3 :modi :shift}
+        ; :minus {:key :slash}
+        ; :multiply {:key :comma :modi [:shift :option]}
+        ; :divide {:key :6 :modi :shift}
       }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -159,7 +154,6 @@
              :show "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'\n"
              :toggle "osascript -e 'set appName to \"%s\"\nset startIt to false\ntell application \"System Events\"\n  if not (exists process appName) then\n    set startIt to true\n  else if frontmost of process appName then\n    set visible of process appName to false\n  else\n    set frontmost of process appName to true\n  end if\nend tell\nif startIt then\n  tell application appName to activate\nend if'"
              :type "osascript -e 'tell application \"System Events\" to keystroke \"%s\" as text'"
-        ;;      :redbar      "echo -n "blue" | nc -4u -w0 localhost 1738"
             }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -167,11 +161,11 @@
 ;; APPLICATIONS
 ;; Here we can define applications to use them as a condition.
 :applications {
-                :vscode ["^com.microsoft.VSCode$"]
-                :safari ["^com\\.apple\\.Safari$"]
-                :java ["^com.jetbrains.inteluflij.ce$"]
+                ; :vscode ["^com.microsoft.VSCode$"]
+                ; :safari ["^com\\.apple\\.Safari$"]
+                ; :java ["^com.jetbrains.inteluflij.ce$"]
                 :vimModeOn ["^com.microsoft.VSCode$" "^com.jetbrains.intellij.ce$"]
-                :photos ["^com.apple.Photos$"]
+                ; :photos ["^com.apple.Photos$"]
                 :obsidian ["^md.obsidian$"]
               }
 
@@ -182,8 +176,7 @@
           :mouse {:key :z :alone {:key :z}}
           :hyper {:key :caps_lock :alone {:key :escape}}
           :num {:key :tab}
-          :symbols {:key :spacebar}  ;; :alone {:key :spacebar}}
-        ;;   :change-layout {:key :FN :alone {:key :FN}}
+          :symbols {:key :spacebar}  
         }
 
 ;;----------------------------------------------------------------------------------------------------------
@@ -195,7 +188,6 @@
              :x-key {:key :x} ; misc
              :m-key {:key :m} ; markdown mode
              :F-keys {:key :comma}
-             :german-letters {:key :g}
 ; *launchers
              :launch-mode {:key :q} ; launch frequently used apps
              :o-key {:key :o} ; open websites
@@ -203,7 +195,8 @@
              :left_ctrl {:key :a}
              :left_alt {:key :s}
              :left_cmd {:key :d}
-        ;;      :left_shift {:key ["left_shift" 1] :alone {:key :f}}
+             ; :left_shift {:key ["left_shift" 1] :alone {:key :f}}
+             :left_shift {:key :f}
              ;
              :right_ctrl {:key :semicolon}
              :right_alt {:key :l}
@@ -216,32 +209,17 @@
 ;; MAIN
 :main[
 
-;; external keyboard settings
-        ;;4Tech keyboard settings
-        ;; {:des "í to 0" :rules [:fortech [:##non_us_backslash :grave_accent_and_tilde]]}
-        ;; {:des "0 to í" :rules [:fortech [:##grave_accent_and_tilde :non_us_backslash]]}
-        ;; {:des "4Tech app key to FN" :rules [:fortech [:application :fn ]]}
-
 ;; simple modifications
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
-        {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
+        ; {:des "right_option to [] or alt+shift" :rules [[:##right_option :!Sleft_option nil {:alone [:!O8 :!O9 :left_arrow]}]]}
 ;        {:des "left_option to {} if alone" :rules [[:left_option :left_option nil {:alone [:!O7 :!O0 :left_arrow]}]]}
         ;; {:des "right_shift to () if alone, unless VSCode or IntelliJ is in front" :rules [:!vimModeOn [:##right_shift :right_shift nil {:alone [:!S8 :!S9 :left_arrow]}]]} ; not compatible with VSCode's & IntelliJ's vim extension
- ;       {:des "photos navigation"
- ;        :rules [:photos
- ;                [:##h :left_arrow]
- ;                [:##j :down_arrow]
- ;                [:##k :up_arrow]
- ;                [:##l :right_arrow]
- ;               ]
- ;       }
 
 ;; keyboard mouse
         {:des "mouse"
         :rules [:mouse
-                ;; [:condi :!blocked]
                 [:j {:mkey {:y 1036}}]
                 [:k {:mkey {:y -1036}}]
                 [:h {:mkey {:x -1036}}]
@@ -277,29 +255,17 @@
                  [:period :!Odelete_forward] ; delete next word
                  [:!Ccomma :!Cdelete_forward] ; delete to the end of the line
                  ; *hyper shortcuts
-;;                 [:c :!QWERc] ; Alfred clipboard history
-                 [:c :f19] ; Raycast clipboard history
-                 [:w :!QWERe] ; Raycast/Alfred emoji search
-                 [:q :!QWERs] ; Raycast/Alfred search snippets
+                 [:c :f19] ; Alfred clipboard history
+                 [:q :!QWERs] ; Alfred search snippets
                  ; *app specific
                  [:t :!Wt :obsidian] ;;insert template in Obsidian
                  [:e :!We :obsidian] ; Omnisearch in Obsidian
-                 [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
-                 [:d :!Qp :obsidian] ;;command palette
-                 [:s :!Qo :obsidian] ;;quick open
+                 ; [:b [:!SOcomma :!SOcomma :!SOz :f :o :n :t :spacebar :c :o :l :o :r :!S7 :!S2 :!SO3 :c :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :non_us_backslash :!S2 :!SOx :!SOz :!S6 :f :o :n :t :!SOx :!SOcomma :!SOcomma :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow :left_arrow] :obsidian] ;bold & red font in Obsidian
+                 [:b :type "**<font color="]
+                 [:d :!Qp :obsidian] ;;command palette in Obsidian
+                 [:s :!Qo :obsidian] ;;quick open in Obisidian
                 ]
         }
-;; numpad
-        ;; {:des "numpad"
-        ;;  :rules [:num
-        ;;         ;; [:condi :!blocked]
-        ;;         [:m :1] [:comma :2] [:period :3]
-        ;;         [:j :4] [:k :5] [:l :6]
-        ;;         [:u :7] [:i :8] [:o :9]
-        ;;         [:n :non_us_backslash] ;; 0
-        ;;         [:0 :plus] [:hyphen :minus] [:p :multiply] [:open_bracket :divide]
-        ;;         ]
-        ;; }
 
 {:des "symbols and numbers" 
          :rules [:symbols
@@ -351,7 +317,6 @@
 ;;;; window management
         {:des "window management (w-key)"
          :rules [:w-key
-                ;;  [:condi :!blocked]
                  ;; *system shortcuts  
                  ;; NOTE: you need to specify most of these keyboard shortcuts in System Preferences too
                  [:a :!CTOSh] ; tile window to left side of screen
@@ -385,7 +350,6 @@
 ;;;; misc shortcuts & Spotify control
         {:des "x-key (misc)"
          :rules [:x-key
-                ;;  [:condi :!blocked]
                 ; shortcuts
                  [:b :!CTOSb] ; show/hide Bartender items
                  [:c :!Ff14] ; show control center by calling an Alfred shortcut
@@ -408,58 +372,42 @@
 ;;;; markdown shortcuts
         {:des "m-key (markdown)"
          :rules [:m-key
-                ;;  [:condi :!blocked]
-                 [:b [:!SOcomma :!SOcomma :!SOcomma :!SOcomma :left_arrow :left_arrow]] ; bold
-                 [:i [:!SOcomma :!SOcomma :left_arrow]] ; italic
-                 [:1 [:!SO3 :spacebar]] ; heading 1
-                 [:2 [:!SO3 :!SO3 :spacebar]] ; heading 2
-                 [:3 [:!SO3 :!SO3 :!SO3 :spacebar]] ; heading 3
-                 [:4 [:!SO3 :!SO3 :!SO3 :!SO3 :spacebar]] ; heading 4
-                 [:5 [:!SO3 :!SO3 :!SO3 :!SO3 :!SO3 :spacebar]] ; heading 5
-                 [:s [:!Oclose_bracket :!Oclose_bracket :!Oclose_bracket :!Oclose_bracket :left_arrow :left_arrow]] ; striketrough
-                 [:x [:!Oclose_bracket :!Oclose_bracket :left_arrow]] ; alt striketrough
-                 [:c [:!Obackslash :!Obackslash :!Obackslash]] ; code block
-                 [:j [:!Obackslash :!Obackslash :!Obackslash :j :a :v :a :return_or_enter :return_or_enter :!Obackslash :!Obackslash :!Obackslash :up_arrow]] ; java code block
-                 [:q [:!SOx :spacebar]] ; quote
-                 [:h [:!S7 :!S7 :!S7 :!S7 :left_arrow :left_arrow]] ; highlight
-                 [:t [:slash :spacebar :!O8 :spacebar :!O9 :spacebar]] ; task list
-                 [:a [:!SOz :!S4 :slash :slash :slash :slash :!SOx :left_arrow :left_arrow :left_arrow]] ; html comment
+                 [:b [:type "****"] :left_arrow :left_arrow] ; bold
+                 [:i [:type "**"] :left_arrow] ; italic
+                 [:1 :type "# "]
+                 [:2 :type "## "] ; heading 2
+                 [:3 :type "### "] ; heading 3
+                 [:4 :type "#### "] ; heading 4
+                 [:5 :type "##### "] ; heading 5
+                 [:s [:type "~~~~"] :left_arrow :left_arrow] ; striketrough
+                 [:c :type "```"] ; code block
                 ]
         }
 
-
-        {:des "German chars"
-          :rules [:german-letters
-                  [:a [:!Eu :a]]
-                  [:s [:!Es]] ;ß
-                  ]
-         }
 ;; launchers
 ;;;; launch mode (frequently used apps)
         {:des "q-key (launch mode)"
          :rules [:launch-mode
-                ;;  [:condi :!blocked]
                  [:s [:toggle "Safari"]]
 ;;                 [:m [:toggle "Spotify"]]
                  [:f [:toggle "Finder"]]
                  [:c [:toggle "Calendar"]]
                  [:b [:launch "Firefox"]] ;;b for browser i guess
-                 [:n [:toggle "Notes"]]
-                 [:d [:toggle "Drafts"]]
+                 ; [:n [:toggle "Notes"]]
+                 ; [:d [:toggle "Drafts"]]
                  [:w [:toggle "Obsidian"]]
                  [:e [:toggle "Mail"]]
 ;;                 [:t [:toggle "TickTick"]]
                  [:p [:toggle "Photos"]]
                  [:i [:toggle "Terminal"]]
                 ;;  [:j [:toggle "IntelliJ IDEA CE"]]
-                 [:v [:toggle "Visual Studio Code"]]
+                 ; [:v [:toggle "Visual Studio Code"]]
                 ]
         }
 
 ;;;; open mode (frequently used websites)
         {:des "o-key (open websites)"
          :rules [:o-key
-                ;;  [:condi :!blocked]
                  [:t [:open "https://telex.hu"]]
                  [:g [:open "https://github.com"]]
                 ;;  [:u [:open "https://www.udemy.com"]]
@@ -469,7 +417,6 @@
 ;; home-row mods
         {:des "a to left_ctrl"
          :rules [:left_ctrl
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Tnon_us_backslash]
                  [:##1 :!T1]
                  [:##2 :!T2]
@@ -529,7 +476,6 @@
         ;;
         {:des "s to left_option"
          :rules [:left_alt
-                ;;  [:condi :!blocked]
                 [:##non_us_backslash :!Onon_us_backslash]
                 [:##1 :!O1]
                 [:##2 :!O2]
@@ -589,7 +535,6 @@
         ;;
         {:des "d to left_command"
          :rules [:left_cmd
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Cnon_us_backslash]
                  [:##1 :!C1]
                  [:##2 :!C2]
@@ -651,7 +596,6 @@
          :rules [
                 ;;  [:f ["left_shift" 1] [:!blocked] {:afterup ["left_shift" 0] :alone :f}]
                  :left_shift
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Snon_us_backslash]
                  [:##1 :!S1]
                  [:##2 :!S2]
@@ -711,7 +655,6 @@
         ;;;;;;;;;;;;;;;
         {:des "semicolon to right_ctrl"
          :rules [:right_ctrl
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Wnon_us_backslash]
                  [:##1 :!W1]
                  [:##2 :!W2]
@@ -771,7 +714,6 @@
         ;;
         {:des "l to right_option"
          :rules [:right_alt
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Enon_us_backslash]
                  [:##1 :!E1]
                  [:##2 :!E2]
@@ -831,7 +773,6 @@
         ;;
         {:des "k to right_command"
          :rules [:right_cmd
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Qnon_us_backslash]
                  [:##1 :!Q1]
                  [:##2 :!Q2]
@@ -891,7 +832,6 @@
         ;;
         {:des "j to right_shift"
          :rules [:right_shift
-                ;;  [:condi :!blocked]
                  [:##non_us_backslash :!Rnon_us_backslash]
                  [:##1 :!R1]
                  [:##2 :!R2]
@@ -952,7 +892,6 @@
 ;; F-keys
         {:des "F-keys"
          :rules [:F-keys
-                ;;  [:condi :!blocked]
                 [:q :!Ff1]
                 [:w :!Ff2]
                 [:e :!Ff3]
