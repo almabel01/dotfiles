@@ -202,19 +202,20 @@
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
-        {:des "homerow mods"
-         :rules [
-                 [:##a :left_control nil {:alone :a}]
-                 [:##s :left_option nil {:alone :s}]
-                 [:##d :left_command nil {:alone :d}]
-                 [:##f :left_shift nil {:alone :f}]
-                 ;;
-                 [:##semicolon :right_control nil {:alone :semicolon}]
-                 [:##l :right_option nil {:alone :l}]
-                 [:##k :right_command nil {:alone :k}]
-                 [:##j :right_shift nil {:alone :j}]
-                ]
-        }
+        ;; the rarely use homerow mods and this config is not compatible with the spacebar mod
+        ;{:des "homerow mods"
+        ; :rules [
+        ;         [:##a :left_control nil {:alone :a}]
+        ;         [:##s :left_option nil {:alone :s}]
+        ;         [:##d :left_command nil {:alone :d}]
+        ;         [:##f :left_shift nil {:alone :f}]
+        ;         ;;
+        ;         [:##semicolon :right_control nil {:alone :semicolon}]
+        ;         [:##l :right_option nil {:alone :l}]
+        ;         [:##k :right_command nil {:alone :k}]
+        ;         [:##j :right_shift nil {:alone :j}]
+        ;        ]
+        ;}
 
 ;; keyboard mouse
         {:des "mouse"
