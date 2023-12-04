@@ -202,6 +202,7 @@
         {:des "right command to F13 (Alfred) if alone" :rules [[:##right_command :right_command nil {:alone :f13}]]}
         {:des "left_control → ctrl+tab if alone unless VSCode or IntelliJ is in front" :rules [:internal :!vimModeOn [:##left_control :left_control nil {:alone :!Ttab}]]} ; change application tabs
         {:des "left cmd → cmd+tab if alone" :rules [:internal [:##left_command :left_command nil {:alone :!Ctab}]]} ; change applications
+        {:des "right option to opt + shift" :rules [[:##right_option :!Rright_option nil ]]}
         ;; the rarely use homerow mods and this config is not compatible with the spacebar mod
         ;{:des "homerow mods"
         ; :rules [
