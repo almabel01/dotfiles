@@ -107,4 +107,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # alias notes="/Users/abel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/journal/"
 # alias icloud="/Users/abel/Library/Mobile\ Documents/com~apple~CloudDocs"
 # alias ohmyzsh="vim ~/.oh-my-zsh"
+alias python="python3"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
